@@ -6,13 +6,14 @@ import { getTotalWeight } from '../../helpers';
 import { useAppSelector } from '../../store';
 import { useIntersection } from '../../hooks/useIntersection';
 
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 50;
 
 const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
   const weight = useMemo(
     () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
     [inventory.maxWeight, inventory.items]
   );
+
   const [page, setPage] = useState(0);
   const containerRef = useRef(null);
   const { ref, entry } = useIntersection({ threshold: 0.5 });
@@ -23,6 +24,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
       setPage((prev) => ++prev);
     }
   }, [entry]);
+
   return (
     <>
       <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>

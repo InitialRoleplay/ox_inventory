@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import useNuiEvent from '../../hooks/useNuiEvent';
-import InventoryControl from './InventoryControl';
-import InventoryHotbar from './InventoryHotbar';
-import { useAppDispatch } from '../../store';
-import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store/inventory';
-import { useExitListener } from '../../hooks/useExitListener';
-import type { Inventory as InventoryProps } from '../../typings';
-import RightInventory from './RightInventory';
-import LeftInventory from './LeftInventory';
+
 import Tooltip from '../utils/Tooltip';
-import { closeTooltip } from '../../store/tooltip';
-import InventoryContext from './InventoryContext';
-import { closeContextMenu } from '../../store/contextMenu';
 import Fade from '../utils/transitions/Fade';
+
+import InventoryHotbar from './InventoryHotbar';
+import InventoryControl from './InventoryControl';
+import InventoryContext from './InventoryContext';
+
+import LeftInventory from './LeftInventory';
+import RightInventory from './RightInventory';
+import ClothesInventory from './ClothesInventory';
+
+import { useAppDispatch } from '../../store';
+import { closeTooltip } from '../../store/tooltip';
+import { closeContextMenu } from '../../store/contextMenu';
+import { useExitListener } from '../../hooks/useExitListener';
+import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store/inventory';
+
+import type { ClothesInventory as ClothesInventoryProps, Inventory as InventoryProps } from '../../typings';
 
 const Inventory: React.FC = () => {
   const [inventoryVisible, setInventoryVisible] = useState(false);
@@ -29,6 +35,7 @@ const Inventory: React.FC = () => {
   useNuiEvent<{
     leftInventory?: InventoryProps;
     rightInventory?: InventoryProps;
+    clothesInventory?: ClothesInventoryProps;
   }>('setupInventory', (data) => {
     dispatch(setupInventory(data));
     !inventoryVisible && setInventoryVisible(true);
@@ -46,6 +53,7 @@ const Inventory: React.FC = () => {
         <div className="inventory-wrapper">
           <LeftInventory />
           <InventoryControl />
+          <ClothesInventory />
           <RightInventory />
           <Tooltip />
           <InventoryContext />

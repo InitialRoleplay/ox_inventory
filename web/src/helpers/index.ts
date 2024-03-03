@@ -1,3 +1,4 @@
+//import { Items } from "../store/items";
 import { Inventory, InventoryType, ItemData, Slot, SlotWithItem, State } from '../typings';
 import { isEqual } from 'lodash';
 import { store } from '../store';
@@ -82,6 +83,9 @@ export const isSlotWithItem = (slot: Slot, strict: boolean = false): slot is Slo
   (slot.name !== undefined && slot.weight !== undefined) ||
   (strict && slot.name !== undefined && slot.count !== undefined && slot.weight !== undefined);
 
+export const isSlotWithClothes = (slot: Slot): slot is SlotWithItem =>
+  (slot.name !== undefined);
+
 export const canStack = (sourceSlot: Slot, targetSlot: Slot) =>
   sourceSlot.name === targetSlot.name && isEqual(sourceSlot.metadata, targetSlot.metadata);
 
@@ -104,8 +108,8 @@ export const getTargetInventory = (
       ? state.leftInventory
       : state.rightInventory
     : sourceType === InventoryType.PLAYER
-    ? state.rightInventory
-    : state.leftInventory,
+      ? state.rightInventory
+      : state.leftInventory,
 });
 
 export const itemDurability = (metadata: any, curTime: number) => {

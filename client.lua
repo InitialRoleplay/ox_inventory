@@ -109,9 +109,51 @@ local function closeTrunk()
 	end
 end
 
+local function createPed()
+    if DoesEntityExist(invPed) then return end
+
+	exports['ps-pause']:TogglePauseMenuColor()
+    SetFrontendActive(true)
+    ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
+
+    while not IsFrontendReadyForControl() do
+        Citizen.Wait(10)
+    end
+
+    Citizen.Wait(100)
+
+    SetMouseCursorVisibleInMenus(false)
+    ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
+
+    local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
+
+    SetEntityVisible(PlayerPedPreview, false, false)
+    GivePedToPauseMenu(PlayerPedPreview, 1)
+    SetPauseMenuPedLighting(true)
+    SetPauseMenuPedSleepState(true)
+    SetEntityCollision(PlayerPedPreview, false, true)
+
+    invPed = PlayerPedPreview
+end
+
+local function deletePed()
+	if not DoesEntityExist(invPed) then return end
+
+    SetFrontendActive(false)
+    ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
+    Citizen.Wait(100)
+    SetMouseCursorVisibleInMenus(true)
+	exports['ps-pause']:TogglePauseMenuColor()
+
+    if DoesEntityExist(invPed) then
+        DeleteEntity(invPed)
+    end
+end
+
 local CraftingBenches = require 'modules.crafting.client'
 local Vehicles = lib.load('data.vehicles')
 local Inventory = require 'modules.inventory.client'
+local Clothes = require 'modules.clothing.client'
 
 ---@param inv string?
 ---@param data any?
@@ -156,7 +198,9 @@ function client.openInventory(inv, data)
 	end
 
 	if canOpenInventory() then
-		local left, right
+		local left, right, clothes
+
+		createPed()
 
 		if inv == 'player' and data ~= cache.serverId then
 			local targetId, targetPed
@@ -235,7 +279,9 @@ function client.openInventory(inv, data)
 			left, right = lib.callback.await('ox_inventory:openInventory', false, inv, data)
 		end
 
-		if left then
+		clothes = Clothes.get()
+
+		if left and clothes then
 			if not cache.vehicle then
 				if inv == 'player' then
 					Utils.PlayAnim(0, 'mp_common', 'givetake1_a', 8.0, 1.0, 2000, 50, 0.0, 0, 0, 0)
@@ -261,6 +307,7 @@ function client.openInventory(inv, data)
 				action = 'setupInventory',
 				data = {
 					leftInventory = left,
+					clothesInventory = clothes,
 					rightInventory = currentInventory
 				}
 			})
@@ -323,10 +370,13 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
 
+	local clothes = Clothes.get()
+
 	SendNUIMessage({
 		action = 'setupInventory',
 		data = {
 			leftInventory = left,
+			clothesInventory = clothes,
 			rightInventory = currentInventory
 		}
 	})
@@ -840,6 +890,8 @@ function client.closeInventory(server)
 	-- and they're incapable of debugging, and I can't repro on a fresh install
 	if not client.interval then return end
 
+	deletePed()
+
 	if invOpen then
 		invOpen = nil
 		SetNuiFocus(false, false)
@@ -1039,6 +1091,8 @@ RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
 		createDrop(dropId, data)
 	end
 
+	local clothes = Clothes.get()
+
 	if owner == cache.serverId then
 		if currentWeapon?.slot == slot then
 			currentWeapon = Weapon.Disarm(currentWeapon)
@@ -1050,7 +1104,10 @@ RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
 			else
 				SendNUIMessage({
 					action = 'setupInventory',
-					data = { rightInventory = currentInventory }
+					data = {
+						clothesInventory = clothes,
+						rightInventory = currentInventory
+					}
 				})
 			end
 		end
@@ -1533,10 +1590,13 @@ RegisterNetEvent('ox_inventory:viewInventory', function(left, right)
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
 
+	local clothes = Clothes.get()
+
 	SendNUIMessage({
 		action = 'setupInventory',
 		data = {
 			leftInventory = left,
+			clothesInventory = clothes,
 			rightInventory = currentInventory
 		}
 	})
