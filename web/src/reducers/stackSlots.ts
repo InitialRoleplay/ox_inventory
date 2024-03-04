@@ -1,20 +1,20 @@
 import { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 import { getTargetInventory } from '../helpers';
-import { Inventory, InventoryType, SlotWithItem, State } from '../typings';
+import { ClothesInventory, Inventory, InventoryType, SlotWithItem, State } from '../typings';
 
 export const stackSlotsReducer: CaseReducer<
   State,
   PayloadAction<{
     fromSlot: SlotWithItem;
-    fromType: Inventory['type'];
+    fromType: Inventory['type'] | ClothesInventory;
     toSlot: SlotWithItem;
-    toType: Inventory['type'];
+    toType: Inventory['type'] | ClothesInventory;
     count: number;
   }>
 > = (state, action) => {
   const { fromSlot, fromType, toSlot, toType, count } = action.payload;
 
-  const { sourceInventory, targetInventory } = getTargetInventory(state, fromType, toType);
+  const { sourceInventory, targetInventory } = getTargetInventory(state, typeof(fromType) === 'string' ? fromType : fromType.type, typeof(toType) === 'string' ? toType : toType.type);
 
   const pieceWeight = fromSlot.weight / fromSlot.count;
 

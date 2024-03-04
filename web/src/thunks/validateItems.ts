@@ -1,15 +1,16 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { setContainerWeight } from '../store/inventory';
 import { fetchNui } from '../utils/fetchNui';
+import { ClothesInventory } from '../typings';
 
 export const validateMove = createAsyncThunk(
   'inventory/validateMove',
   async (
     data: {
       fromSlot: number;
-      fromType: string;
+      fromType: string | ClothesInventory;
       toSlot: number;
-      toType: string;
+      toType: string | ClothesInventory;
       count: number;
     },
     { rejectWithValue, dispatch }

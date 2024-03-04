@@ -57,6 +57,15 @@ debugData([
               imageurl: 'https://i.imgur.com/2xHhTTz.png',
             },
           },
+          {
+            slot: 7,
+            name: 'clothes_mask',
+            weight: 100,
+            count: 1,
+            metadata: {
+              label: 'Masque',
+            },
+          },
         ],
       },
       rightInventory: {
@@ -83,6 +92,60 @@ debugData([
           },
         ],
       },
+      clothesInventory: {
+        type: 'clothes',
+        slots: 16,
+        items: [
+          {
+            slot: 1,
+          },
+          {
+            slot: 2,
+          },
+          {
+            slot: 3,
+          },
+          {
+            slot: 4,
+          },
+          {
+            slot: 5,
+          },
+          {
+            slot: 6,
+          },
+          {
+            slot: 7,
+          },
+          {
+            slot: 8,
+          },
+          {
+            slot: 9,
+          },
+          {
+            slot: 10,
+          },
+          {
+            slot: 11,
+          },
+          {
+            slot: 12,
+          },
+          {
+            slot: 13,
+          },
+          {
+            slot: 14,
+          },
+          {
+            slot: 15,
+          },
+          {
+            slot: 16,
+          },
+        ]
+      }
     },
   },
 ]);

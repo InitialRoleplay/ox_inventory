@@ -1576,6 +1576,7 @@ local function dropItem(source, playerInventory, fromData, data)
 end
 
 local activeSlots = {}
+local Clothes = require 'modules.clothing.server'
 
 ---@param source number
 ---@param data SwapSlotData
@@ -1583,11 +1584,28 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 	if data.count < 1 then return end
 
 	local playerInventory = Inventory(source)
-
 	if not playerInventory then return end
 
-	local toInventory = (data.toType == 'player' and playerInventory) or Inventory(playerInventory.open)
-	local fromInventory = (data.fromType == 'player' and playerInventory) or Inventory(playerInventory.open)
+	local toInventory = data.toType.type == 'clothes' and data.toType or (data.toType == 'player' and playerInventory) or Inventory(playerInventory.open)
+	local fromInventory = data.fromType.type == 'clothes' and data.fromType or (data.fromType == 'player' and playerInventory) or Inventory(playerInventory.open)
+
+	if not toInventory.id then toInventory.id = 'clothes' end
+	if not fromInventory.id then fromInventory.id = 'clothes' end
+
+	if data.toType.type and data.toType.type == 'clothes' and data.fromType == 'player' then
+		local item = fromInventory.items[data.fromSlot]
+		if not item then return false end
+
+		if not Inventory.RemoveItem(fromInventory, item, 1, item.metadata, item.slot) then
+			return false
+		end
+
+		if not Clothes.addClothes(source, item) then
+			return false
+		end
+
+		return true
+	end
 
 	if not fromInventory or not toInventory then
 		playerInventory:closeInventory()
@@ -1686,6 +1704,11 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 				if not sameInventory then
 					if (toWeight <= toInventory.maxWeight and fromWeight <= fromInventory.maxWeight) then
+
+						if fromInventory.type and fromInventory.type == 'clothes' then
+							if not Clothes.removeClothes(source, fromData) then return end
+						end
+
 						if not TriggerEventHooks('swapItems', hookPayload) then return end
 
 						if containerItem then
@@ -1718,6 +1741,10 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 						end
 					else return false, 'cannot_carry' end
 				else
+					if fromInventory.type and fromInventory.type == 'clothes' then
+						if not Clothes.removeClothes(source, fromData) then return end
+					end
+
 					if not TriggerEventHooks('swapItems', hookPayload) then return end
 
 					toData, fromData = Inventory.SwapSlots(fromInventory, toInventory, data.fromSlot, data.toSlot)
@@ -1732,6 +1759,10 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 				if fromInventory.type == 'container' or sameInventory or totalWeight <= toInventory.maxWeight then
 					hookPayload.action = 'stack'
+
+					if fromInventory.type and fromInventory.type == 'clothes' then
+						if not Clothes.removeClothes(source, fromData) then return end
+					end
 
 					if not TriggerEventHooks('swapItems', hookPayload) then
 						toData.count -= data.count
@@ -1777,6 +1808,10 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 				if fromInventory.type == 'container' or sameInventory or (toInventory.weight + toData.weight <= toInventory.maxWeight) then
 					hookPayload.action = 'move'
 
+					if fromInventory.type and fromInventory.type == 'clothes' then
+						if not Clothes.removeClothes(source, fromData) then return end
+					end
+
 					if not TriggerEventHooks('swapItems', hookPayload) then return end
 
 					if not sameInventory then
@@ -1793,8 +1828,13 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 							end
 						end
 
-						fromInventory.weight -= toData.weight
-						toInventory.weight += toData.weight
+						if fromInventory.weight then
+							fromInventory.weight -= toData.weight
+						end
+
+						if toInventory.weight then
+							toInventory.weight += toData.weight
+						end
 
 						if container then
 							Inventory.ContainerWeight(containerItem, toContainer and toInventory.weight or fromInventory.weight, playerInventory)
@@ -1869,12 +1909,14 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
                         }
                     }, true)
 
-                    fromInventory:syncSlotsWithClients({
-                        {
-                            item = fromInventory.items[data.fromSlot] or { slot = data.fromSlot },
-                            inventory = fromInventory.id
-                        }
-                    }, true)
+					if fromInventory.syncSlotsWithClients then
+						fromInventory:syncSlotsWithClients({
+							{
+								item = fromInventory.items[data.fromSlot] or { slot = data.fromSlot },
+								inventory = fromInventory.id
+							}
+						}, true)
+					end
                 end
             end)
 

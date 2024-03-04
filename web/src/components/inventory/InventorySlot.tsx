@@ -65,6 +65,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
       }),
       drop: (source) => {
         dispatch(closeTooltip());
+
         switch (source.inventory) {
           case InventoryType.SHOP:
             onBuy(source, { inventory: inventoryType, item: { slot: item.slot } });

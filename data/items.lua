@@ -11,128 +11,112 @@ return {
 		label = 'Masque',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_torso'] = {
 		label = 'Veste',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_pants'] = {
 		label = 'Pantalon',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_bags'] = {
 		label = 'Sac à dos',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_hands'] = {
 		label = 'Gants',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_shoes'] = {
 		label = 'Chaussures',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_access'] = {
 		label = 'Accéssoires',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_tshirts'] = {
 		label = 'T-Shirt',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_kevlars'] = {
 		label = 'Gilet par balle',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_bagdes'] = {
 		label = 'Badge',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_chains'] = {
 		label = 'Chaine',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_hats'] = {
 		label = 'Chapeau',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_glasses'] = {
 		label = 'Lunettes de Soleil',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_ears'] = {
 		label = 'Lunettes de Soleil',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_watches'] = {
 		label = 'Montre',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	['clothes_bracelets'] = {
 		label = 'Bracelet',
 		description = 'Un vêtement cool',
 		weight = 100,
-		stack = true,
-		close = true,
+		stack = false,
 	},
 
 	["cryptostick"] = {

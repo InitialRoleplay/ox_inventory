@@ -48,7 +48,7 @@ local function canOpenInventory()
         return shared.info('cannot open inventory', '(is not loaded)')
     end
 
-    if IsPauseMenuActive() then return end
+    -- if IsPauseMenuActive() then return end
 
     if invBusy or invOpen == nil or (currentWeapon and currentWeapon.timer ~= 0) then
         return shared.info('cannot open inventory', '(is busy)')
@@ -109,45 +109,47 @@ local function closeTrunk()
 	end
 end
 
+local invPed
+
 local function createPed()
-    if DoesEntityExist(invPed) then return end
+    -- if DoesEntityExist(invPed) then return end
 
-	exports['ps-pause']:TogglePauseMenuColor()
-    SetFrontendActive(true)
-    ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
+	-- exports['ps-pause']:TogglePauseMenuColor()
+    -- SetFrontendActive(true)
+    -- ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
 
-    while not IsFrontendReadyForControl() do
-        Citizen.Wait(10)
-    end
+    -- while not IsFrontendReadyForControl() do
+    --     Citizen.Wait(10)
+    -- end
 
-    Citizen.Wait(100)
+    -- Citizen.Wait(100)
 
-    SetMouseCursorVisibleInMenus(false)
-    ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
+    -- SetMouseCursorVisibleInMenus(false)
+    -- ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
 
-    local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
+    -- local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
 
-    SetEntityVisible(PlayerPedPreview, false, false)
-    GivePedToPauseMenu(PlayerPedPreview, 1)
-    SetPauseMenuPedLighting(true)
-    SetPauseMenuPedSleepState(true)
-    SetEntityCollision(PlayerPedPreview, false, true)
+    -- SetEntityVisible(PlayerPedPreview, false, false)
+    -- GivePedToPauseMenu(PlayerPedPreview, 1)
+    -- SetPauseMenuPedLighting(true)
+    -- SetPauseMenuPedSleepState(true)
+    -- SetEntityCollision(PlayerPedPreview, false, true)
 
-    invPed = PlayerPedPreview
+    -- invPed = PlayerPedPreview
 end
 
 local function deletePed()
-	if not DoesEntityExist(invPed) then return end
+	-- if not DoesEntityExist(invPed) then return end
 
-    SetFrontendActive(false)
-    ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
-    Citizen.Wait(100)
-    SetMouseCursorVisibleInMenus(true)
-	exports['ps-pause']:TogglePauseMenuColor()
+    -- SetFrontendActive(false)
+    -- ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
+    -- Citizen.Wait(100)
+    -- SetMouseCursorVisibleInMenus(true)
+	-- exports['ps-pause']:TogglePauseMenuColor()
 
-    if DoesEntityExist(invPed) then
-        DeleteEntity(invPed)
-    end
+    -- if DoesEntityExist(invPed) then
+    --     DeleteEntity(invPed)
+    -- end
 end
 
 local CraftingBenches = require 'modules.crafting.client'

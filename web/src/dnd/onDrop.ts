@@ -47,8 +47,8 @@ export const onDrop = (source: DragSource, target?: DropTarget) => {
   const data = {
     fromSlot: sourceSlot,
     toSlot: targetSlot,
-    fromType: sourceInventory.type,
-    toType: targetInventory.type,
+    fromType: sourceInventory.type == 'clothes' ? sourceInventory : sourceInventory.type,
+    toType: targetInventory.type == 'clothes' ? targetInventory : targetInventory.type,
     count: count,
   };
 
