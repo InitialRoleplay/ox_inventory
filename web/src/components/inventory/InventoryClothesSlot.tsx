@@ -58,10 +58,9 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
     [inventoryType, item]
   );
 
-  useNuiEvent('refreshSlots', (data: { items?: ItemsPayload | ItemsPayload[] }) => {
+  useNuiEvent('refreshClothing', (data: { items?: ItemsPayload | ItemsPayload[] }) => {
     if (!isDragging && !data.items) return;
     if (!Array.isArray(data.items)) return;
-
     const itemSlot = data.items.find((dataItem) => dataItem.item.slot === item.slot);
     if (!itemSlot) return;
     manager.dispatch({ type: 'dnd-core/END_DRAG' });

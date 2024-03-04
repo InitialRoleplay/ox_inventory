@@ -28,7 +28,56 @@ const initialState: State = {
   clothesInventory: {
     type: '',
     slots: 0,
-    items: [],
+    items: [
+      {
+        slot: 1,
+      },
+      {
+        slot: 2,
+      },
+      {
+        slot: 3,
+      },
+      {
+        slot: 4,
+      },
+      {
+        slot: 5,
+      },
+      {
+        slot: 6,
+      },
+      {
+        slot: 7,
+      },
+      {
+        slot: 8,
+      },
+      {
+        slot: 9,
+      },
+      {
+        slot: 10,
+      },
+      {
+        slot: 11,
+      },
+      {
+        slot: 12,
+      },
+      {
+        slot: 13,
+      },
+      {
+        slot: 14,
+      },
+      {
+        slot: 15,
+      },
+      {
+        slot: 16,
+      },
+    ],
   },
   additionalMetadata: new Array(),
   itemAmount: 0,
