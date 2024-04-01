@@ -11,7 +11,6 @@ export const onDrop = (source: DragSource, target?: DropTarget) => {
   const { sourceInventory, targetInventory } = getTargetInventory(state, source.inventory, target?.inventory);
 
   const sourceSlot = sourceInventory.items[source.item.slot - 1] as SlotWithItem;
-
   const sourceData = Items[sourceSlot.name];
 
   if (sourceData === undefined) return console.error(`${sourceSlot.name} item data undefined!`);
@@ -47,8 +46,8 @@ export const onDrop = (source: DragSource, target?: DropTarget) => {
   const data = {
     fromSlot: sourceSlot,
     toSlot: targetSlot,
-    fromType: sourceInventory.type == 'clothes' ? sourceInventory : sourceInventory.type,
-    toType: targetInventory.type == 'clothes' ? targetInventory : targetInventory.type,
+    fromType: sourceInventory.type,
+    toType: targetInventory.type,
     count: count,
   };
 

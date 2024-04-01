@@ -9,6 +9,7 @@ import { setClipboard } from '../../utils/setClipboard';
 import { useAppSelector } from '../../store';
 import React from 'react';
 import { Menu, MenuItem } from '../utils/menu/Menu';
+import { onRename } from '../../dnd/onRename';
 
 interface DataProps {
   action: string;
@@ -33,7 +34,7 @@ interface ButtonWithIndex extends Button {
   index: number;
 }
 
-interface GroupedButtons extends Array<Group> {}
+interface GroupedButtons extends Array<Group> { }
 
 const InventoryContext: React.FC = () => {
   const contextMenu = useAppSelector((state) => state.contextMenu);
@@ -45,6 +46,9 @@ const InventoryContext: React.FC = () => {
     switch (data && data.action) {
       case 'use':
         onUse({ name: item.name, slot: item.slot });
+        break;
+      case 'rename':
+        onRename({ slot: item.slot });
         break;
       case 'give':
         onGive({ name: item.name, slot: item.slot });
@@ -93,8 +97,13 @@ const InventoryContext: React.FC = () => {
     <>
       <Menu>
         <MenuItem onClick={() => handleClick({ action: 'use' })} label={Locale.ui_use || 'Use'} />
-        <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
-        <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
+        <MenuItem onClick={() => handleClick({ action: 'rename' })} label={Locale.ui_rename || 'Rename'} />
+        {!contextMenu.item?.name.includes('clothes') && (
+          <>
+            <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
+            <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
+          </>
+        )}
         {item && item.metadata?.ammo > 0 && (
           <MenuItem onClick={() => handleClick({ action: 'removeAmmo' })} label={Locale.ui_remove_ammo} />
         )}

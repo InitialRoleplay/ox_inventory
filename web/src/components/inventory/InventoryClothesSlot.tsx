@@ -1,10 +1,14 @@
-import React, { useCallback } from 'react';
-import { Slot, DragSource, Inventory, InventoryType, SlotWithItem } from '../../typings';
+import React, { useRef } from 'react';
+import { DragSource, Inventory, InventoryType, Slot, SlotWithItem } from '../../typings';
 import { useDrag, useDragDropManager, useDrop } from 'react-dnd';
+import { useAppDispatch } from '../../store';
+import WeightBar from '../utils/WeightBar';
 import { onDrop } from '../../dnd/onDrop';
-import { getItemUrl, isSlotWithClothes } from '../../helpers';
+import { canCraftItem, canPurchaseItem, getItemUrl, isSlotWithItem } from '../../helpers';
 import useNuiEvent from '../../hooks/useNuiEvent';
 import { ItemsPayload } from '../../reducers/refreshSlots';
+import { closeTooltip, openTooltip } from '../../store/tooltip';
+import { openContextMenu } from '../../store/contextMenu';
 import { useMergeRefs } from '@floating-ui/react';
 
 const autorizedItem: Record<number, string> = {
@@ -24,28 +28,24 @@ const autorizedItem: Record<number, string> = {
   14: 'clothes_ears',
   15: 'clothes_watches',
   16: 'clothes_bracelets',
+  17: 'clothes_outfit',
 }
 
 interface SlotProps {
+  inventoryId: Inventory['id'];
   inventoryType: Inventory['type'];
+  inventoryGroups: Inventory['groups'];
   item: Slot;
   default?: string;
 }
 
-const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = ({ item, inventoryType, default: image }, ref) => {
+const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = (
+  { item, inventoryId, inventoryType, default: image },
+  ref
+) => {
   const manager = useDragDropManager();
-
-  const canDrop = useCallback((source: DragSource) => {
-    if (!source.item.name?.includes('clothes')) {
-      return false;
-    }
-
-    if (autorizedItem[item.slot] !== source.item.name) {
-      return false;
-    }
-
-    return (source.item.slot !== item.slot || source.inventory !== inventoryType) && inventoryType !== InventoryType.SHOP && inventoryType !== InventoryType.CRAFTING;
-  }, [item, inventoryType]);
+  const dispatch = useAppDispatch();
+  const timerRef = useRef<NodeJS.Timer | null>(null);
 
   const [{ isDragging }, drag] = useDrag<DragSource, void, { isDragging: boolean }>(
     () => ({
@@ -54,14 +54,14 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
         isDragging: monitor.isDragging(),
       }),
       item: () =>
-        isSlotWithClothes(item)
+        isSlotWithItem(item, inventoryType !== InventoryType.SHOP)
           ? {
             inventory: inventoryType,
             item: {
               name: item.name,
               slot: item.slot,
             },
-            image: item.image || 'none',
+            image: item?.name && `url(${getItemUrl(item) || 'none'}`,
           }
           : null,
     }),
@@ -75,35 +75,73 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
         isOver: monitor.isOver(),
       }),
       drop: (source) => {
+        dispatch(closeTooltip());
         onDrop(source, { inventory: inventoryType, item: { slot: item.slot } });
       },
-      canDrop,
+      canDrop: (source) => (source.item.slot !== item.slot || source.inventory !== inventoryType) && autorizedItem[item.slot] === source.item.name,
     }),
     [inventoryType, item]
   );
 
-  useNuiEvent('refreshClothing', (data: { items?: ItemsPayload | ItemsPayload[] }) => {
+  useNuiEvent('refreshSlots', (data: { items?: ItemsPayload | ItemsPayload[] }) => {
     if (!isDragging && !data.items) return;
     if (!Array.isArray(data.items)) return;
-    const itemSlot = data.items.find((dataItem) => dataItem.item.slot === item.slot);
+
+    const itemSlot = data.items.find(
+      (dataItem) => dataItem.item.slot === item.slot && dataItem.inventory === inventoryId
+    );
+
     if (!itemSlot) return;
+
     manager.dispatch({ type: 'dnd-core/END_DRAG' });
   });
 
   const connectRef = (element: HTMLDivElement) => drag(drop(element));
+
+  const handleContext = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    if (!isSlotWithItem(item)) return;
+    dispatch(openContextMenu({ item, coords: { x: event.clientX, y: event.clientY } }));
+  };
+
   const refs = useMergeRefs([connectRef, ref]);
 
   return (
     <div
       ref={refs}
+      onContextMenu={handleContext}
       className="inventory-clothes-slot"
       style={{
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : image})`,
         animation: isOver ? 'tilt-shaking 0.75s infinite' : '',
       }}
-    ></div>
+    >
+      {isSlotWithItem(item) && (
+        <div
+          className="item-clothes-slot-wrapper"
+          onMouseEnter={() => {
+            timerRef.current = setTimeout(() => {
+              dispatch(openTooltip({ item, inventoryType }));
+            }, 500);
+          }}
+          onMouseLeave={() => {
+            dispatch(closeTooltip());
+            if (timerRef.current) {
+              clearTimeout(timerRef.current);
+              timerRef.current = null;
+            }
+          }}
+        >
+          <div>
+            {inventoryType !== 'shop' && item?.durability !== undefined && (
+              <WeightBar percent={item.durability} durability />
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default React.memo(React.forwardRef(InventorySlot));
+export default React.memo(React.forwardRef(InventoryClothesSlot));

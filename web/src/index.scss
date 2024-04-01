@@ -31,7 +31,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: 'Quicksand', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -62,6 +62,9 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: $mainColor;
   color: $textColor;
   padding: 4px;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: inset;
+  border-width: 1px;
   border-radius: 4px;
   outline: none;
   display: flex;
@@ -72,21 +75,15 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 8px;
   border-radius: 4px;
   background-color: transparent;
-
   outline: none;
   border: none;
-
   color: $textColor;
-  font-size: 16px;
-
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
   &:active {
     transform: none;
   }
-
   &:hover {
     background-color: $secondaryColorHighlight;
     cursor: pointer;
@@ -125,12 +122,12 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-  gap: 650px;
+  gap: 700px;
 }
 
 .inventory-control {
   position: absolute;
-  top: 90%;
+  top: 92.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -138,13 +135,13 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 
   .inventory-control-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
 
   .inventory-control-input {
@@ -195,7 +192,6 @@ button:active {
   left: 50%;
   transform: translate(-50%, -50%);
   color: $textColor;
-  font-size: 16px;
   width: 450px;
   display: flex;
   flex-direction: column;
@@ -274,8 +270,8 @@ button:active {
 
 // Dialog is used fro useful controls window
 
-// inventory grids
 
+// inventory grids
 .inventory-grid-wrapper {
   display: flex;
   flex-direction: column;
@@ -287,9 +283,8 @@ button:active {
   flex-direction: row;
   justify-content: space-between;
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
-  margin-bottom: 5px;
 }
 
 .inventory-grid-container {
@@ -301,50 +296,37 @@ button:active {
   overflow-y: scroll;
 }
 
+// inventory clothes
 .inventory-clothes-wrapper {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550px;
-  height: 900px;
+
+  width: 600px;
+  height: 800px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.inventory-clothes-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+  .inventory-clothes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+  }
 
-.inventory-clothes-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.inventory-clothes-slot {
-  background-color: $secondaryColor;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: saturation;
-  border-radius: 2.5%;
-  image-rendering: -webkit-optimize-contrast;
-  position: relative;
-  background-size: 7vh;
-  color: $textColor;
-  width: 8vh;
-  height: 8vh;
+  .inventory-clothes-outfit {
+    position: absolute;
+    top: 87.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 // inventory slots
-
 .inventory-slot {
   background-color: $secondaryColor;
   background-repeat: no-repeat;
@@ -354,6 +336,9 @@ button:active {
   position: relative;
   background-size: 7vh;
   color: $textColor;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: inset;
+  border-width: 1px;
 }
 
 .inventory-slot-label-box {
@@ -362,6 +347,9 @@ button:active {
   text-align: center;
   border-bottom-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  border-top-style: inset;
+  border-top-width: 1px;
 }
 
 .inventory-slot-label-text {
@@ -369,19 +357,20 @@ button:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 3px 3px;
-  font-weight: 500;
+  padding: 2px 3px;
+  font-weight: 400;
   font-family: $mainFont;
   font-size: 12px;
 }
 
 .inventory-slot-number {
-  color: $textColor;
+  background-color: white;
+  color: black;
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
-  font-size: 16px;
+  font-size: 12px;
   font-family: $mainFont;
 }
 
@@ -391,7 +380,7 @@ button:active {
   justify-content: space-between;
   height: 100%;
   p {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -413,7 +402,7 @@ button:active {
   padding: 3px;
   gap: 3px;
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -440,6 +429,33 @@ button:active {
   }
 }
 
+// inventory clothes slots
+.inventory-clothes-slot {
+  background-color: $secondaryColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2.5%;
+  image-rendering: -webkit-optimize-contrast;
+  position: relative;
+  background-size: 7vh;
+  color: $textColor;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: inset;
+  border-width: 1px;
+  width: $gridSize - 2vh;
+  height: $gridSize - 2vh;
+  overflow-y: scroll;
+}
+
+.item-clothes-slot-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  p {
+    font-size: 12px;
+  }
+}
 
 .tooltip-wrapper {
   pointer-events: none;

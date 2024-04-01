@@ -9,9 +9,11 @@ require 'modules.pefcl.server'
 
 local TriggerEventHooks = require 'modules.hooks.server'
 local db = require 'modules.mysql.server'
+local clothing = require 'modules.clothing.server'
 local Items = require 'modules.items.server'
 local Inventory = require 'modules.inventory.server'
 
+require 'modules.clothing.hook'
 require 'modules.crafting.server'
 require 'modules.shops.server'
 
@@ -26,10 +28,12 @@ function server.setPlayerInventory(player, data)
 		data = db.loadPlayer(player.identifier)
 	end
 
+	clothing.getClothesInv(player.source)
+
 	local inventory = {}
 	local totalWeight = 0
 
-	if data and next(data) then
+	if type(data) == 'table' then
 		local ostime = os.time()
 
 		for _, v in pairs(data) do
@@ -112,10 +116,11 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
     end
 
 	if data then
+        local isDataTable = type(data) == 'table'
 		if invType == 'stash' then
 			right = Inventory(data, left)
 			if right == false then return false end
-		elseif type(data) == 'table' then
+		elseif isDataTable then
 			if data.netid then
 				data.type = invType
 				right = Inventory(data)
@@ -164,6 +169,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 		}
 
 		if invType == 'container' then hookPayload.slot = left.containerSlot end
+		if isDataTable and data.netid then hookPayload.netId = data.netid end
 
 		if not TriggerEventHooks('openInventory', hookPayload) then return end
 

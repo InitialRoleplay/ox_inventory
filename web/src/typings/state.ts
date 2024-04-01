@@ -1,16 +1,16 @@
-import { ClothesInventory, Inventory } from './inventory';
+import { Inventory } from './inventory';
 
 export type State = {
   leftInventory: Inventory;
+  clothesInventory: Inventory;
   rightInventory: Inventory;
-  clothesInventory: ClothesInventory;
   itemAmount: number;
   shiftPressed: boolean;
   isBusy: boolean;
   additionalMetadata: Array<{ metadata: string; value: string }>;
   history?: {
     leftInventory: Inventory;
+    clothesInventory: Inventory;
     rightInventory: Inventory;
-    clothesInventory: ClothesInventory;
   };
 };

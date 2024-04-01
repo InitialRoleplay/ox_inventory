@@ -2,6 +2,7 @@ if not lib then return end
 
 local Items = require 'modules.items.server'
 local Inventory = require 'modules.inventory.server'
+
 local Shops = {}
 local locations = shared.target and 'targets' or 'locations'
 

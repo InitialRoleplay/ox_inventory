@@ -23,7 +23,7 @@ interface SlotProps {
   item: Slot;
 }
 
-const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = (
+const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = (
   { item, inventoryId, inventoryType, inventoryGroups },
   ref
 ) => {
@@ -65,7 +65,6 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
       }),
       drop: (source) => {
         dispatch(closeTooltip());
-
         switch (source.inventory) {
           case InventoryType.SHOP:
             onBuy(source, { inventory: inventoryType, item: { slot: item.slot } });
@@ -132,8 +131,8 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
             ? 'brightness(80%) grayscale(100%)'
             : undefined,
         opacity: isDragging ? 0.4 : 1.0,
-        backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'})`,
-        border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
+        backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+        animation: isOver ? 'tilt-shaking 0.75s infinite' : '',
       }}
     >
       {isSlotWithItem(item) && (
@@ -159,7 +158,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
           >
             {inventoryType === 'player' && item.slot <= 5 && <div className="inventory-slot-number">{item.slot}</div>}
             <div className="item-slot-info-wrapper">
-              {/* <p>
+              <p>
                 {item.weight > 0
                   ? item.weight >= 1000
                     ? `${(item.weight / 1000).toLocaleString('en-us', {
@@ -169,7 +168,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
                         minimumFractionDigits: 0,
                       })}g `
                   : ''}
-              </p> */}
+              </p>
               <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
             </div>
           </div>
@@ -223,4 +222,4 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
   );
 };
 
-export default React.memo(React.forwardRef(InventoryClothesSlot));
+export default React.memo(React.forwardRef(InventorySlot));

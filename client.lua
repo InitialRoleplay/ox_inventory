@@ -2,9 +2,11 @@ if not lib then return end
 
 require 'modules.bridge.client'
 require 'modules.interface.client'
+require 'modules.clothing.client'
 
 local Utils = require 'modules.utils.client'
 local Weapon = require 'modules.weapon.client'
+
 local currentWeapon
 
 exports('getCurrentWeapon', function()
@@ -109,53 +111,56 @@ local function closeTrunk()
 	end
 end
 
-local invPed
-
-local function createPed()
-    -- if DoesEntityExist(invPed) then return end
-
-	-- exports['ps-pause']:TogglePauseMenuColor()
-    -- SetFrontendActive(true)
-    -- ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
-
-    -- while not IsFrontendReadyForControl() do
-    --     Citizen.Wait(10)
-    -- end
-
-    -- Citizen.Wait(100)
-
-    -- SetMouseCursorVisibleInMenus(false)
-    -- ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
-
-    -- local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
-
-    -- SetEntityVisible(PlayerPedPreview, false, false)
-    -- GivePedToPauseMenu(PlayerPedPreview, 1)
-    -- SetPauseMenuPedLighting(true)
-    -- SetPauseMenuPedSleepState(true)
-    -- SetEntityCollision(PlayerPedPreview, false, true)
-
-    -- invPed = PlayerPedPreview
-end
-
-local function deletePed()
-	-- if not DoesEntityExist(invPed) then return end
-
-    -- SetFrontendActive(false)
-    -- ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
-    -- Citizen.Wait(100)
-    -- SetMouseCursorVisibleInMenus(true)
-	-- exports['ps-pause']:TogglePauseMenuColor()
-
-    -- if DoesEntityExist(invPed) then
-    --     DeleteEntity(invPed)
-    -- end
-end
-
 local CraftingBenches = require 'modules.crafting.client'
 local Vehicles = lib.load('data.vehicles')
 local Inventory = require 'modules.inventory.client'
-local Clothes = require 'modules.clothing.client'
+
+function client.createPed()
+    if DoesEntityExist(invPed) then return end
+
+	if GetResourceState('ps-pause') == 'started' then
+		exports['ps-pause']:TogglePauseMenuColor()
+	end
+
+    SetFrontendActive(true)
+    ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
+
+    while not IsFrontendReadyForControl() do
+        Citizen.Wait(10)
+    end
+
+    Citizen.Wait(100)
+
+    SetMouseCursorVisibleInMenus(false)
+    ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
+
+    local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
+
+    SetEntityVisible(PlayerPedPreview, false, false)
+    GivePedToPauseMenu(PlayerPedPreview, 1)
+    SetPauseMenuPedLighting(true)
+    SetPauseMenuPedSleepState(true)
+    SetEntityCollision(PlayerPedPreview, false, true)
+
+    invPed = PlayerPedPreview
+end
+
+function client.deletePed()
+	if not DoesEntityExist(invPed) then return end
+
+    SetFrontendActive(false)
+    ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
+    Citizen.Wait(100)
+    SetMouseCursorVisibleInMenus(true)
+
+	if GetResourceState('ps-pause') == 'started' then
+		exports['ps-pause']:TogglePauseMenuColor()
+	end
+
+    if DoesEntityExist(invPed) then
+        DeleteEntity(invPed)
+    end
+end
 
 ---@param inv string?
 ---@param data any?
@@ -200,9 +205,7 @@ function client.openInventory(inv, data)
 	end
 
 	if canOpenInventory() then
-		local left, right, clothes
-
-		createPed()
+		local left, clothes, right
 
 		if inv == 'player' and data ~= cache.serverId then
 			local targetId, targetPed
@@ -281,7 +284,7 @@ function client.openInventory(inv, data)
 			left, right = lib.callback.await('ox_inventory:openInventory', false, inv, data)
 		end
 
-		clothes = Clothes.get()
+        clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
 
 		if left and clothes then
 			if not cache.vehicle then
@@ -313,6 +316,8 @@ function client.openInventory(inv, data)
 					rightInventory = currentInventory
 				}
 			})
+
+			client.createPed()
 
 			if not currentInventory.coords and not inv == 'container' then
 				currentInventory.coords = GetEntityCoords(playerPed)
@@ -369,10 +374,11 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 
 	currentInventory = right or defaultInventory
 	currentInventory.ignoreSecurityChecks = true
+
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
 
-	local clothes = Clothes.get()
+	local clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
 
 	SendNUIMessage({
 		action = 'setupInventory',
@@ -799,6 +805,17 @@ local function registerCommands()
 	})
 
 	lib.addKeybind({
+		name = 'closeinv',
+		description = 'Close inventory',
+		defaultKey = 'ESC',
+		onPressed = function()
+			if invOpen then
+				return client.closeInventory()
+			end
+		end
+	})
+
+	lib.addKeybind({
 		name = 'inv2',
 		description = locale('open_secondary_inventory'),
 		defaultKey = client.keys[2],
@@ -892,7 +909,7 @@ function client.closeInventory(server)
 	-- and they're incapable of debugging, and I can't repro on a fresh install
 	if not client.interval then return end
 
-	deletePed()
+	client.deletePed()
 
 	if invOpen then
 		invOpen = nil
@@ -1093,8 +1110,6 @@ RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
 		createDrop(dropId, data)
 	end
 
-	local clothes = Clothes.get()
-
 	if owner == cache.serverId then
 		if currentWeapon?.slot == slot then
 			currentWeapon = Weapon.Disarm(currentWeapon)
@@ -1106,10 +1121,7 @@ RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
 			else
 				SendNUIMessage({
 					action = 'setupInventory',
-					data = {
-						clothesInventory = clothes,
-						rightInventory = currentInventory
-					}
+					data = { rightInventory = currentInventory }
 				})
 			end
 		end
@@ -1589,10 +1601,11 @@ RegisterNetEvent('ox_inventory:viewInventory', function(left, right)
 	currentInventory = right or defaultInventory
 	currentInventory.ignoreSecurityChecks = true
     currentInventory.type = 'inspect'
+
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
 
-	local clothes = Clothes.get()
+	local clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
 
 	SendNUIMessage({
 		action = 'setupInventory',
@@ -1752,6 +1765,17 @@ RegisterNUICallback('giveItem', function(data, cb)
     if entity and IsPedAPlayer(entity) and IsEntityVisible(entity) and #(GetEntityCoords(playerPed, true) - GetEntityCoords(entity, true)) < 3.0 then
         return giveItemToTarget(GetPlayerServerId(NetworkGetPlayerIndexFromPed(entity)), data.slot, data.count)
     end
+end)
+
+RegisterNUICallback('renameItem', function(data, cb)
+	cb(1)
+
+	client.closeInventory(true)
+
+    local input = lib.inputDialog('Renommer l\'item', {'Rien pour réinitialiser le nom'})
+    TriggerServerEvent('ox_inventory:renameItem', data, input)
+
+	client.openInventory()
 end)
 
 RegisterNUICallback('useButton', function(data, cb)

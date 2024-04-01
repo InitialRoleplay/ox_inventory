@@ -21,7 +21,12 @@ export const refreshSlotsReducer: CaseReducer<State, PayloadAction<Payload>> = (
     Object.values(action.payload.items)
       .filter((data) => !!data)
       .forEach((data) => {
-        const targetInventory = data.inventory ? data.inventory !== InventoryType.PLAYER ? state.rightInventory : state.leftInventory : state.leftInventory;
+        const targetInventory = data.inventory
+          ? data.inventory !== InventoryType.PLAYER
+            ? state.rightInventory
+            : state.leftInventory
+          : state.leftInventory;
+
         data.item.durability = itemDurability(data.item.metadata, curTime);
         targetInventory.items[data.item.slot - 1] = data.item;
       });
@@ -51,7 +56,11 @@ export const refreshSlotsReducer: CaseReducer<State, PayloadAction<Payload>> = (
     const inventoryId = action.payload.weightData.inventoryId;
     const inventoryMaxWeight = action.payload.weightData.maxWeight;
     const inv =
-      inventoryId === state.leftInventory.id ? 'leftInventory' : inventoryId === state.rightInventory.id ? 'rightInventory' : null;
+      inventoryId === state.leftInventory.id
+        ? 'leftInventory'
+        : inventoryId === state.rightInventory.id
+        ? 'rightInventory'
+        : null;
 
     if (!inv) return;
 
@@ -62,12 +71,16 @@ export const refreshSlotsReducer: CaseReducer<State, PayloadAction<Payload>> = (
     const { inventoryId } = action.payload.slotsData;
     const { slots } = action.payload.slotsData;
 
-    const inv = inventoryId === state.leftInventory.id ? 'leftInventory' : inventoryId === state.rightInventory.id ? 'rightInventory' : null;
+    const inv =
+      inventoryId === state.leftInventory.id
+        ? 'leftInventory'
+        : inventoryId === state.rightInventory.id
+        ? 'rightInventory'
+        : null;
 
     if (!inv) return;
 
     state[inv].slots = slots;
-
     inventorySlice.caseReducers.setupInventory(state, {
       type: 'setupInventory',
       payload: {

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
 import { flip, FloatingPortal, offset, shift, useFloating, useTransitionStyles } from '@floating-ui/react';
+import React, { useEffect } from 'react';
 import { useAppSelector } from '../../store';
 import SlotTooltip from '../inventory/SlotTooltip';
 
@@ -35,6 +35,7 @@ const Tooltip: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };

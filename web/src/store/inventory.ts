@@ -1,7 +1,5 @@
-import type { RootState } from '.';
-import { State } from '../typings';
 import { createSlice, current, isFulfilled, isPending, isRejected, PayloadAction } from '@reduxjs/toolkit';
-
+import type { RootState } from '.';
 import {
   moveSlotsReducer,
   refreshSlotsReducer,
@@ -9,9 +7,17 @@ import {
   stackSlotsReducer,
   swapSlotsReducer,
 } from '../reducers';
+import { State } from '../typings';
 
 const initialState: State = {
   leftInventory: {
+    id: '',
+    type: '',
+    slots: 0,
+    maxWeight: 0,
+    items: [],
+  },
+  clothesInventory: {
     id: '',
     type: '',
     slots: 0,
@@ -23,11 +29,6 @@ const initialState: State = {
     type: '',
     slots: 0,
     maxWeight: 0,
-    items: [],
-  },
-  clothesInventory: {
-    type: '',
-    slots: 0,
     items: [],
   },
   additionalMetadata: new Array(),
@@ -72,20 +73,21 @@ export const inventorySlice = createSlice({
   extraReducers: (builder) => {
     builder.addMatcher(isPending, (state) => {
       state.isBusy = true;
+
       state.history = {
         leftInventory: current(state.leftInventory),
-        rightInventory: current(state.rightInventory),
         clothesInventory: current(state.clothesInventory),
+        rightInventory: current(state.rightInventory),
       };
     });
     builder.addMatcher(isFulfilled, (state) => {
       state.isBusy = false;
     });
     builder.addMatcher(isRejected, (state) => {
-      if (state.history && state.history.leftInventory && state.history.rightInventory && state.history.clothesInventory) {
+      if (state.history && state.history.leftInventory && state.history.clothesInventory && state.history.rightInventory) {
         state.leftInventory = state.history.leftInventory;
-        state.rightInventory = state.history.rightInventory;
         state.clothesInventory = state.history.clothesInventory;
+        state.rightInventory = state.history.rightInventory;
       }
       state.isBusy = false;
     });
@@ -103,10 +105,9 @@ export const {
   refreshSlots,
   setContainerWeight,
 } = inventorySlice.actions;
-
 export const selectLeftInventory = (state: RootState) => state.inventory.leftInventory;
-export const selectRightInventory = (state: RootState) => state.inventory.rightInventory;
 export const selectClothesInventory = (state: RootState) => state.inventory.clothesInventory;
+export const selectRightInventory = (state: RootState) => state.inventory.rightInventory;
 export const selectItemAmount = (state: RootState) => state.inventory.itemAmount;
 export const selectIsBusy = (state: RootState) => state.inventory.isBusy;
 

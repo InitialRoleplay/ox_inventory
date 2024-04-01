@@ -10,112 +10,119 @@ return {
 	['clothes_masks'] = {
 		label = 'Masque',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_torso'] = {
 		label = 'Veste',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_pants'] = {
 		label = 'Pantalon',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_bags'] = {
 		label = 'Sac à dos',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_hands'] = {
 		label = 'Gants',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_shoes'] = {
 		label = 'Chaussures',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_access'] = {
 		label = 'Accéssoires',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_tshirts'] = {
 		label = 'T-Shirt',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_kevlars'] = {
 		label = 'Gilet par balle',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_bagdes'] = {
 		label = 'Badge',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_chains'] = {
 		label = 'Chaine',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_hats'] = {
 		label = 'Chapeau',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_glasses'] = {
 		label = 'Lunettes de Soleil',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_ears'] = {
 		label = 'Lunettes de Soleil',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_watches'] = {
 		label = 'Montre',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
 		stack = false,
 	},
 
 	['clothes_bracelets'] = {
 		label = 'Bracelet',
 		description = 'Un vêtement cool',
-		weight = 100,
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_outfit'] = {
+		label = 'Tenue',
+		description = 'Une tenue cool',
+		weight = 0,
 		stack = false,
 	},
 
@@ -772,17 +779,6 @@ return {
 		description = "",
 		client = {
 			image = "driver_license.png",
-		}
-	},
-
-	["coffee"] = {
-		label = "Café",
-		weight = 200,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "coffee.png",
 		}
 	},
 
@@ -2347,17 +2343,6 @@ return {
 		}
 	},
 
-	["banana"] = {
-		label = "Banane",
-		weight = 15,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "banana.png",
-		}
-	},
-
 	["weed_brick"] = {
 		label = "Brique de Weed",
 		weight = 1000,
@@ -2740,17 +2725,6 @@ return {
 		description = "",
 		client = {
 			image = "armour.png",
-		}
-	},
-
-	["twerks_candy"] = {
-		label = "Twerks",
-		weight = 100,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "twerks_candy.png",
 		}
 	},
 
@@ -3518,10 +3492,79 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
 		client = {
 			image = "water_bottle.png",
 		}
+	},
+
+	["coffee"] = {
+		label = "Café",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["cranberry"] = {
+		label = "Jus à la Canneberge",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["barr-bubblegum"] = {
+		label = "Canette Au Chewing Gum",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["ccookie"] = {
+		label = "Cocktail Cookie",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["earl_grey_tea"] = {
+		label = "The Vert",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["grapejuice"] = {
+		label = "Jus De Raisin",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["honey_hazelnut_oat_latte"] = {
+		label = "Café Latte",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["irn-bru"] = {
+		label = "Canette Energisante",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["iced_black_tea"] = {
+		label = "Thé Noir Glacé",
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	["orang.o.tang"] = {
+		label = "Canette à l'Orange",
+		weight = 500,
+		stack = true,
+		close = true,
 	},
 
 	["rolex"] = {
@@ -3532,17 +3575,6 @@ return {
 		description = "",
 		client = {
 			image = "rolex.png",
-		}
-	},
-
-	["grapejuice"] = {
-		label = "Jus de raisin",
-		weight = 500,
-		stack = true,
-		close = false,
-		description = "",
-		client = {
-			image = "grapejuice.png",
 		}
 	},
 
@@ -4693,6 +4725,123 @@ return {
 		client = {
 			image = "bread.png",
 		}
+	},
+
+	["twerks_candy"] = {
+		label = "Barre Chocolaté",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "Bait: Barre Chocolaté",
+		client = {
+			image = "twerks_candy.png",
+		}
+	},
+	
+	["sunchips2"] = {
+		label = "Chips Fromage",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "Bait: Chips au fromage",
+		client = {
+			image = "sunchips2.png",
+		}
+	},
+
+	["chocolate"] = {
+		label = "Tablette De Chocolat",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "Bait: Tablette de chocolat",
+		client = {
+			image = "chocolate.png",
+		}
+	},
+	
+	["sugar_butts"] = {
+		label = "Mégots Aux Sucres",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["banana"] = {
+		label = "Banane",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["blueberries"] = {
+		label = "Myrabelle",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["canned_chicken_soup"] = {
+		label = "Soupe De Poulet",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["canned_salmon"] = {
+		label = "Saumon En Boite",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["chocdonut"] = {
+		label = "Donuts",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["egg_boiled"] = {
+		label = "Oeuf",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["eye_kandy"] = {
+		label = "Bonbon",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["health_bar"] = {
+		label = "Barre De Santé",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["ration_chicken"] = {
+		label = "Ration De Poulet",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["ravioli"] = {
+		label = "Ravioli",
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	["vanilla_icecream"] = {
+		label = "Glace à La Vanille",
+		weight = 10,
+		stack = true,
+		close = true,
 	},
 
 	["technoplankton"] = {

@@ -37,13 +37,13 @@ debugData([
             },
             count: 5,
           },
-          { slot: 2, name: 'carokit', weight: 0, count: 1, metadata: { durability: 75 } },
+          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 } },
           { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' } },
           {
             slot: 4,
             name: 'water',
             weight: 100,
-            count: 1,
+            count: 20,
             metadata: { description: 'Generic item description' },
           },
           { slot: 5, name: 'water', weight: 100, count: 1 },
@@ -57,15 +57,17 @@ debugData([
               imageurl: 'https://i.imgur.com/2xHhTTz.png',
             },
           },
-          {
-            slot: 7,
-            name: 'clothes_mask',
-            weight: 100,
-            count: 1,
-            metadata: {
-              label: 'Masque',
-            },
-          },
+        ],
+      },
+      clothesInventory: {
+        id: 'clothingCITIZENID',
+        type: 'clothing',
+        slots: 17,
+        label: 'Vêtements',
+        weight: 100,
+        maxWeight: 100000,
+        items: [
+          { slot: 1, name: 'clothes_mask', weight: 0, metadata: { type: 'prop', drawable: 12, texture: 1, component: 1, image: 'clothes/male/male_1_12' }, },
         ],
       },
       rightInventory: {
@@ -92,60 +94,6 @@ debugData([
           },
         ],
       },
-      clothesInventory: {
-        type: 'clothes',
-        slots: 16,
-        items: [
-          {
-            slot: 1,
-          },
-          {
-            slot: 2,
-          },
-          {
-            slot: 3,
-          },
-          {
-            slot: 4,
-          },
-          {
-            slot: 5,
-          },
-          {
-            slot: 6,
-          },
-          {
-            slot: 7,
-          },
-          {
-            slot: 8,
-          },
-          {
-            slot: 9,
-          },
-          {
-            slot: 10,
-          },
-          {
-            slot: 11,
-          },
-          {
-            slot: 12,
-          },
-          {
-            slot: 13,
-          },
-          {
-            slot: 14,
-          },
-          {
-            slot: 15,
-          },
-          {
-            slot: 16,
-          },
-        ]
-      }
     },
   },
 ]);
@@ -182,8 +130,8 @@ const App: React.FC = () => {
   );
 };
 
-addEventListener('dragstart', function (event) {
-  event.preventDefault();
-});
+addEventListener("dragstart", function (event) {
+  event.preventDefault()
+})
 
 export default App;
