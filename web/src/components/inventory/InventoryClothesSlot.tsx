@@ -4,7 +4,7 @@ import { useDrag, useDragDropManager, useDrop } from 'react-dnd';
 import { useAppDispatch } from '../../store';
 import WeightBar from '../utils/WeightBar';
 import { onDrop } from '../../dnd/onDrop';
-import { canCraftItem, canPurchaseItem, getItemUrl, isSlotWithItem } from '../../helpers';
+import { getItemUrl, isSlotWithItem } from '../../helpers';
 import useNuiEvent from '../../hooks/useNuiEvent';
 import { ItemsPayload } from '../../reducers/refreshSlots';
 import { closeTooltip, openTooltip } from '../../store/tooltip';
@@ -12,23 +12,23 @@ import { openContextMenu } from '../../store/contextMenu';
 import { useMergeRefs } from '@floating-ui/react';
 
 const autorizedItem: Record<number, string> = {
-  1: 'clothes_masks',
-  2: 'clothes_torso',
-  3: 'clothes_pants',
-  4: 'clothes_bags',
-  5: 'clothes_hands',
-  6: 'clothes_shoes',
-  7: 'clothes_access',
-  8: 'clothes_tshirts',
-  9: 'clothes_kevlars',
-  10: 'clothes_bagdes',
-  11: 'clothes_chains',
-  12: 'clothes_hats',
-  13: 'clothes_glasses',
-  14: 'clothes_ears',
-  15: 'clothes_watches',
-  16: 'clothes_bracelets',
-  17: 'clothes_outfit',
+  1: "clothes_torsos",
+  2: "clothes_tshirts",
+  3: "clothes_hands",
+  4: "clothes_bags",
+  5: "clothes_armors",
+  6: "clothes_pants",
+  7: "clothes_shoes",
+  8: 'clothes_outfits',
+
+  9: "clothes_hats",
+  10: "clothes_masks",
+  11: "clothes_glasses",
+  12: "clothes_ears",
+  13: "clothes_chains",
+  14: "clothes_watches",
+  15: "clothes_bracelets",
+  16: "clothes_decals",
 }
 
 interface SlotProps {
@@ -115,6 +115,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : image})`,
         animation: isOver ? 'tilt-shaking 0.75s infinite' : '',
+        filter: isSlotWithItem(item) ? 'grayscale(0%)' : 'grayscale(100%)',
       }}
     >
       {isSlotWithItem(item) && (

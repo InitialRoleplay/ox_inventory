@@ -1007,6 +1007,8 @@ local function updateInventory(data, weight)
         end
 	end
 
+	client.sync()
+
 	client.setPlayerData('inventory', PlayerData.inventory)
 	TriggerEvent('ox_inventory:updateInventory', changes)
 end

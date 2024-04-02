@@ -7,83 +7,6 @@ return {
 		label = 'Argent sale',
 	},
 
-	['clothes_masks'] = {
-		label = 'Masque',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_torso'] = {
-		label = 'Veste',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_pants'] = {
-		label = 'Pantalon',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_bags'] = {
-		label = 'Sac à dos',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_hands'] = {
-		label = 'Gants',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_shoes'] = {
-		label = 'Chaussures',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_access'] = {
-		label = 'Accéssoires',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_tshirts'] = {
-		label = 'T-Shirt',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_kevlars'] = {
-		label = 'Gilet par balle',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_bagdes'] = {
-		label = 'Badge',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_chains'] = {
-		label = 'Chaine',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
 	['clothes_hats'] = {
 		label = 'Chapeau',
 		description = 'Un vêtement cool',
@@ -91,15 +14,29 @@ return {
 		stack = false,
 	},
 
+	['clothes_masks'] = {
+		label = 'Masque',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
 	['clothes_glasses'] = {
-		label = 'Lunettes de Soleil',
+		label = 'Lunettes',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
 	},
 
 	['clothes_ears'] = {
-		label = 'Lunettes de Soleil',
+		label = 'Oreillete',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_chains'] = {
+		label = 'Collier',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
@@ -113,13 +50,69 @@ return {
 	},
 
 	['clothes_bracelets'] = {
-		label = 'Bracelet',
+		label = 'Bracelets',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
 	},
 
-	['clothes_outfit'] = {
+	['clothes_decals'] = {
+		label = 'Accéssoires',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_torsos'] = {
+		label = 'Torse',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_tshirts'] = {
+		label = 'T-Shirt',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_hands'] = {
+		label = 'Gants',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_bags'] = {
+		label = 'Sac à dos',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_armors'] = {
+		label = 'Gilet par balle',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_pants'] = {
+		label = 'Pantalon',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_shoes'] = {
+		label = 'Chaussures',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_outfits'] = {
 		label = 'Tenue',
 		description = 'Une tenue cool',
 		weight = 0,
@@ -4737,7 +4730,7 @@ return {
 			image = "twerks_candy.png",
 		}
 	},
-	
+
 	["sunchips2"] = {
 		label = "Chips Fromage",
 		weight = 10,
@@ -4759,7 +4752,7 @@ return {
 			image = "chocolate.png",
 		}
 	},
-	
+
 	["sugar_butts"] = {
 		label = "Mégots Aux Sucres",
 		weight = 10,
@@ -5547,6 +5540,127 @@ return {
 		description = "Service Part - Power Steering Fluid",
 		client = {
 			image = "steering_fluid.png",
+		}
+	},
+
+	["microwave"] = {
+		label = "Microwave",
+		weight = 46000,
+		stack = false,
+		close = true,
+		description = "Microwave",
+		client = {
+			image = "placeholder.png",
+		}
+	},
+
+	["iphone"] = {
+		label = "iPhone",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Very expensive phone",
+		client = {
+			image = "iphone.png",
+		}
+	},
+
+	["jerry_can"] = {
+		label = "Jerrycan 20L",
+		weight = 20000,
+		stack = true,
+		close = true,
+		description = "A can full of Fuel",
+		client = {
+			image = "jerry_can.png",
+		}
+	},
+
+	["weaponlicense"] = {
+		label = "Weapon License",
+		weight = 0,
+		stack = false,
+		close = true,
+		description = "Weapon License",
+		client = {
+			image = "weapon_license.png",
+		}
+	},
+
+	["samsungphone"] = {
+		label = "Samsung S10",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Very expensive phone",
+		client = {
+			image = "samsungphone.png",
+		}
+	},
+
+	["lawyerpass"] = {
+		label = "Lawyer Pass",
+		weight = 0,
+		stack = false,
+		close = false,
+		description = "Pass exclusive to lawyers to show they can represent a suspect",
+		client = {
+			image = "lawyerpass.png",
+		}
+	},
+
+	["vodka"] = {
+		label = "Vodka",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "For all the thirsty out there",
+		client = {
+			image = "vodka.png",
+		}
+	},
+
+	["heavyarmor"] = {
+		label = "Heavy Armor",
+		weight = 5000,
+		stack = true,
+		close = true,
+		description = "Some protection won't hurt... right?",
+		client = {
+			image = "armor.png",
+		}
+	},
+
+	["small_tv"] = {
+		label = "Small TV",
+		weight = 30000,
+		stack = false,
+		close = true,
+		description = "TV",
+		client = {
+			image = "placeholder.png",
+		}
+	},
+
+	["toaster"] = {
+		label = "Toaster",
+		weight = 18000,
+		stack = false,
+		close = true,
+		description = "Toast",
+		client = {
+			image = "placeholder.png",
+		}
+	},
+
+	["driver_license"] = {
+		label = "Drivers License",
+		weight = 0,
+		stack = false,
+		close = false,
+		description = "Permit to show you can drive a vehicle",
+		client = {
+			image = "driver_license.png",
 		}
 	},
 }

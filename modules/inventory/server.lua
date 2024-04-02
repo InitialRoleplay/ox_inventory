@@ -1579,6 +1579,74 @@ local function dropItem(source, playerInventory, fromData, data)
 	}
 end
 
+---@param source number
+---@param playerInventory OxInventory
+---@param clothesInventory OxInventory
+---@param fromData SlotWithItem?
+---@param data SwapSlotData
+local function dropClothes(source, playerInventory, clothesInventory, fromData, data)
+    if not fromData then return end
+
+	local toData = table.clone(fromData)
+	toData.slot = data.toSlot
+	toData.count = data.count
+	toData.weight = Inventory.SlotWeight(Items(toData.name), toData)
+
+    if toData.weight > shared.playerweight then return end
+
+	if not TriggerEventHooks('swapItems', {
+		source = source,
+		fromInventory = clothesInventory.id,
+		fromSlot = fromData,
+		fromType = clothesInventory.type,
+		toInventory = 'newdrop',
+		toSlot = data.toSlot,
+		toType = 'drop',
+		count = data.count,
+        action = 'move',
+	}) then return end
+
+    fromData.count -= data.count
+    fromData.weight = Inventory.SlotWeight(Items(fromData.name), fromData)
+
+    if fromData.count < 1 then
+        fromData = nil
+    else
+        toData.metadata = table.clone(toData.metadata)
+    end
+
+	local slot = data.fromSlot
+	clothesInventory.weight -= toData.weight
+	clothesInventory.items[slot] = fromData
+
+	local dropId = generateInvId('drop')
+	local inventory = Inventory.Create(dropId, ('Drop %s'):format(dropId:gsub('%D', '')), 'drop', shared.playerslots, toData.weight, shared.playerweight, false, {[data.toSlot] = toData})
+
+	if not inventory then return end
+
+	inventory.coords = data.coords
+	Inventory.Drops[dropId] = {coords = inventory.coords, instance = data.instance}
+	playerInventory.changed = true
+
+	TriggerClientEvent('ox_inventory:createDrop', -1, dropId, Inventory.Drops[dropId], playerInventory.open and source, slot)
+
+	if server.loglevel > 0 then
+		lib.logger(playerInventory.id, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, toData.name, playerInventory.label, dropId))
+	end
+
+	if server.syncInventory then server.syncInventory(playerInventory) end
+
+	return true, {
+		weight = clothesInventory.weight,
+		items = {
+			{
+				item = fromData or { slot = data.fromSlot },
+				inventory = clothesInventory.id
+			}
+		}
+	}
+end
+
 local activeSlots = {}
 
 ---@param source number
@@ -1673,6 +1741,9 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
         end
 
         if data.toType == 'newdrop' then
+			if data.fromType == 'clothing' then
+				return dropClothes(source, playerInventory, fromInventory, fromData, data)
+			end
             return dropItem(source, playerInventory, fromData, data)
         end
 

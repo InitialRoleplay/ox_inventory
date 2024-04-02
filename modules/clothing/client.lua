@@ -10,7 +10,7 @@ local function isMaleOrFemale()
     return "male"
 end
 
-local function sync(all)
+function client.sync(all)
     if all then
         local props = appearance:getPedProps(cache.ped)
         local components = appearance:getPedComponents(cache.ped)
@@ -22,20 +22,15 @@ local function sync(all)
     local outfit = appearance:getPedAppearance(cache.ped)
     TriggerServerEvent("illenium-appearance:server:saveAppearance", outfit)
 
-    local clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
-	SendNUIMessage({
-		action = 'setupInventory',
-		data = {
-			clothesInventory = clothes,
-		}
-	})
-
-    client.deletePed()
-    client.createPed()
+    CreateThread(function()
+        Wait(100)
+        client.deletePed()
+        Wait(100)
+        client.createPed()
+    end)
 end
 
 lib.callback.register('ox_inventory:getPlayerClothes', function()
-    local index = 0
 	local clothes = {}
 
 	local sex = isMaleOrFemale()
@@ -43,39 +38,35 @@ lib.callback.register('ox_inventory:getPlayerClothes', function()
 	local components = appearance:getPedComponents(cache.ped)
 
 	for _, value in pairs(components) do
-        if value.component_id ~= 0 then
+        if value.component_id ~= 0 and value.component_id ~= 2 then
             local component = shared.clothing.no_clothing[sex][value.component_id]
+
             if component.drawable ~= value.drawable then
-                clothes[index] = {
+                clothes[#clothes+1] = {
                     type = 'component',
                     drawable = value.drawable,
                     texture = value.texture,
                     component = value.component_id,
                 }
             else
-                clothes[index] = {}
+                clothes[#clothes+1] = {}
             end
         end
-
-        index += 1
 	end
 
 	for _, value in pairs(props) do
-        if value.prop_id ~= 0 then
-            local prop = shared.clothing.no_props[sex][value.prop_id]
-            if prop.drawable ~= value.drawable then
-                clothes[index] = {
-                    type = 'prop',
-                    drawable = value.drawable,
-                    texture = value.texture,
-                    prop = value.prop_id,
-                }
-            else
-                clothes[index] = {}
-            end
-        end
+        local prop = shared.clothing.no_props[sex][value.prop_id]
 
-        index += 1
+        if prop.drawable ~= value.drawable then
+            clothes[#clothes+1] = {
+                type = 'prop',
+                drawable = value.drawable,
+                texture = value.texture,
+                prop = value.prop_id,
+            }
+        else
+            clothes[#clothes+1] = {}
+        end
 	end
 
 	return sex, clothes
@@ -100,7 +91,7 @@ lib.callback.register('ox_inventory:addClothing', function(data)
         })
     end
 
-    sync()
+    client.sync()
 
     return true
 end)
@@ -128,7 +119,7 @@ lib.callback.register('ox_inventory:removeClothing', function(data)
         })
     end
 
-    sync()
+    client.sync()
 
     return true
 end)
@@ -160,7 +151,7 @@ lib.callback.register('ox_inventory:addOutfit', function(data)
         appearance:setPedProps(cache.ped, props)
     end
 
-    sync()
+    client.sync()
 
     return true
 end)
@@ -198,7 +189,7 @@ lib.callback.register('ox_inventory:removeOutfit', function(data)
         appearance:setPedProps(cache.ped, props)
     end
 
-    sync()
+    client.sync()
 
     return true
 end)

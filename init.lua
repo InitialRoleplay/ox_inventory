@@ -25,12 +25,11 @@ shared.clothing = {
     no_clothing = {
         ['male'] = {
             [1] = { drawable = 0, texture = 0, },
-            [2] = { drawable = 0, texture = 0, },
             [3] = { drawable = 15, texture = 0, },
             [4] = { drawable = 14, texture = 1, },
             [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 34, texture = 0, },
-            [7] = { drawable = -1, texture = 0, },
+            [6] = { drawable = 5, texture = 0, },
+            [7] = { drawable = 0, texture = 0, },
             [8] = { drawable = 15, texture = 0, },
             [9] = { drawable = 0, texture = 0, },
             [10] = { drawable = 0, texture = 0, },
@@ -38,11 +37,10 @@ shared.clothing = {
         },
         ['female'] = {
             [1] = { drawable = 0, texture = 0, },
-            [2] = { drawable = 0, texture = 0, },
             [3] = { drawable = 15, texture = 0, },
             [4] = { drawable = 14, texture = 1, },
             [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 34, texture = 0, },
+            [6] = { drawable = 5, texture = 0, },
             [7] = { drawable = 0, texture = 0, },
             [8] = { drawable = 15, texture = 0, },
             [9] = { drawable = 0, texture = 0, },

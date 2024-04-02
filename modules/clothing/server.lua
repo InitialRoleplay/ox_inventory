@@ -6,27 +6,57 @@ CreateThread(function()
     Inventory = require 'modules.inventory.server'
 end)
 
-local idToNameComps = {
-    [1] = "clothes_masks",
-    [2] = "clothes_torso",
-    [3] = "clothes_pants",
-    [4] = "clothes_bags",
-    [5] = "clothes_hands",
-    [6] = "clothes_shoes",
-    [7] = "clothes_access",
-    [8] = "clothes_tshirts",
-    [9] = "clothes_kevlars",
-    [10] = "clothes_bagdes",
-    [11] = "clothes_chains",
+local slotItems = {
+    [1] = "clothes_torsos",     --
+    [2] = "clothes_tshirts",    --
+    [3] = "clothes_hands",
+    [4] = "clothes_bags",       --
+    [5] = "clothes_armors",     --
+    [6] = "clothes_pants",      --
+    [7] = "clothes_shoes",      --
+
+    [9] = "clothes_hats",       --
+    [10] = "clothes_masks",     --
+    [11] = "clothes_glasses",   --
+    [12] = "clothes_ears",      --
+    [13] = "clothes_chains",
+    [14] = "clothes_watches",   --
+    [15] = "clothes_bracelets", --
+    [16] = "clothes_decals",    --
 }
 
-local idToNameProps = {
-    [12] = "clothes_hats",
-    [13] = "clothes_glasses",
-    [14] = "clothes_ears",
-    [15] = "clothes_watches",
-    [16] = "clothes_bracelets",
+local idToSlot = {
+    [1] = 10,
+    [2] = 3,
+    [3] = 6,
+    [4] = 4,
+    [5] = 7,
+    [6] = 13,
+    [7] = 2,
+    [9] = 5,
+    [10] = 16,
+    [11] = 1,
+    [12] = 9,
+    [13] = 11,
+    [14] = 12,
+    [15] = 14,
+    [16] = 15,
 }
+
+function clothing.imageExists(image)
+    local path = GetResourcePath(GetCurrentResourceName())
+
+    local name = ("%s/web/images/%s.png"):format(path, image)
+
+    local f = io.open(name, "r")
+
+    if f ~= nil then
+        io.close(f)
+        return true
+    else
+        return false
+    end
+end
 
 function clothing.getClothesInv(source)
     local license = GetPlayerIdentifierByType(source, 'license')
@@ -36,66 +66,67 @@ end
 
 ---@param source number
 lib.callback.register('ox_inventory:getInventoryClothes', function(source)
-	local clothes = clothing.getClothesInv(source)
+    local src = source
+    local clothes = clothing.getClothesInv(src)
 
     if not clothes then
         return false
     end
 
-	local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', source)
+    local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', source)
 
-    if not playerClothes then
-        Inventory.Clear(clothes, 'clothes_outfit')
-    else
-        for i = 1, 16 do
-            local cloth = playerClothes[i]
+    for i = 1, 14 do
+        local cloth = playerClothes[i]
+        if i > 7 then
+            i += 1
+        end
 
-            if cloth and next(cloth) then
-                if cloth.type == 'component' then
-                    cloth.image = ('clothes/%s/%s_%s_%s'):format(playerSex, playerSex, cloth.component, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
-                else
-                    cloth.image = ('clothes/%s/%s_%s_%s'):format(playerSex, playerSex, cloth.prop, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
-                end
+        local item = clothes.items[idToSlot[i]]
 
-                if not clothes.items[i] then
-                    if cloth.type == 'component' then
-                        Inventory.AddItem(clothes, idToNameComps[i], 1, cloth, i)
-                    else
-                        Inventory.AddItem(clothes, idToNameProps[i], 1, cloth, i)
-                    end
-                else
-                    if not lib.table.matches(cloth, clothes.items[i].metadata) then
-                        if clothes.items[i] then
-                            Inventory.RemoveItem(clothes, clothes.items[i].name, clothes.items[i].count)
-                            if clothes.items[i].metadata then
-                                Inventory.AddItem(clothes, clothes.items[i].name, clothes.items[i].count, cloth)
-                            end
+        if next(cloth) then
+            if cloth.type == 'component' then
+                cloth.image = ('clothes/%s/%s_%s_%s'):format(playerSex, playerSex, cloth.component, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
+            else
+                cloth.image = ('clothes/%s/%s_prop_%s_%s'):format(playerSex, playerSex, cloth.prop, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
+            end
+
+            if not item then
+                Inventory.AddItem(clothes, tostring(slotItems[idToSlot[i]]), 1, cloth, tonumber(idToSlot[i]))
+            else
+                if not lib.table.matches(cloth, item.metadata) then
+                    if item then
+                        Inventory.RemoveItem(clothes, tostring(item.name), item.count, tonumber(idToSlot[i]))
+                        if item.metadata then
+                            Inventory.AddItem(clothes, tostring(item.name), item.count, cloth, tonumber(idToSlot[i]))
                         end
                     end
                 end
-            else
-                if clothes.items[i] then
-                    Inventory.RemoveItem(clothes, clothes.items[i].name, clothes.items[i].count)
-                    if clothes.items[i].metadata then
-                        Inventory.AddItem(source, clothes.items[i].name, clothes.items[i].count, clothes.items[i].metadata)
-                    end
+            end
+        else
+            if item then
+                local name = tostring(item.name)
+                local count = item.count
+                local metadata = item.metadata
+                if Inventory.RemoveItem(clothes, name, count, metadata, tonumber(idToSlot[i])) and (metadata and next(metadata)) then
+                    Inventory.AddItem(source, name, count, metadata)
                 end
             end
         end
     end
 
-    Inventory.Save(clothes)
-    clothes = clothing.getClothesInv(source)
+    for i = 1, 16 do
+        clothes:syncSlotsWithClients(i, true)
+    end
 
-	return clothes and {
-		id = clothes.id,
-		label = clothes.label,
-		type = clothes.type,
-		slots = clothes.slots,
-		weight = 0,
-		maxWeight = 10000,
-		items = clothes.items or {}
-	}
+    return clothes and {
+        id = clothes.id,
+        label = clothes.label,
+        type = clothes.type,
+        slots = clothes.slots,
+        weight = 0,
+        maxWeight = 10000,
+        items = clothes.items or {}
+    }
 end)
 
 function clothing.addClothing(payload)
@@ -111,7 +142,7 @@ function clothing.addOutfit(payload)
 end
 
 function clothing.removeOutfit(payload)
-	local clothes = clothing.getClothesInv(payload.source)
+    local clothes = clothing.getClothesInv(payload.source)
 
     local metadata = {
         props = {},
@@ -135,7 +166,7 @@ function clothing.removeOutfit(payload)
 end
 
 function clothing.swapOutfit(payload)
-	local clothes = clothing.getClothesInv(payload.source)
+    local clothes = clothing.getClothesInv(payload.source)
 
     local metadata = {
         props = {},
