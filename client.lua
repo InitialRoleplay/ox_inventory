@@ -115,6 +115,12 @@ local CraftingBenches = require 'modules.crafting.client'
 local Vehicles = lib.load('data.vehicles')
 local Inventory = require 'modules.inventory.client'
 
+local invPed
+
+function client.getPed()
+	return invPed
+end
+
 function client.createPed()
     if DoesEntityExist(invPed) then return end
 
@@ -1007,7 +1013,7 @@ local function updateInventory(data, weight)
         end
 	end
 
-	client.sync()
+	client.syncClothes()
 
 	client.setPlayerData('inventory', PlayerData.inventory)
 	TriggerEvent('ox_inventory:updateInventory', changes)

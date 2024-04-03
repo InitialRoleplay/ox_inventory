@@ -10,24 +10,22 @@ local function isMaleOrFemale()
     return "male"
 end
 
-function client.sync(all)
-    if all then
-        local props = appearance:getPedProps(cache.ped)
-        local components = appearance:getPedComponents(cache.ped)
-
-        appearance:setPedProps(cache.ped, props)
-        appearance:setPedComponents(cache.ped, components)
-    end
-
+function client.syncClothes(all)
     local outfit = appearance:getPedAppearance(cache.ped)
     TriggerServerEvent("illenium-appearance:server:saveAppearance", outfit)
 
-    CreateThread(function()
-        Wait(100)
-        client.deletePed()
-        Wait(100)
-        client.createPed()
-    end)
+    local ped = client.getPed()
+    appearance:setPedAppearance(ped, outfit)
+
+    if all then
+        local clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
+        SendNUIMessage({
+            action = 'setupInventory',
+            data = {
+                clothesInventory = clothes
+            }
+        })
+    end
 end
 
 lib.callback.register('ox_inventory:getPlayerClothes', function()
@@ -91,7 +89,7 @@ lib.callback.register('ox_inventory:addClothing', function(data)
         })
     end
 
-    client.sync()
+    client.syncClothes()
 
     return true
 end)
@@ -119,7 +117,7 @@ lib.callback.register('ox_inventory:removeClothing', function(data)
         })
     end
 
-    client.sync()
+    client.syncClothes()
 
     return true
 end)
@@ -129,7 +127,7 @@ lib.callback.register('ox_inventory:addOutfit', function(data)
         return false
     end
 
-    if data.type == 'component' then
+    if data.components and next(data.components) then
         local components = {}
         for _, value in pairs(data.components) do
             components[#components+1] = {
@@ -139,7 +137,9 @@ lib.callback.register('ox_inventory:addOutfit', function(data)
             }
         end
         appearance:setPedComponents(cache.ped, components)
-    elseif data.type == 'prop' then
+    end
+
+    if data.props and next(data.props) then
         local props = {}
         for _, value in pairs(data.props) do
             props[#props+1] = {
@@ -151,45 +151,31 @@ lib.callback.register('ox_inventory:addOutfit', function(data)
         appearance:setPedProps(cache.ped, props)
     end
 
-    client.sync()
+    client.syncClothes()
 
     return true
 end)
 
 lib.callback.register('ox_inventory:removeOutfit', function(data)
-    if not data then
-        return false
-    end
+    local sex = isMaleOrFemale()
 
-	local sex = isMaleOrFemale()
+    for index, value in pairs(shared.clothing.no_clothing[sex]) do
+        appearance:setPedComponent(cache.ped, {
+            component_id = index,
+            drawable = value.drawable,
+            texture = value.texture
+        })
+	end
 
-    if data.type == 'component' then
-        local components = {}
+	for index, value in pairs(shared.clothing.no_props[sex]) do
+        appearance:setPedProp(cache.ped, {
+            prop_id = index,
+            drawable = value.drawable,
+            texture = value.texture
+        })
+	end
 
-        for index, value in pairs(shared.clothing.no_clothing[sex]) do
-            components[#components+1] = {
-                component_id = index,
-                drawable = value.drawable,
-                texture = value.texture
-            }
-        end
-
-        appearance:setPedComponents(cache.ped, components)
-    elseif data.type == 'prop' then
-        local props = {}
-
-        for index, value in pairs(shared.clothing.no_props[sex]) do
-            props[#props+1] = {
-                prop_id = index,
-                drawable = value.drawable,
-                texture = value.texture
-            }
-        end
-
-        appearance:setPedProps(cache.ped, props)
-    end
-
-    client.sync()
+    client.syncClothes(true)
 
     return true
 end)
