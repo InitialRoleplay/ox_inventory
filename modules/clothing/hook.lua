@@ -16,6 +16,7 @@ exports.ox_inventory:registerHook('swapItems', function(payload)
 
     return true
 end, {
+    disableCheck = true,
     itemFilter = {
         clothes_torsos = true,
         clothes_tshirts = true,
@@ -54,6 +55,7 @@ exports.ox_inventory:registerHook('swapItems', function(payload)
 
     return true
 end, {
+    disableCheck = true,
     itemFilter = {
         clothes_outfits = true,
     },

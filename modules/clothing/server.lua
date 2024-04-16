@@ -64,17 +64,13 @@ function clothing.getClothesInv(source)
     return Inventory('clothing' .. license, source) --[[@as OxInventory]]
 end
 
----@param source number
-lib.callback.register('ox_inventory:getInventoryClothes', function(source)
+RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
     local src = source
-    local clothes = clothing.getClothesInv(src)
 
-    if not clothes then
-        return false
-    end
+    local clothes = clothing.getClothesInv(src)
+    if not clothes then return end
 
     local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', source)
-
     Inventory.Clear(clothes, 'clothes_outfits')
 
     for i = 1, 14 do
@@ -84,45 +80,28 @@ lib.callback.register('ox_inventory:getInventoryClothes', function(source)
             i += 1
         end
 
-        local item = clothes.items[idToSlot[i]]
-
         if cloth and next(cloth) then
             if cloth.type == 'component' then
-                cloth.image = ('clothes/%s/%s_%s_%s'):format(playerSex, playerSex, cloth.component, cloth.drawable) ..
-                (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
+                cloth.image = ('clothes/%s/%s_%s_%s'):format(playerSex, playerSex, cloth.component, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
             else
-                cloth.image = ('clothes/%s/%s_prop_%s_%s'):format(playerSex, playerSex, cloth.prop, cloth.drawable) ..
-                (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
+                cloth.image = ('clothes/%s/%s_prop_%s_%s'):format(playerSex, playerSex, cloth.prop, cloth.drawable) .. (cloth.texture ~= 0 and ('_%s'):format(cloth.texture) or '')
             end
-
-            if not item then
-                Inventory.AddItem(clothes, tostring(slotItems[idToSlot[i]]), 1, cloth, tonumber(idToSlot[i]))
-            else
-                if not lib.table.matches(cloth, item.metadata) then
-                    if item then
-                        Inventory.RemoveItem(clothes, tostring(item.name), item.count, tonumber(idToSlot[i]))
-                        if item.metadata then
-                            Inventory.AddItem(clothes, tostring(item.name), item.count, cloth, tonumber(idToSlot[i]))
-                        end
-                    end
-                end
-            end
-        else
-            if item then
-                local name = tostring(item.name)
-                local count = item.count
-                local metadata = item.metadata
-
-                if Inventory.RemoveItem(clothes, name, count, metadata, tonumber(idToSlot[i])) and (metadata and next(metadata)) then
-                    Inventory.AddItem(source, name, count, metadata)
-                end
-            end
+            Inventory.AddItem(clothes, tostring(slotItems[idToSlot[i]]), 1, cloth, tonumber(idToSlot[i]))
         end
     end
 
     for i = 1, 16 do
-        clothes:syncSlotsWithClients(i, true)
+        clothes:syncSlotsWithClients({
+            slots = { item = { slot = i } },
+            inventory = clothes.id,
+        }, true)
     end
+end)
+
+---@param source number
+lib.callback.register('ox_inventory:getInventoryClothes', function(source)
+    local src = source
+    local clothes = clothing.getClothesInv(src)
 
     return clothes and {
         id = clothes.id,
@@ -132,7 +111,7 @@ lib.callback.register('ox_inventory:getInventoryClothes', function(source)
         weight = 0,
         maxWeight = 10000,
         items = clothes.items or {}
-    }
+    } or false
 end)
 
 function clothing.addClothing(payload)
@@ -152,7 +131,7 @@ function clothing.removeOutfit(payload)
 end
 
 function clothing.swapOutfit(payload)
-    return true
+    return false
 end
 
 return clothing

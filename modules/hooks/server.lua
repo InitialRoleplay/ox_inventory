@@ -61,8 +61,10 @@ local function TriggerEventHooks(event, payload)
             local _, response = pcall(hooks[i], payload)
 			local executionTime = microtime() - start
 
-			if executionTime >= 100000 then
-				warn(('Execution of event hook "%s:%s:%s" took %.2fms.'):format(hook.resource, event, i, executionTime / 1e3))
+			if not hook.disableCheck then
+				if executionTime >= 100000 then
+					warn(('Execution of event hook "%s:%s:%s" took %.2fms.'):format(hook.resource, event, i, executionTime / 1e3))
+				end
 			end
 
 			if event == 'createItem' then
