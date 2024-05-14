@@ -125,7 +125,7 @@ function client.createPed()
     if DoesEntityExist(invPed) then return end
 
 	if GetResourceState('ps-pause') == 'started' then
-		exports['ps-pause']:TogglePauseMenuColor()
+		-- exports['ps-pause']:TogglePauseMenuColor()
 	end
 
     SetFrontendActive(true)
@@ -160,7 +160,7 @@ function client.deletePed()
     SetMouseCursorVisibleInMenus(true)
 
 	if GetResourceState('ps-pause') == 'started' then
-		exports['ps-pause']:TogglePauseMenuColor()
+		-- exports['ps-pause']:TogglePauseMenuColor()
 	end
 
     if DoesEntityExist(invPed) then

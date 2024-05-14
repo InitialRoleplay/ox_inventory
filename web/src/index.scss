@@ -122,12 +122,12 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-  gap: 700px;
+  gap: 600px;
 }
 
 .inventory-control {
   position: absolute;
-  top: 92.5%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -270,6 +270,20 @@ button:active {
 
 // Dialog is used fro useful controls window
 
+// Fast slots grid
+.inventory-fast-grid {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  height: calc(#{1} * #{$gridSize + 0.25vh} + #{1} * #{$gridGap});
+  grid-template-columns: repeat(5, $gridSize);
+  grid-auto-rows: $gridSize + 0.22vh;
+  gap: $gridGap;
+  overflow-y: scroll;
+}
 
 // inventory grids
 .inventory-grid-wrapper {
