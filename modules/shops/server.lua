@@ -250,6 +250,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					shopId = shopId,
 					toInventory = playerInv.id,
 					toSlot = data.toSlot,
+					fromSlot = fromData,
 					itemName = fromData.name,
 					metadata = metadata,
 					count = count,
