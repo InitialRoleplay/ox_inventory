@@ -1,4 +1,6 @@
 return {
+	-- Vanilla
+
 	['money'] = {
 		label = 'Argent',
 	},
@@ -7,11 +9,41 @@ return {
 		label = 'Argent sale',
 	},
 
-	['clothes_hats'] = {
-		label = 'Chapeau',
-		description = 'Un vêtement cool',
-		weight = 0,
+	['ghostcam'] = {
+		label = 'Caméra spectra',
+		weight = 100,
+		stack = true,
+		close = true,
+		consume = 0,
+		server = {
+			export = 'initial_ghosthunting.ghostcam',
+		},
+	},
+
+	['ghostevidence'] = {
+		label = 'Indice',
+		weight = 100,
 		stack = false,
+		close = true,
+		consume = 0,
+		server = {
+			export = 'initial_ghosthunting.ghostevidence',
+		},
+	},
+
+	["vehiclekey"] = {
+		label = "Clés de véhicule",
+		description =
+		'Il s\'agit d\'une clé de voiture, prenez-en soin, si vous la perdez, vous ne pourrez probablement pas utiliser votre voiture.',
+		weight = 10,
+		stack = false
+	},
+
+	["keybag"] = {
+		label = "Sac à clés",
+		description = 'Il s\'agit d\'un sac à clés, dans lequel vous pouvez ranger toutes vos clés.',
+		weight = 10,
+		stack = false
 	},
 
 	['clothes_masks'] = {
@@ -21,22 +53,92 @@ return {
 		stack = false,
 	},
 
-	['clothes_glasses'] = {
-		label = 'Lunettes',
+	['clothes_torso'] = {
+		label = 'Veste',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
 	},
 
-	['clothes_ears'] = {
-		label = 'Oreillete',
+	['clothes_pants'] = {
+		label = 'Pantalon',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_bags'] = {
+		label = 'Sac à dos',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_hands'] = {
+		label = 'Gants',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_shoes'] = {
+		label = 'Chaussures',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_access'] = {
+		label = 'Accéssoires',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_tshirts'] = {
+		label = 'T-Shirt',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_kevlars'] = {
+		label = 'Gilet par balle',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_bagdes'] = {
+		label = 'Badge',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
 	},
 
 	['clothes_chains'] = {
-		label = 'Collier',
+		label = 'Chaine',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_hats'] = {
+		label = 'Chapeau',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_glasses'] = {
+		label = 'Lunettes de Soleil',
+		description = 'Un vêtement cool',
+		weight = 0,
+		stack = false,
+	},
+
+	['clothes_ears'] = {
+		label = 'Lunettes de Soleil',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
@@ -50,90 +152,16 @@ return {
 	},
 
 	['clothes_bracelets'] = {
-		label = 'Bracelets',
+		label = 'Bracelet',
 		description = 'Un vêtement cool',
 		weight = 0,
 		stack = false,
 	},
 
-	['clothes_decals'] = {
-		label = 'Accéssoires',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_torsos'] = {
-		label = 'Torse',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_tshirts'] = {
-		label = 'T-Shirt',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_hands'] = {
-		label = 'Gants',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_bags'] = {
-		label = 'Sac à dos',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_armors'] = {
-		label = 'Gilet par balle',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_pants'] = {
-		label = 'Pantalon',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_shoes'] = {
-		label = 'Chaussures',
-		description = 'Un vêtement cool',
-		weight = 0,
-		stack = false,
-	},
-
-	['clothes_outfits'] = {
+	['clothes_outfit'] = {
 		label = 'Tenue',
 		description = 'Une tenue cool',
 		weight = 0,
-		stack = false,
-	},
-
-	["cryptostick"] = {
-		label = "Crypto Stick",
-		weight = 50,
-		stack = false,
-	},
-
-	["phone_dongle"] = {
-		label = "Phone Dongle",
-		weight = 50,
-		stack = false,
-	},
-
-	["powerbank"] = {
-		label = "Power Bank",
-		weight = 50,
 		stack = false,
 	},
 
@@ -225,108 +253,6 @@ return {
 	['bluedream_joint'] = {
 		label = 'Blue Dream Joint',
 		weight = 15,
-	},
-
-	['phone'] = {
-		label = 'Classic Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
-	},
-
-	['black_phone'] = {
-		label = 'Black Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
-	},
-
-	['yellow_phone'] = {
-		label = 'Yellow Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
-	},
-
-	['red_phone'] = {
-		label = 'Red Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
-	},
-
-	['green_phone'] = {
-		label = 'Green Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
-	},
-
-	['white_phone'] = {
-		label = 'White Phone',
-		weight = 150,
-		stack = false,
-		consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		}
 	},
 
 	['trowel'] = {
@@ -983,17 +909,6 @@ return {
 		}
 	},
 
-	["cuffkeys"] = {
-		label = "Cuff Keys",
-		weight = 75,
-		stack = true,
-		close = true,
-		description = "Set them free !",
-		client = {
-			image = "cuffkeys.png",
-		}
-	},
-
 	["livery"] = {
 		label = "Rouleau de livrée",
 		weight = 0,
@@ -1013,17 +928,6 @@ return {
 		description = "",
 		client = {
 			image = "null.png",
-		}
-	},
-
-	["ziptie"] = {
-		label = "ZipTie",
-		weight = 50,
-		stack = true,
-		close = true,
-		description = "Comes in handy when people misbehave. Maybe it can be used for something else?",
-		client = {
-			image = "ziptie.png",
 		}
 	},
 
@@ -1654,28 +1558,6 @@ return {
 		}
 	},
 
-	["leo-gps"] = {
-		label = "LEO GPS",
-		weight = 2000,
-		stack = false,
-		close = true,
-		description = "Show your gps location to others",
-		client = {
-			image = "leo-gps.png",
-		}
-	},
-
-	["broken_handcuffs"] = {
-		label = "Broken Handcuffs",
-		weight = 100,
-		stack = true,
-		close = true,
-		description = "It's broken, maybe you can repair it?",
-		client = {
-			image = "broken_handcuffs.png",
-		}
-	},
-
 	["weed_packaged"] = {
 		label = "weed_packaged",
 		weight = 10,
@@ -1717,17 +1599,6 @@ return {
 		description = "",
 		client = {
 			image = "moneybag.png",
-		}
-	},
-
-	["bolt_cutter"] = {
-		label = "Bolt Cutter",
-		weight = 50,
-		stack = true,
-		close = true,
-		description = "Wanna cut some metal items ?",
-		client = {
-			image = "bolt_cutter.png",
 		}
 	},
 
@@ -3433,28 +3304,6 @@ return {
 		description = "",
 		client = {
 			image = "null.png",
-		}
-	},
-
-	["vehiclekey"] = {
-		label = "Vehicle key",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
-		client = {
-			image = "vehiclekeys.png",
-		}
-	},
-
-	["flush_cutter"] = {
-		label = "Flush Cutter",
-		weight = 50,
-		stack = true,
-		close = true,
-		description = "Comes in handy when you want to cut zipties..",
-		client = {
-			image = "flush_cutter.png",
 		}
 	},
 
@@ -5543,124 +5392,196 @@ return {
 		}
 	},
 
-	["microwave"] = {
-		label = "Microwave",
-		weight = 46000,
-		stack = false,
-		close = true,
-		description = "Microwave",
-		client = {
-			image = "placeholder.png",
-		}
-	},
-
-	["iphone"] = {
-		label = "iPhone",
-		weight = 1000,
+	["kq_easteregg"] = {
+		label = "Easter egg",
+		weight = 100,
 		stack = true,
 		close = true,
-		description = "Very expensive phone",
+		description = "Decorated easter egg",
 		client = {
-			image = "iphone.png",
+			image = "kq_easteregg.png",
 		}
 	},
 
-	["jerry_can"] = {
-		label = "Jerrycan 20L",
-		weight = 20000,
+	-- qb-policejob
+
+	["broken_handcuffs"] = {
+		label = "Broken handcuffs",
+		weight = 100,
 		stack = true,
 		close = true,
-		description = "A can full of Fuel",
-		client = {
-			image = "jerry_can.png",
-		}
+		description = "It's broken, maybe you can repair it?",
 	},
 
-	["weaponlicense"] = {
-		label = "Weapon License",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "Weapon License",
-		client = {
-			image = "weapon_license.png",
-		}
-	},
-
-	["samsungphone"] = {
-		label = "Samsung S10",
-		weight = 1000,
+	["cuffkeys"] = {
+		label = "Cuff Keys",
+		weight = 75,
 		stack = true,
 		close = true,
-		description = "Very expensive phone",
-		client = {
-			image = "samsungphone.png",
-		}
+		description = "Set them free !",
 	},
 
-	["lawyerpass"] = {
-		label = "Lawyer Pass",
-		weight = 0,
-		stack = false,
-		close = false,
-		description = "Pass exclusive to lawyers to show they can represent a suspect",
-		client = {
-			image = "lawyerpass.png",
-		}
-	},
-
-	["vodka"] = {
-		label = "Vodka",
-		weight = 500,
+	["ziptie"] = {
+		label = "Ziptie",
+		weight = 50,
 		stack = true,
 		close = true,
-		description = "For all the thirsty out there",
-		client = {
-			image = "vodka.png",
-		}
+		description = "Comes in handy when people misbehave. Maybe it can be used for something else?",
 	},
 
-	["heavyarmor"] = {
-		label = "Heavy Armor",
-		weight = 5000,
+	["flush_cutter"] = {
+		label = "Flush Cutter",
+		weight = 50,
 		stack = true,
 		close = true,
-		description = "Some protection won't hurt... right?",
-		client = {
-			image = "armor.png",
-		}
+		description = "Comes in handy when you want to cut zipties..",
+		client = { image = "flush_cutter.png", }
 	},
 
-	["small_tv"] = {
-		label = "Small TV",
-		weight = 30000,
+	["bolt_cutter"] = {
+		label = "Bolt Cutter",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "Wanna cut some metal items ?",
+		client = { image = "bolt_cutter.png", }
+	},
+
+	["leo-gps"] = {
+		label = "LEO GPS",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "Show your gps location to others",
+	},
+
+	["alcoholtester"] = {
+		label = "Alcohol Tester",
+		weight = 400,
 		stack = false,
 		close = true,
-		description = "TV",
+		description = "For testing purposes..",
+	},
+
+	-- qs-smartphone-pro
+
+	["cryptostick"] = {
+		label = "Crypto Stick",
+		weight = 50,
+		stack = false,
+	},
+
+	["phone_dongle"] = {
+		label = "Phone Dongle",
+		weight = 50,
+		stack = false,
+	},
+
+	["powerbank"] = {
+		label = "Power Bank",
+		weight = 50,
+		stack = false,
+	},
+
+	['phone'] = {
+		label = 'Classic Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
 		client = {
-			image = "placeholder.png",
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
 		}
 	},
 
-	["toaster"] = {
-		label = "Toaster",
-		weight = 18000,
+	['black_phone'] = {
+		label = 'Black Phone',
+		weight = 150,
 		stack = false,
-		close = true,
-		description = "Toast",
+		consume = 0,
 		client = {
-			image = "placeholder.png",
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
 		}
 	},
 
-	["driver_license"] = {
-		label = "Drivers License",
-		weight = 0,
+	['yellow_phone'] = {
+		label = 'Yellow Phone',
+		weight = 150,
 		stack = false,
-		close = false,
-		description = "Permit to show you can drive a vehicle",
+		consume = 0,
 		client = {
-			image = "driver_license.png",
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['red_phone'] = {
+		label = 'Red Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['green_phone'] = {
+		label = 'Green Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['white_phone'] = {
+		label = 'White Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
 		}
 	},
 }
