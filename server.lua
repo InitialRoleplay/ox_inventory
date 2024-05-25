@@ -4,9 +4,6 @@ if GetConvar('inventory:versioncheck', 'true') == 'true' then
 	lib.versionCheck('overextended/ox_inventory')
 end
 
-require 'modules.bridge.server'
-require 'modules.pefcl.server'
-
 local TriggerEventHooks = require 'modules.hooks.server'
 local db = require 'modules.mysql.server'
 local clothing = require 'modules.clothing.server'
@@ -16,6 +13,8 @@ local Inventory = require 'modules.inventory.server'
 require 'modules.clothing.hook'
 require 'modules.crafting.server'
 require 'modules.shops.server'
+require 'modules.pefcl.server'
+require 'modules.bridge.server'
 
 ---@param player table
 ---@param data table?
