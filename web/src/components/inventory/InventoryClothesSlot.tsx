@@ -45,7 +45,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
 ) => {
   const manager = useDragDropManager();
   const dispatch = useAppDispatch();
-  const timerRef = useRef<NodeJS.Timer | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const [{ isDragging }, drag] = useDrag<DragSource, void, { isDragging: boolean }>(
     () => ({
@@ -122,7 +122,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
         <div
           className="item-clothes-slot-wrapper"
           onMouseEnter={() => {
-            timerRef.current = setTimeout(() => {
+            timerRef.current = window.setTimeout(() => {
               dispatch(openTooltip({ item, inventoryType }));
             }, 500);
           }}

@@ -37,7 +37,6 @@ debugData([
             },
             count: 5,
           },
-          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 } },
           { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' } },
           {
             slot: 4,
@@ -66,9 +65,7 @@ debugData([
         label: 'Vêtements',
         weight: 100,
         maxWeight: 100000,
-        items: [
-          { slot: 1, name: 'clothes_mask', weight: 0, metadata: { type: 'prop', drawable: 12, texture: 1, component: 1, image: 'clothes/male/male_1_12' }, },
-        ],
+        items: [],
       },
       rightInventory: {
         id: 'shop',
@@ -130,8 +127,8 @@ const App: React.FC = () => {
   );
 };
 
-addEventListener("dragstart", function (event) {
-  event.preventDefault()
-})
+addEventListener('dragstart', function (event) {
+  event.preventDefault();
+});
 
 export default App;
