@@ -4,23 +4,23 @@ import InventoryClothesSlot from './InventoryClothesSlot';
 import { useAppSelector } from '../../store';
 
 const images: Record<string, string> = {
-  "clothing-1": 'nui://ox_inventory/web/images/clothes/empty/torsos.png',
-  "clothing-2": 'nui://ox_inventory/web/images/clothes/empty/tshirts.png',
-  "clothing-3": 'nui://ox_inventory/web/images/clothes/empty/hands.png',
-  "clothing-4": 'nui://ox_inventory/web/images/clothes/empty/bags.png',
-  "clothing-5": 'nui://ox_inventory/web/images/clothes/empty/armors.png',
-  "clothing-6": 'nui://ox_inventory/web/images/clothes/empty/pants.png',
-  "clothing-7": 'nui://ox_inventory/web/images/clothes/empty/shoes.png',
-  "clothing-8": 'nui://ox_inventory/web/images/clothes/empty/outfits.png',
+  "clothing-1": 'nui://ox_inventory/web/images/clothes/empty/torsos.webp',
+  "clothing-2": 'nui://ox_inventory/web/images/clothes/empty/tshirts.webp',
+  "clothing-3": 'nui://ox_inventory/web/images/clothes/empty/hands.webp',
+  "clothing-4": 'nui://ox_inventory/web/images/clothes/empty/bags.webp',
+  "clothing-5": 'nui://ox_inventory/web/images/clothes/empty/armors.webp',
+  "clothing-6": 'nui://ox_inventory/web/images/clothes/empty/pants.webp',
+  "clothing-7": 'nui://ox_inventory/web/images/clothes/empty/shoes.webp',
+  "clothing-8": 'nui://ox_inventory/web/images/clothes/empty/outfits.webp',
 
-  "clothing-9": 'nui://ox_inventory/web/images/clothes/empty/hats.png',
-  "clothing-10": 'nui://ox_inventory/web/images/clothes/empty/masks.png',
-  "clothing-11": 'nui://ox_inventory/web/images/clothes/empty/glasses.png',
-  "clothing-12": 'nui://ox_inventory/web/images/clothes/empty/ears.png',
-  "clothing-13": 'nui://ox_inventory/web/images/clothes/empty/chains.png',
-  "clothing-14": 'nui://ox_inventory/web/images/clothes/empty/watches.png',
-  "clothing-15": 'nui://ox_inventory/web/images/clothes/empty/bracelets.png',
-  "clothing-16": 'nui://ox_inventory/web/images/clothes/empty/decals.png',
+  "clothing-9": 'nui://ox_inventory/web/images/clothes/empty/hats.webp',
+  "clothing-10": 'nui://ox_inventory/web/images/clothes/empty/masks.webp',
+  "clothing-11": 'nui://ox_inventory/web/images/clothes/empty/glasses.webp',
+  "clothing-12": 'nui://ox_inventory/web/images/clothes/empty/ears.webp',
+  "clothing-13": 'nui://ox_inventory/web/images/clothes/empty/chains.webp',
+  "clothing-14": 'nui://ox_inventory/web/images/clothes/empty/watches.webp',
+  "clothing-15": 'nui://ox_inventory/web/images/clothes/empty/bracelets.webp',
+  "clothing-16": 'nui://ox_inventory/web/images/clothes/empty/decals.webp',
 };
 
 const InventoryClothesGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {

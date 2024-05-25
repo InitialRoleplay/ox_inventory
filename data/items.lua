@@ -648,7 +648,7 @@ return {
 		close = true,
 		description = 'A little dusty',
 		client = {
-			image = 'newscam.png',
+			image = 'newscam.webp',
 			export = 'dailyglobe.newscamera'
 		},
 	},
@@ -661,7 +661,7 @@ return {
 		close = true,
 		description = 'Heavier than it looks',
 		client = {
-			image = 'newsbmic.png',
+			image = 'newsbmic.webp',
 			export = 'dailyglobe.newsboom'
 		},
 	},
@@ -674,7 +674,7 @@ return {
 		close = true,
 		description = 'Is this thing on?',
 		client = {
-			image = 'newsmic.png',
+			image = 'newsmic.webp',
 			export = 'dailyglobe.newsmic'
 		},
 	},
@@ -686,7 +686,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -697,7 +697,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -708,7 +708,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -719,7 +719,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "shovel.png",
+			image = "shovel.webp",
 		}
 	},
 
@@ -730,7 +730,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_nutrition.png",
+			image = "weed_nutrition.webp",
 		}
 	},
 
@@ -741,7 +741,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "laptop.png",
+			image = "laptop.webp",
 		}
 	},
 
@@ -752,7 +752,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -763,7 +763,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "exhaust.png",
+			image = "exhaust.webp",
 		}
 	},
 
@@ -773,7 +773,7 @@ return {
 		stack = false,
 		close = true,
 		client = {
-			image = "diving_tube.png",
+			image = "diving_tube.webp",
 		}
 	},
 
@@ -784,7 +784,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "headlights.png",
+			image = "headlights.webp",
 		}
 	},
 
@@ -795,7 +795,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "brakes1.png",
+			image = "brakes1.webp",
 		}
 	},
 
@@ -806,7 +806,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "spray.png",
+			image = "spray.webp",
 		}
 	},
 
@@ -817,7 +817,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "milk.png",
+			image = "milk.webp",
 		}
 	},
 
@@ -828,7 +828,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_fanta.png",
+			image = "bs_fanta.webp",
 		}
 	},
 
@@ -839,7 +839,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "hay.png",
+			image = "hay.webp",
 		}
 	},
 
@@ -850,7 +850,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "copper.png",
+			image = "copper.webp",
 		}
 	},
 
@@ -861,7 +861,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "seat.png",
+			image = "seat.webp",
 		}
 	},
 
@@ -872,7 +872,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -883,7 +883,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "id_card.png",
+			image = "id_card.webp",
 		}
 	},
 
@@ -894,7 +894,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "xtc_baggy.png",
+			image = "xtc_baggy.webp",
 		}
 	},
 
@@ -905,7 +905,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -916,7 +916,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "livery.png",
+			image = "livery.webp",
 		}
 	},
 
@@ -927,7 +927,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -938,7 +938,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "dmv.png",
+			image = "dmv.webp",
 		}
 	},
 
@@ -949,7 +949,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "cocaine_cut.png",
+			image = "cocaine_cut.webp",
 		}
 	},
 
@@ -960,7 +960,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -971,7 +971,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "transmission2.png",
+			image = "transmission2.webp",
 		}
 	},
 
@@ -982,7 +982,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "package_money.png",
+			image = "package_money.webp",
 		}
 	},
 
@@ -993,7 +993,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "evidence.png",
+			image = "evidence.webp",
 		}
 	},
 
@@ -1004,7 +1004,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "glass.png",
+			image = "glass.webp",
 		}
 	},
 
@@ -1015,7 +1015,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "grape.png",
+			image = "grape.webp",
 		}
 	},
 
@@ -1026,7 +1026,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "firework2.png",
+			image = "firework2.webp",
 		}
 	},
 
@@ -1037,7 +1037,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "roof.png",
+			image = "roof.webp",
 		}
 	},
 
@@ -1048,7 +1048,7 @@ return {
 		close = true,
 		description = "A filled evidence bag to see who committed the crime >:(",
 		client = {
-			image = "evidence.png",
+			image = "evidence.webp",
 		}
 	},
 
@@ -1059,7 +1059,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "markedbills.png",
+			image = "markedbills.webp",
 		}
 	},
 
@@ -1070,7 +1070,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "joint.png",
+			image = "joint.webp",
 		}
 	},
 
@@ -1081,7 +1081,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "wood.png",
+			image = "wood.webp",
 		}
 	},
 
@@ -1092,7 +1092,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "armor.png",
+			image = "armor.webp",
 		}
 	},
 
@@ -1103,7 +1103,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "transmission1.png",
+			image = "transmission1.webp",
 		}
 	},
 
@@ -1114,7 +1114,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mojito.png",
+			image = "mojito.webp",
 		}
 	},
 
@@ -1125,7 +1125,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1136,7 +1136,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "ginger_syrup.png",
+			image = "ginger_syrup.webp",
 		}
 	},
 
@@ -1147,7 +1147,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "fishing_bait.png",
+			image = "fishing_bait.webp",
 		}
 	},
 
@@ -1158,7 +1158,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1169,7 +1169,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "hood.png",
+			image = "hood.webp",
 		}
 	},
 
@@ -1180,7 +1180,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bprooftires.png",
+			image = "bprooftires.webp",
 		}
 	},
 
@@ -1191,7 +1191,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "noscolour.png",
+			image = "noscolour.webp",
 		}
 	},
 
@@ -1202,7 +1202,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "plate.png",
+			image = "plate.webp",
 		}
 	},
 
@@ -1213,7 +1213,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tablet.png",
+			image = "tablet.webp",
 		}
 	},
 
@@ -1224,7 +1224,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "flour.png",
+			image = "flour.webp",
 		}
 	},
 
@@ -1235,7 +1235,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "wine.png",
+			image = "wine.webp",
 		}
 	},
 
@@ -1246,7 +1246,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "drifttires.png",
+			image = "drifttires.webp",
 		}
 	},
 
@@ -1257,7 +1257,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "sorted_money.png",
+			image = "sorted_money.webp",
 		}
 	},
 
@@ -1268,7 +1268,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -1279,7 +1279,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "screwdriverset.png",
+			image = "screwdriverset.webp",
 		}
 	},
 
@@ -1290,7 +1290,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "advancedkit.png",
+			image = "advancedkit.webp",
 		}
 	},
 
@@ -1301,7 +1301,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "stickynote.png",
+			image = "stickynote.webp",
 		}
 	},
 
@@ -1312,7 +1312,7 @@ return {
 		close = true,
 		description = "An oxygen tank and a rebreather",
 		client = {
-			image = "diving_gear.png",
+			image = "diving_gear.webp",
 		}
 	},
 
@@ -1323,7 +1323,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "steel.png",
+			image = "steel.webp",
 		}
 	},
 
@@ -1334,7 +1334,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -1345,7 +1345,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_coca.png",
+			image = "bs_coca.webp",
 		}
 	},
 
@@ -1356,7 +1356,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -1367,7 +1367,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "small_trap.png",
+			image = "small_trap.webp",
 		}
 	},
 
@@ -1378,7 +1378,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1389,7 +1389,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1400,7 +1400,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "harness.png",
+			image = "harness.webp",
 		}
 	},
 
@@ -1411,7 +1411,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "nitrous.png",
+			image = "nitrous.webp",
 		}
 	},
 
@@ -1422,7 +1422,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "salad.png",
+			image = "salad.webp",
 		}
 	},
 
@@ -1433,7 +1433,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1444,7 +1444,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "ananas.png",
+			image = "ananas.webp",
 		}
 	},
 
@@ -1455,7 +1455,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_baggy_empty.png",
+			image = "weed_baggy_empty.webp",
 		}
 	},
 
@@ -1466,7 +1466,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "firework3.png",
+			image = "firework3.webp",
 		}
 	},
 
@@ -1477,7 +1477,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "aluminum.png",
+			image = "aluminum.webp",
 		}
 	},
 
@@ -1488,7 +1488,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1499,7 +1499,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1510,7 +1510,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "radio.png",
+			image = "radio.webp",
 		}
 	},
 
@@ -1521,7 +1521,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -1532,7 +1532,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lawyerpass.png",
+			image = "lawyerpass.webp",
 		}
 	},
 
@@ -1543,7 +1543,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1554,7 +1554,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lscm.png",
+			image = "lscm.webp",
 		}
 	},
 
@@ -1565,7 +1565,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "weed_packaged.png",
+			image = "weed_packaged.webp",
 		}
 	},
 
@@ -1576,7 +1576,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1587,7 +1587,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "rhum_bacardi_white.png",
+			image = "rhum_bacardi_white.webp",
 		}
 	},
 
@@ -1598,7 +1598,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "moneybag.png",
+			image = "moneybag.webp",
 		}
 	},
 
@@ -1609,7 +1609,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "passion_fruit_juice.png",
+			image = "passion_fruit_juice.webp",
 		}
 	},
 
@@ -1620,7 +1620,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bumper.png",
+			image = "bumper.webp",
 		}
 	},
 
@@ -1631,7 +1631,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_the-bleeder.png",
+			image = "bs_the-bleeder.webp",
 		}
 	},
 
@@ -1642,7 +1642,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "cola.png",
+			image = "cola.webp",
 		}
 	},
 
@@ -1653,7 +1653,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "chemicals.png",
+			image = "chemicals.webp",
 		}
 	},
 
@@ -1664,7 +1664,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "police_stormram.png",
+			image = "police_stormram.webp",
 		}
 	},
 
@@ -1675,7 +1675,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -1686,7 +1686,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_milkshake.png",
+			image = "bs_milkshake.webp",
 		}
 	},
 
@@ -1697,7 +1697,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "cane_sugar_syrup.png",
+			image = "cane_sugar_syrup.webp",
 		}
 	},
 
@@ -1708,7 +1708,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "spray_remover.png",
+			image = "spray_remover.webp",
 		}
 	},
 
@@ -1719,7 +1719,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lawyerpass.png",
+			image = "lawyerpass.webp",
 		}
 	},
 
@@ -1730,7 +1730,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "aluminumoxide.png",
+			image = "aluminumoxide.webp",
 		}
 	},
 
@@ -1741,7 +1741,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "turbo.png",
+			image = "turbo.webp",
 		}
 	},
 
@@ -1752,7 +1752,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "big_trap.png",
+			image = "big_trap.webp",
 		}
 	},
 
@@ -1763,7 +1763,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weath_seed.png",
+			image = "weath_seed.webp",
 		}
 	},
 
@@ -1774,7 +1774,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "fishing_rod.png",
+			image = "fishing_rod.webp",
 		}
 	},
 
@@ -1785,7 +1785,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "firework4.png",
+			image = "firework4.webp",
 		}
 	},
 
@@ -1796,7 +1796,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "banana_cream.png",
+			image = "banana_cream.webp",
 		}
 	},
 
@@ -1807,7 +1807,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "firework1.png",
+			image = "firework1.webp",
 		}
 	},
 
@@ -1818,7 +1818,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_the-heart-stopper.png",
+			image = "bs_the-heart-stopper.webp",
 		}
 	},
 
@@ -1829,7 +1829,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "plastic.png",
+			image = "plastic.webp",
 		}
 	},
 
@@ -1840,7 +1840,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -1851,7 +1851,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -1862,7 +1862,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bodyrepair.png",
+			image = "bodyrepair.webp",
 		}
 	},
 
@@ -1873,7 +1873,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "shonen.png",
+			image = "shonen.webp",
 		}
 	},
 
@@ -1884,7 +1884,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "cocaine.png",
+			image = "cocaine.webp",
 		}
 	},
 
@@ -1895,7 +1895,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "snikkel_candy.png",
+			image = "snikkel_candy.webp",
 		}
 	},
 
@@ -1906,7 +1906,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_pepsi.png",
+			image = "bs_pepsi.webp",
 		}
 	},
 
@@ -1917,7 +1917,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "rollcage.png",
+			image = "rollcage.webp",
 		}
 	},
 
@@ -1928,7 +1928,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bandage.png",
+			image = "bandage.webp",
 		}
 	},
 
@@ -1939,7 +1939,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -1950,7 +1950,7 @@ return {
 		close = true,
 		description = "Its also known as pillar coral",
 		client = {
-			image = "dendrogyra_coral.png",
+			image = "dendrogyra_coral.webp",
 		}
 	},
 
@@ -1961,7 +1961,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tosti.png",
+			image = "tosti.webp",
 		}
 	},
 
@@ -1972,7 +1972,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "dough.png",
+			image = "dough.webp",
 		}
 	},
 
@@ -1983,7 +1983,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "sandwich.png",
+			image = "sandwich.webp",
 		}
 	},
 
@@ -1994,7 +1994,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "armor.png",
+			image = "armor.webp",
 		}
 	},
 
@@ -2005,7 +2005,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "feather.png",
+			image = "feather.webp",
 		}
 	},
 
@@ -2016,7 +2016,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "radioscanner.png",
+			image = "radioscanner.webp",
 		}
 	},
 
@@ -2027,7 +2027,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "goldchain.png",
+			image = "goldchain.webp",
 		}
 	},
 
@@ -2038,7 +2038,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "leather.png",
+			image = "leather.webp",
 		}
 	},
 
@@ -2049,7 +2049,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "vapejuice.png",
+			image = "vapejuice.webp",
 		}
 	},
 
@@ -2060,7 +2060,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lime.png",
+			image = "lime.webp",
 		}
 	},
 
@@ -2071,7 +2071,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "brakes2.png",
+			image = "brakes2.webp",
 		}
 	},
 
@@ -2082,7 +2082,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "thermite.png",
+			image = "thermite.webp",
 		}
 	},
 
@@ -2093,7 +2093,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "painkillers.png",
+			image = "painkillers.webp",
 		}
 	},
 
@@ -2104,7 +2104,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "whiskey.png",
+			image = "whiskey.webp",
 		}
 	},
 
@@ -2115,7 +2115,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "meth_packaged.png",
+			image = "meth_packaged.webp",
 		}
 	},
 
@@ -2126,7 +2126,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "security_card_01.png",
+			image = "security_card_01.webp",
 		}
 	},
 
@@ -2137,7 +2137,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "brakes3.png",
+			image = "brakes3.webp",
 		}
 	},
 
@@ -2148,7 +2148,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "v10engine.png",
+			image = "v10engine.webp",
 		}
 	},
 
@@ -2159,7 +2159,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "v8engine.png",
+			image = "v8engine.webp",
 		}
 	},
 
@@ -2170,7 +2170,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -2181,7 +2181,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "banana_mama.png",
+			image = "banana_mama.webp",
 		}
 	},
 
@@ -2192,7 +2192,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "ironoxide.png",
+			image = "ironoxide.webp",
 		}
 	},
 
@@ -2203,7 +2203,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "advancedlockpick.png",
+			image = "advancedlockpick.webp",
 		}
 	},
 
@@ -2214,7 +2214,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_brick.png",
+			image = "weed_brick.webp",
 		}
 	},
 
@@ -2225,7 +2225,7 @@ return {
 		close = false,
 		description = "A kit made to siphon gasoline from vehicles.",
 		client = {
-			image = "syphoningkit.png",
+			image = "syphoningkit.webp",
 		}
 	},
 
@@ -2236,7 +2236,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -2247,7 +2247,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "parachute.png",
+			image = "parachute.webp",
 		}
 	},
 
@@ -2258,7 +2258,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mechanic_tools.png",
+			image = "mechanic_tools.webp",
 		}
 	},
 
@@ -2269,7 +2269,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2280,7 +2280,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "goldbar.png",
+			image = "goldbar.webp",
 		}
 	},
 
@@ -2291,7 +2291,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "armor.png",
+			image = "armor.webp",
 		}
 	},
 
@@ -2302,7 +2302,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tunerchip.png",
+			image = "tunerchip.webp",
 		}
 	},
 
@@ -2313,7 +2313,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "coke_brick.png",
+			image = "coke_brick.webp",
 		}
 	},
 
@@ -2324,7 +2324,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "rope.png",
+			image = "rope.webp",
 		}
 	},
 
@@ -2335,7 +2335,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2346,7 +2346,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tomato_seed.png",
+			image = "tomato_seed.webp",
 		}
 	},
 
@@ -2357,7 +2357,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "iron.png",
+			image = "iron.webp",
 		}
 	},
 
@@ -2368,7 +2368,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -2379,7 +2379,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_torpedo.png",
+			image = "bs_torpedo.webp",
 		}
 	},
 
@@ -2390,7 +2390,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "horn.png",
+			image = "horn.webp",
 		}
 	},
 
@@ -2401,7 +2401,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "fruity_passion.png",
+			image = "fruity_passion.webp",
 		}
 	},
 
@@ -2412,7 +2412,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2423,7 +2423,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "bourbon.png",
+			image = "bourbon.webp",
 		}
 	},
 
@@ -2434,7 +2434,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "coke_small_brick.png",
+			image = "coke_small_brick.webp",
 		}
 	},
 
@@ -2445,7 +2445,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "usb_device.png",
+			image = "usb_device.webp",
 		}
 	},
 
@@ -2456,7 +2456,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "meth.png",
+			image = "meth.webp",
 		}
 	},
 
@@ -2467,7 +2467,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "visacard.png",
+			image = "visacard.webp",
 		}
 	},
 
@@ -2478,7 +2478,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "printerdocument.png",
+			image = "printerdocument.webp",
 		}
 	},
 
@@ -2489,7 +2489,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2500,7 +2500,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tomato.png",
+			image = "tomato.webp",
 		}
 	},
 
@@ -2511,7 +2511,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -2522,7 +2522,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tablet.png",
+			image = "tablet.webp",
 		}
 	},
 
@@ -2533,7 +2533,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "suspension1.png",
+			image = "suspension1.webp",
 		}
 	},
 
@@ -2544,7 +2544,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "firstaid.png",
+			image = "firstaid.webp",
 		}
 	},
 
@@ -2555,7 +2555,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "armor.png",
+			image = "armor.webp",
 		}
 	},
 
@@ -2566,7 +2566,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mastercard.png",
+			image = "mastercard.webp",
 		}
 	},
 
@@ -2577,7 +2577,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_patty_raw.png",
+			image = "bs_patty_raw.webp",
 		}
 	},
 
@@ -2588,7 +2588,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "armour.png",
+			image = "armour.webp",
 		}
 	},
 
@@ -2599,7 +2599,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "oxy.png",
+			image = "oxy.webp",
 		}
 	},
 
@@ -2610,7 +2610,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "whiskey_bourbon.png",
+			image = "whiskey_bourbon.webp",
 		}
 	},
 
@@ -2621,7 +2621,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -2632,7 +2632,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weath.png",
+			image = "weath.webp",
 		}
 	},
 
@@ -2643,7 +2643,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "cleaningkit.png",
+			image = "cleaningkit.webp",
 		}
 	},
 
@@ -2654,7 +2654,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "crack_baggy.png",
+			image = "crack_baggy.webp",
 		}
 	},
 
@@ -2665,7 +2665,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2676,7 +2676,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lockpick.png",
+			image = "lockpick.webp",
 		}
 	},
 
@@ -2687,7 +2687,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "binoculars.png",
+			image = "binoculars.webp",
 		}
 	},
 
@@ -2698,7 +2698,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "carbonated_water.png",
+			image = "carbonated_water.webp",
 		}
 	},
 
@@ -2709,7 +2709,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "security_card_02.png",
+			image = "security_card_02.webp",
 		}
 	},
 
@@ -2720,7 +2720,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "ice_cube.png",
+			image = "ice_cube.webp",
 		}
 	},
 
@@ -2731,7 +2731,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_patty.png",
+			image = "bs_patty.webp",
 		}
 	},
 
@@ -2742,7 +2742,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lighter.png",
+			image = "lighter.webp",
 		}
 	},
 
@@ -2753,7 +2753,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_cup.png",
+			image = "bs_cup.webp",
 		}
 	},
 
@@ -2764,7 +2764,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "diamond_ring.png",
+			image = "diamond_ring.webp",
 		}
 	},
 
@@ -2775,7 +2775,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "ananas_juice.png",
+			image = "ananas_juice.webp",
 		}
 	},
 
@@ -2786,7 +2786,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "cocaine_packaged.png",
+			image = "cocaine_packaged.webp",
 		}
 	},
 
@@ -2797,7 +2797,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lawyerpass.png",
+			image = "lawyerpass.webp",
 		}
 	},
 
@@ -2808,7 +2808,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "usb_device.png",
+			image = "usb_device.webp",
 		}
 	},
 
@@ -2819,7 +2819,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "casinochips.png",
+			image = "casinochips.webp",
 		}
 	},
 
@@ -2830,7 +2830,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "whiskey_coca.png",
+			image = "whiskey_coca.webp",
 		}
 	},
 
@@ -2841,7 +2841,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mint.png",
+			image = "mint.webp",
 		}
 	},
 
@@ -2852,7 +2852,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "rice.png",
+			image = "rice.webp",
 		}
 	},
 
@@ -2863,7 +2863,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_bun.png",
+			image = "bs_bun.webp",
 		}
 	},
 
@@ -2874,7 +2874,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "certificate.png",
+			image = "certificate.webp",
 		}
 	},
 
@@ -2885,7 +2885,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "raspberry.png",
+			image = "raspberry.webp",
 		}
 	},
 
@@ -2896,7 +2896,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "suspension3.png",
+			image = "suspension3.webp",
 		}
 	},
 
@@ -2907,7 +2907,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2918,7 +2918,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -2929,7 +2929,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "toolbox.png",
+			image = "toolbox.webp",
 		}
 	},
 
@@ -2940,7 +2940,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lawyerpass.png",
+			image = "lawyerpass.webp",
 		}
 	},
 
@@ -2951,7 +2951,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "v12engine.png",
+			image = "v12engine.webp",
 		}
 	},
 
@@ -2962,7 +2962,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -2973,7 +2973,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "suspension2.png",
+			image = "suspension2.webp",
 		}
 	},
 
@@ -2984,7 +2984,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "walkstick.png",
+			image = "walkstick.webp",
 		}
 	},
 
@@ -2995,7 +2995,7 @@ return {
 		close = false,
 		description = "A Jerry Can made to hold gasoline.",
 		client = {
-			image = "jerrycan.png",
+			image = "jerrycan.webp",
 		}
 	},
 
@@ -3006,7 +3006,7 @@ return {
 		close = true,
 		description = "Its also known as black corals or thorn corals",
 		client = {
-			image = "antipatharia_coral.png",
+			image = "antipatharia_coral.webp",
 		}
 	},
 
@@ -3017,7 +3017,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "noscan.png",
+			image = "noscan.webp",
 		}
 	},
 
@@ -3028,7 +3028,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "skirts.png",
+			image = "skirts.webp",
 		}
 	},
 
@@ -3039,7 +3039,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "egg.png",
+			image = "egg.webp",
 		}
 	},
 
@@ -3050,7 +3050,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "medium_trap.png",
+			image = "medium_trap.webp",
 		}
 	},
 
@@ -3061,7 +3061,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "labkey.png",
+			image = "labkey.webp",
 		}
 	},
 
@@ -3072,7 +3072,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "vape.png",
+			image = "vape.webp",
 		}
 	},
 
@@ -3083,7 +3083,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "cocaine_baggy.png",
+			image = "cocaine_baggy.webp",
 		}
 	},
 
@@ -3094,7 +3094,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "driver_license.png",
+			image = "driver_license.webp",
 		}
 	},
 
@@ -3105,7 +3105,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "pinger.png",
+			image = "pinger.webp",
 		}
 	},
 
@@ -3116,7 +3116,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "passion_fruit.png",
+			image = "passion_fruit.webp",
 		}
 	},
 
@@ -3127,7 +3127,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "handcuffs.png",
+			image = "handcuffs.webp",
 		}
 	},
 
@@ -3138,7 +3138,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "rims.png",
+			image = "rims.webp",
 		}
 	},
 
@@ -3149,7 +3149,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_baggy.png",
+			image = "weed_baggy.webp",
 		}
 	},
 
@@ -3160,7 +3160,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "potato.png",
+			image = "potato.webp",
 		}
 	},
 
@@ -3171,7 +3171,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_ingredients_icecream.png",
+			image = "bs_ingredients_icecream.webp",
 		}
 	},
 
@@ -3182,7 +3182,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "metal.png",
+			image = "metal.webp",
 		}
 	},
 
@@ -3193,7 +3193,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "metalscrap.png",
+			image = "metalscrap.webp",
 		}
 	},
 
@@ -3204,7 +3204,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_money-shot.png",
+			image = "bs_money-shot.webp",
 		}
 	},
 
@@ -3215,7 +3215,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "spoiler.png",
+			image = "spoiler.webp",
 		}
 	},
 
@@ -3226,7 +3226,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -3237,7 +3237,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "electronickit.png",
+			image = "electronickit.webp",
 		}
 	},
 
@@ -3248,7 +3248,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "fitbit.png",
+			image = "fitbit.webp",
 		}
 	},
 
@@ -3259,7 +3259,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "diamond.png",
+			image = "diamond.webp",
 		}
 	},
 
@@ -3270,7 +3270,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "tires.png",
+			image = "tires.webp",
 		}
 	},
 
@@ -3281,7 +3281,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "weed_seed.png",
+			image = "weed_seed.webp",
 		}
 	},
 
@@ -3292,7 +3292,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "nos.png",
+			image = "nos.webp",
 		}
 	},
 
@@ -3303,7 +3303,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -3314,7 +3314,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "suspension4.png",
+			image = "suspension4.webp",
 		}
 	},
 
@@ -3325,7 +3325,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "bs_fries.png",
+			image = "bs_fries.webp",
 		}
 	},
 
@@ -3335,7 +3335,7 @@ return {
 		stack = true,
 		close = true,
 		client = {
-			image = "water_bottle.png",
+			image = "water_bottle.webp",
 		}
 	},
 
@@ -3416,7 +3416,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "rolex.png",
+			image = "rolex.webp",
 		}
 	},
 
@@ -3427,7 +3427,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "peach_schnaps.png",
+			image = "peach_schnaps.webp",
 		}
 	},
 
@@ -3438,7 +3438,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "ifaks.png",
+			image = "ifaks.webp",
 		}
 	},
 
@@ -3449,7 +3449,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "raspberry_puree.png",
+			image = "raspberry_puree.webp",
 		}
 	},
 
@@ -3460,7 +3460,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "salad_seed.png",
+			image = "salad_seed.webp",
 		}
 	},
 
@@ -3471,7 +3471,7 @@ return {
 		close = true,
 		description = "No have",
 		client = {
-			image = "weed.png",
+			image = "weed.webp",
 		}
 	},
 
@@ -3482,7 +3482,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "repairkit.png",
+			image = "repairkit.webp",
 		}
 	},
 
@@ -3493,7 +3493,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "underglow_controller.png",
+			image = "underglow_controller.webp",
 		}
 	},
 
@@ -3504,7 +3504,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "rubber.png",
+			image = "rubber.webp",
 		}
 	},
 
@@ -3515,7 +3515,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "transmission3.png",
+			image = "transmission3.webp",
 		}
 	},
 
@@ -3526,7 +3526,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "beer.png",
+			image = "beer.webp",
 		}
 	},
 
@@ -3537,7 +3537,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "spraycan.png",
+			image = "spraycan.webp",
 		}
 	},
 
@@ -3548,7 +3548,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "drill.png",
+			image = "drill.webp",
 		}
 	},
 
@@ -3559,7 +3559,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "weapon_license.png",
+			image = "weapon_license.webp",
 		}
 	},
 
@@ -3570,7 +3570,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "vape.png",
+			image = "vape.webp",
 		}
 	},
 
@@ -3581,7 +3581,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "null.png",
+			image = "null.webp",
 		}
 	},
 
@@ -3592,7 +3592,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "internals.png",
+			image = "internals.webp",
 		}
 	},
 
@@ -3603,7 +3603,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mechboard.png",
+			image = "mechboard.webp",
 		}
 	},
 
@@ -3614,7 +3614,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "10kgoldchain.png",
+			image = "10kgoldchain.webp",
 		}
 	},
 
@@ -3625,7 +3625,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "mirror.png",
+			image = "mirror.webp",
 		}
 	},
 
@@ -3751,7 +3751,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "sim_card.png",
+			image = "sim_card.webp",
 		}
 	},
 
@@ -3762,7 +3762,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "caroil.png",
+			image = "caroil.webp",
 		}
 	},
 
@@ -3773,7 +3773,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "axleparts.png",
+			image = "axleparts.webp",
 		}
 	},
 
@@ -3784,7 +3784,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "engine5.png",
+			image = "engine5.webp",
 		}
 	},
 
@@ -3795,7 +3795,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "carbattery.png",
+			image = "carbattery.webp",
 		}
 	},
 
@@ -3806,7 +3806,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "sparetire.png",
+			image = "sparetire.webp",
 		}
 	},
 
@@ -3817,7 +3817,7 @@ return {
 		close = false,
 		description = "",
 		client = {
-			image = "sparkplugs.png",
+			image = "sparkplugs.webp",
 		}
 	},
 
@@ -3828,7 +3828,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "suspension5.png",
+			image = "suspension5.webp",
 		}
 	},
 
@@ -3839,7 +3839,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "transmission4.png",
+			image = "transmission4.webp",
 		}
 	},
 
@@ -3850,7 +3850,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "gps.png",
+			image = "gps.webp",
 		}
 	},
 
@@ -3861,7 +3861,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "gps_detector.png",
+			image = "gps_detector.webp",
 		}
 	},
 
@@ -3872,7 +3872,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "lumber.png",
+			image = "lumber.webp",
 		}
 	},
 
@@ -3883,7 +3883,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "player_gps.png",
+			image = "player_gps.webp",
 		}
 	},
 
@@ -3894,7 +3894,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "woodplank.png",
+			image = "woodplank.webp",
 		}
 	},
 
@@ -3905,7 +3905,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "vehicle_gps.png",
+			image = "vehicle_gps.webp",
 		}
 	},
 
@@ -3916,7 +3916,7 @@ return {
 		close = true,
 		description = "",
 		client = {
-			image = "treebark.png",
+			image = "treebark.webp",
 		}
 	},
 
@@ -3927,7 +3927,7 @@ return {
 		close = false,
 		description = "A flying disc",
 		client = {
-			image = "frisbee.png",
+			image = "frisbee.webp",
 		}
 	},
 
@@ -3938,7 +3938,7 @@ return {
 		close = false,
 		description = "A flying disc",
 		client = {
-			image = "frisbee_g.png",
+			image = "frisbee_g.webp",
 		}
 	},
 
@@ -3949,7 +3949,7 @@ return {
 		close = false,
 		description = "A flying disc",
 		client = {
-			image = "frisbee_r.png",
+			image = "frisbee_r.webp",
 		}
 	},
 
@@ -3960,7 +3960,7 @@ return {
 		close = false,
 		description = "A flying disc",
 		client = {
-			image = "frisbee_y.png",
+			image = "frisbee_y.webp",
 		}
 	},
 
@@ -3971,7 +3971,7 @@ return {
 		close = false,
 		description = "A flying disc",
 		client = {
-			image = "frisbee_b.png",
+			image = "frisbee_b.webp",
 		}
 	},
 
@@ -3982,7 +3982,7 @@ return {
 		close = true,
 		description = "WOOW!! A new look! Then This is the one.",
 		client = {
-			image = "2080.png",
+			image = "2080.webp",
 		}
 	},
 
@@ -3993,7 +3993,7 @@ return {
 		close = true,
 		description = "It does the job for its price.",
 		client = {
-			image = "1050.png",
+			image = "1050.webp",
 		}
 	},
 
@@ -4004,7 +4004,7 @@ return {
 		close = true,
 		description = "A good upgrade if you are broke.",
 		client = {
-			image = "1060.png",
+			image = "1060.webp",
 		}
 	},
 
@@ -4015,7 +4015,7 @@ return {
 		close = true,
 		description = "Is it just me or this looks kinda thicc?",
 		client = {
-			image = "4090.png",
+			image = "4090.webp",
 		}
 	},
 
@@ -4026,7 +4026,7 @@ return {
 		close = true,
 		description = "A thermalpast To keep your cpu chiling.",
 		client = {
-			image = "thermalpast.png",
+			image = "thermalpast.webp",
 		}
 	},
 
@@ -4037,7 +4037,7 @@ return {
 		close = true,
 		description = "IDK Man! It's so expensive.",
 		client = {
-			image = "3060.png",
+			image = "3060.webp",
 		}
 	},
 
@@ -4048,7 +4048,7 @@ return {
 		close = true,
 		description = "It must be good since it got 3 fans right?",
 		client = {
-			image = "1080.png",
+			image = "1080.webp",
 		}
 	},
 
@@ -4059,7 +4059,7 @@ return {
 		close = true,
 		description = "Just look at it, what do you expect!",
 		client = {
-			image = "shitgpu.png",
+			image = "shitgpu.webp",
 		}
 	},
 
@@ -4070,7 +4070,7 @@ return {
 		close = true,
 		description = "Used in house construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4081,7 +4081,7 @@ return {
 		close = true,
 		description = "Used in windmill construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4092,7 +4092,7 @@ return {
 		close = true,
 		description = "Used in house construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4103,7 +4103,7 @@ return {
 		close = true,
 		description = "Used in windmill construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4114,7 +4114,7 @@ return {
 		close = true,
 		description = "Used in house construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4125,7 +4125,7 @@ return {
 		close = true,
 		description = "Used in house construction",
 		client = {
-			image = "concrete_block.png",
+			image = "concrete_block.webp",
 		}
 	},
 
@@ -4136,7 +4136,7 @@ return {
 		close = true,
 		description = "Extremely durable fishing rod.",
 		client = {
-			image = "nerorod.png",
+			image = "nerorod.webp",
 		}
 	},
 
@@ -4147,7 +4147,7 @@ return {
 		close = true,
 		description = "Bait: RedWorms",
 		client = {
-			image = "redworms.png",
+			image = "redworms.webp",
 		}
 	},
 
@@ -4158,7 +4158,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Minnow",
 		client = {
-			image = "minnow.png",
+			image = "minnow.webp",
 		}
 	},
 
@@ -4169,7 +4169,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Turtle",
 		client = {
-			image = "turtle.png",
+			image = "turtle.webp",
 		}
 	},
 
@@ -4180,7 +4180,7 @@ return {
 		close = true,
 		description = "The kings braid for catching the most powerful fish in the sea!",
 		client = {
-			image = "kingbraid.png",
+			image = "kingbraid.webp",
 		}
 	},
 
@@ -4191,7 +4191,7 @@ return {
 		close = true,
 		description = "A Fish finder for locating fish in bodies of water",
 		client = {
-			image = "fish-finder.png",
+			image = "fish-finder.webp",
 		}
 	},
 
@@ -4202,7 +4202,7 @@ return {
 		close = true,
 		description = "A deep sea fishing hook.",
 		client = {
-			image = "no6.png",
+			image = "no6.webp",
 		}
 	},
 
@@ -4213,7 +4213,7 @@ return {
 		close = true,
 		description = "A professional grade fishing hook!",
 		client = {
-			image = "no10.png",
+			image = "no10.webp",
 		}
 	},
 
@@ -4224,7 +4224,7 @@ return {
 		close = true,
 		description = "The legendary fishing pole from 'Fish R Us' used for fishing fishes.",
 		client = {
-			image = "fishrusreel.png",
+			image = "fishrusreel.webp",
 		}
 	},
 
@@ -4235,7 +4235,7 @@ return {
 		close = true,
 		description = "The line of lightning ready to catch fish in any waters!.",
 		client = {
-			image = "lightningbraid.png",
+			image = "lightningbraid.webp",
 		}
 	},
 
@@ -4246,7 +4246,7 @@ return {
 		close = true,
 		description = "A professional grade fishing line.",
 		client = {
-			image = "noodlebraid.png",
+			image = "noodlebraid.webp",
 		}
 	},
 
@@ -4257,7 +4257,7 @@ return {
 		close = true,
 		description = "Bait: Leech",
 		client = {
-			image = "leech.png",
+			image = "leech.webp",
 		}
 	},
 
@@ -4268,7 +4268,7 @@ return {
 		close = true,
 		description = "A brute fishing pole.",
 		client = {
-			image = "brutasrod.png",
+			image = "brutasrod.webp",
 		}
 	},
 
@@ -4279,7 +4279,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Striped Bass",
 		client = {
-			image = "stripedbass.png",
+			image = "stripedbass.webp",
 		}
 	},
 
@@ -4290,7 +4290,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Garfish",
 		client = {
-			image = "garfish.png",
+			image = "garfish.webp",
 		}
 	},
 
@@ -4301,7 +4301,7 @@ return {
 		close = true,
 		description = "The thunder of reels used for fishing mega fishes.",
 		client = {
-			image = "thunderreel.png",
+			image = "thunderreel.webp",
 		}
 	},
 
@@ -4312,7 +4312,7 @@ return {
 		close = true,
 		description = "Better off using your hands. Good luck!",
 		client = {
-			image = "no1.png",
+			image = "no1.webp",
 		}
 	},
 
@@ -4323,7 +4323,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Tuna",
 		client = {
-			image = "tuna.png",
+			image = "tuna.webp",
 		}
 	},
 
@@ -4334,7 +4334,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Crappie",
 		client = {
-			image = "crappie.png",
+			image = "crappie.webp",
 		}
 	},
 
@@ -4345,7 +4345,7 @@ return {
 		close = true,
 		description = "Bait: Mealworms",
 		client = {
-			image = "mealworms.png",
+			image = "mealworms.webp",
 		}
 	},
 
@@ -4356,7 +4356,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Haddock",
 		client = {
-			image = "haddock.png",
+			image = "haddock.webp",
 		}
 	},
 
@@ -4367,7 +4367,7 @@ return {
 		close = true,
 		description = "Finally some real fishing line, time to reel em' in!",
 		client = {
-			image = "mobeymono.png",
+			image = "mobeymono.webp",
 		}
 	},
 
@@ -4378,7 +4378,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Salmon",
 		client = {
-			image = "salmon.png",
+			image = "salmon.webp",
 		}
 	},
 
@@ -4389,7 +4389,7 @@ return {
 		close = true,
 		description = "Bait: Waxworms",
 		client = {
-			image = "waxworms.png",
+			image = "waxworms.webp",
 		}
 	},
 
@@ -4400,7 +4400,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Whale",
 		client = {
-			image = "whale.png",
+			image = "whale.webp",
 		}
 	},
 
@@ -4411,7 +4411,7 @@ return {
 		close = true,
 		description = "At least you can catch seaweed with this thing",
 		client = {
-			image = "no2.png",
+			image = "no2.webp",
 		}
 	},
 
@@ -4422,7 +4422,7 @@ return {
 		close = true,
 		description = "Bait: Bacon",
 		client = {
-			image = "bacon.png",
+			image = "bacon.webp",
 		}
 	},
 
@@ -4433,7 +4433,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Trout",
 		client = {
-			image = "trout.png",
+			image = "trout.webp",
 		}
 	},
 
@@ -4444,7 +4444,7 @@ return {
 		close = true,
 		description = "Bait: NightWorms",
 		client = {
-			image = "nightworms.png",
+			image = "nightworms.webp",
 		}
 	},
 
@@ -4455,7 +4455,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Dolphin",
 		client = {
-			image = "dolphin.png",
+			image = "dolphin.webp",
 		}
 	},
 
@@ -4466,7 +4466,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Pollock",
 		client = {
-			image = "pollock.png",
+			image = "pollock.webp",
 		}
 	},
 
@@ -4477,7 +4477,7 @@ return {
 		close = true,
 		description = "The best fishing pole on the market the 'magnum'!",
 		client = {
-			image = "magnumxlrod.png",
+			image = "magnumxlrod.webp",
 		}
 	},
 
@@ -4488,7 +4488,7 @@ return {
 		close = true,
 		description = "Bait: Turtle Meat",
 		client = {
-			image = "turtlemeat.png",
+			image = "turtlemeat.webp",
 		}
 	},
 
@@ -4499,7 +4499,7 @@ return {
 		close = true,
 		description = "Mine as well use your shoe string...",
 		client = {
-			image = "cheapmono.png",
+			image = "cheapmono.webp",
 		}
 	},
 
@@ -4510,7 +4510,7 @@ return {
 		close = true,
 		description = "Finally a real fishing hook!",
 		client = {
-			image = "no3.png",
+			image = "no3.webp",
 		}
 	},
 
@@ -4521,7 +4521,7 @@ return {
 		close = true,
 		description = "A rod that can adapt to all elements.",
 		client = {
-			image = "elementalrod.png",
+			image = "elementalrod.webp",
 		}
 	},
 
@@ -4532,7 +4532,7 @@ return {
 		close = true,
 		description = "Bait: Maggots",
 		client = {
-			image = "maggots.png",
+			image = "maggots.webp",
 		}
 	},
 
@@ -4543,7 +4543,7 @@ return {
 		close = true,
 		description = "Dollar store fishing rod.",
 		client = {
-			image = "valuecastrod.png",
+			image = "valuecastrod.webp",
 		}
 	},
 
@@ -4554,7 +4554,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Northern Pike",
 		client = {
-			image = "northernpike.png",
+			image = "northernpike.webp",
 		}
 	},
 
@@ -4565,7 +4565,7 @@ return {
 		close = true,
 		description = "Bait: Bread",
 		client = {
-			image = "bread.png",
+			image = "bread.webp",
 		}
 	},
 
@@ -4576,7 +4576,7 @@ return {
 		close = true,
 		description = "Bait: Barre Chocolaté",
 		client = {
-			image = "twerks_candy.png",
+			image = "twerks_candy.webp",
 		}
 	},
 
@@ -4587,7 +4587,7 @@ return {
 		close = true,
 		description = "Bait: Chips au fromage",
 		client = {
-			image = "sunchips2.png",
+			image = "sunchips2.webp",
 		}
 	},
 
@@ -4598,7 +4598,7 @@ return {
 		close = true,
 		description = "Bait: Tablette de chocolat",
 		client = {
-			image = "chocolate.png",
+			image = "chocolate.webp",
 		}
 	},
 
@@ -4693,7 +4693,7 @@ return {
 		close = true,
 		description = "Bait: Technoplankton",
 		client = {
-			image = "technoplankton.png",
+			image = "technoplankton.webp",
 		}
 	},
 
@@ -4704,7 +4704,7 @@ return {
 		close = true,
 		description = "You can fit the line between your teeth!",
 		client = {
-			image = "bitesizedmono.png",
+			image = "bitesizedmono.webp",
 		}
 	},
 
@@ -4715,7 +4715,7 @@ return {
 		close = true,
 		description = "The Zeus of fishing poles!",
 		client = {
-			image = "zeusrod.png",
+			image = "zeusrod.webp",
 		}
 	},
 
@@ -4726,7 +4726,7 @@ return {
 		close = true,
 		description = "You trying to catch a great white shark with that thing?!",
 		client = {
-			image = "towhook.png",
+			image = "towhook.webp",
 		}
 	},
 
@@ -4737,7 +4737,7 @@ return {
 		close = true,
 		description = "Fishing for rock bottom used for fishing fishes.",
 		client = {
-			image = "rockbottomreel.png",
+			image = "rockbottomreel.webp",
 		}
 	},
 
@@ -4748,7 +4748,7 @@ return {
 		close = true,
 		description = "The 'zilla' of all reels!",
 		client = {
-			image = "zillareel.png",
+			image = "zillareel.webp",
 		}
 	},
 
@@ -4759,7 +4759,7 @@ return {
 		close = true,
 		description = "Bait: Huge Cut Bait",
 		client = {
-			image = "hugecutbait.png",
+			image = "hugecutbait.webp",
 		}
 	},
 
@@ -4770,7 +4770,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Rainbow Trout",
 		client = {
-			image = "rainbowtrout.png",
+			image = "rainbowtrout.webp",
 		}
 	},
 
@@ -4781,7 +4781,7 @@ return {
 		close = true,
 		description = "Fresh Caught: Shark",
 		client = {
-			image = "shark.png",
+			image = "shark.webp",
 		}
 	},
 
@@ -4792,7 +4792,7 @@ return {
 		close = true,
 		description = "Bait: Crab",
 		client = {
-			image = "crab.png",
+			image = "crab.webp",
 		}
 	},
 
@@ -4803,7 +4803,7 @@ return {
 		close = true,
 		description = "Line Sniffer Reel used for fishing fishes & sniffing lines.",
 		client = {
-			image = "linesnifferreel.png",
+			image = "linesnifferreel.webp",
 		}
 	},
 
@@ -4814,7 +4814,7 @@ return {
 		close = true,
 		description = "Wroom wroom.",
 		client = {
-			image = "racing_gps.png",
+			image = "racing_gps.webp",
 		}
 	},
 
@@ -4825,7 +4825,7 @@ return {
 		close = true,
 		description = "A wheel from a vehicle",
 		client = {
-			image = "chop_wheel.png",
+			image = "chop_wheel.webp",
 		}
 	},
 
@@ -4836,7 +4836,7 @@ return {
 		close = true,
 		description = "A trunk from a vehicle",
 		client = {
-			image = "chop_trunk.png",
+			image = "chop_trunk.webp",
 		}
 	},
 
@@ -4847,7 +4847,7 @@ return {
 		close = true,
 		description = "A hood from a vehicle",
 		client = {
-			image = "chop_hood.png",
+			image = "chop_hood.webp",
 		}
 	},
 
@@ -4858,7 +4858,7 @@ return {
 		close = true,
 		description = "A door from a vehicle",
 		client = {
-			image = "chop_door.png",
+			image = "chop_door.webp",
 		}
 	},
 
@@ -4869,7 +4869,7 @@ return {
 		close = true,
 		description = "A tracking disabler",
 		client = {
-			image = "trackeritem.png",
+			image = "trackeritem.webp",
 		}
 	},
 
@@ -4880,7 +4880,7 @@ return {
 		close = true,
 		description = "Snap into an access tool.",
 		client = {
-			image = "accesstool.png",
+			image = "accesstool.webp",
 		}
 	},
 
@@ -4891,7 +4891,7 @@ return {
 		close = true,
 		description = "A field DNA swab kit containing several vials and swabs",
 		client = {
-			image = "dnatestkit.png",
+			image = "dnatestkit.webp",
 		}
 	},
 
@@ -4902,7 +4902,7 @@ return {
 		close = true,
 		description = "A vintage 2000's WiWang breathalyzer engraved Property of LSPD",
 		client = {
-			image = "breathalyzer.png",
+			image = "breathalyzer.webp",
 		}
 	},
 
@@ -4914,7 +4914,7 @@ return {
 		description =
 		"A multipanel field test kit used to test for popular drugs in a suspects saliva, it's probably accurate.",
 		client = {
-			image = "drugtestkit.png",
+			image = "drugtestkit.webp",
 		}
 	},
 
@@ -4925,7 +4925,7 @@ return {
 		close = true,
 		description = "People still use these??",
 		client = {
-			image = "sdcard.png",
+			image = "sdcard.webp",
 		}
 	},
 
@@ -4937,7 +4937,7 @@ return {
 		description =
 		"A Pro Tech mobile fingerprint reader that looks like it's seen better days, currently stuck in french.",
 		client = {
-			image = "fingerprintreader.png",
+			image = "fingerprintreader.webp",
 		}
 	},
 
@@ -4948,7 +4948,7 @@ return {
 		close = true,
 		description = "A field GSR test kit containing several test strips",
 		client = {
-			image = "gsrtestkit.png",
+			image = "gsrtestkit.webp",
 		}
 	},
 
@@ -4959,7 +4959,7 @@ return {
 		close = true,
 		description = "Caught in 4K",
 		client = {
-			image = "nikon.png",
+			image = "nikon.webp",
 		}
 	},
 
@@ -4970,7 +4970,7 @@ return {
 		close = true,
 		description = "Material - Brass",
 		client = {
-			image = "brass.png",
+			image = "brass.webp",
 		}
 	},
 
@@ -4981,7 +4981,7 @@ return {
 		close = true,
 		description = "Service Part - Air Filter",
 		client = {
-			image = "air_filter.png",
+			image = "air_filter.webp",
 		}
 	},
 
@@ -4992,7 +4992,7 @@ return {
 		close = true,
 		description = "Material - Aluminium",
 		client = {
-			image = "aluminium.png",
+			image = "aluminium.webp",
 		}
 	},
 
@@ -5003,7 +5003,7 @@ return {
 		close = true,
 		description = "Material - Scrap Metal",
 		client = {
-			image = "scrap_metal.png",
+			image = "scrap_metal.webp",
 		}
 	},
 
@@ -5014,7 +5014,7 @@ return {
 		close = true,
 		description = "Jump Starter for vehicle battery",
 		client = {
-			image = "jump_starter.png",
+			image = "jump_starter.webp",
 		}
 	},
 
@@ -5025,7 +5025,7 @@ return {
 		close = true,
 		description = "Service Part - Coolant",
 		client = {
-			image = "coolant.png",
+			image = "coolant.webp",
 		}
 	},
 
@@ -5036,7 +5036,7 @@ return {
 		close = true,
 		description = "Material - Synthetic Oil",
 		client = {
-			image = "synthetic_oil.png",
+			image = "synthetic_oil.webp",
 		}
 	},
 
@@ -5047,7 +5047,7 @@ return {
 		close = true,
 		description = "Spawn a road barrier prop",
 		client = {
-			image = "roadbarrier.png",
+			image = "roadbarrier.webp",
 		}
 	},
 
@@ -5058,7 +5058,7 @@ return {
 		close = true,
 		description = "Service Part - Fuel Filter",
 		client = {
-			image = "fuel_filter.png",
+			image = "fuel_filter.webp",
 		}
 	},
 
@@ -5069,7 +5069,7 @@ return {
 		close = true,
 		description = "Tire Repair Kit for bursted tires",
 		client = {
-			image = "tire_repairkit.png",
+			image = "tire_repairkit.webp",
 		}
 	},
 
@@ -5080,7 +5080,7 @@ return {
 		close = true,
 		description = "Health Part - Radiator",
 		client = {
-			image = "radiator.png",
+			image = "radiator.webp",
 		}
 	},
 
@@ -5091,7 +5091,7 @@ return {
 		close = true,
 		description = "Patch Kit for health/service parts",
 		client = {
-			image = "patchkit.png",
+			image = "patchkit.webp",
 		}
 	},
 
@@ -5102,7 +5102,7 @@ return {
 		close = true,
 		description = "Service Part - Drive Belt",
 		client = {
-			image = "drive_belt.png",
+			image = "drive_belt.webp",
 		}
 	},
 
@@ -5113,7 +5113,7 @@ return {
 		close = true,
 		description = "Health Part - Clutch",
 		client = {
-			image = "clutch.png",
+			image = "clutch.webp",
 		}
 	},
 
@@ -5124,7 +5124,7 @@ return {
 		close = true,
 		description = "Spawn an engine hoist prop",
 		client = {
-			image = "enginehoist.png",
+			image = "enginehoist.webp",
 		}
 	},
 
@@ -5135,7 +5135,7 @@ return {
 		close = true,
 		description = "Health Part - Brakes",
 		client = {
-			image = "brakes.png",
+			image = "brakes.webp",
 		}
 	},
 
@@ -5146,7 +5146,7 @@ return {
 		close = true,
 		description = "Material - Synthetic Acid",
 		client = {
-			image = "acid.png",
+			image = "acid.webp",
 		}
 	},
 
@@ -5157,7 +5157,7 @@ return {
 		close = true,
 		description = "Material - Electric Scrap",
 		client = {
-			image = "electric_scrap.png",
+			image = "electric_scrap.webp",
 		}
 	},
 
@@ -5168,7 +5168,7 @@ return {
 		close = true,
 		description = "Body Part - Trunk",
 		client = {
-			image = "part_trunk.png",
+			image = "part_trunk.webp",
 		}
 	},
 
@@ -5179,7 +5179,7 @@ return {
 		close = true,
 		description = "Spawn a tools trolley prop",
 		client = {
-			image = "toolstrolley.png",
+			image = "toolstrolley.webp",
 		}
 	},
 
@@ -5190,7 +5190,7 @@ return {
 		close = true,
 		description = "Service Part - Flywheel",
 		client = {
-			image = "flywheel.png",
+			image = "flywheel.webp",
 		}
 	},
 
@@ -5201,7 +5201,7 @@ return {
 		close = true,
 		description = "Repair Kit Advanced",
 		client = {
-			image = "repairkit_adv.png",
+			image = "repairkit_adv.webp",
 		}
 	},
 
@@ -5212,7 +5212,7 @@ return {
 		close = true,
 		description = "Body Part - Door",
 		client = {
-			image = "part_door.png",
+			image = "part_door.webp",
 		}
 	},
 
@@ -5223,7 +5223,7 @@ return {
 		close = true,
 		description = "Body Part - Hood",
 		client = {
-			image = "part_hood.png",
+			image = "part_hood.webp",
 		}
 	},
 
@@ -5234,7 +5234,7 @@ return {
 		close = true,
 		description = "Spawn a road cone prop",
 		client = {
-			image = "roadcone.png",
+			image = "roadcone.webp",
 		}
 	},
 
@@ -5245,7 +5245,7 @@ return {
 		close = true,
 		description = "Material - Carbon Fiber",
 		client = {
-			image = "carbon_fiber.png",
+			image = "carbon_fiber.webp",
 		}
 	},
 
@@ -5256,7 +5256,7 @@ return {
 		close = true,
 		description = "Service Part - Transmission Fluid",
 		client = {
-			image = "transmission_fluid.png",
+			image = "transmission_fluid.webp",
 		}
 	},
 
@@ -5267,7 +5267,7 @@ return {
 		close = true,
 		description = "Body Part - Window",
 		client = {
-			image = "part_window.png",
+			image = "part_window.webp",
 		}
 	},
 
@@ -5278,7 +5278,7 @@ return {
 		close = true,
 		description = "Spawn a consign prop",
 		client = {
-			image = "consign.png",
+			image = "consign.webp",
 		}
 	},
 
@@ -5289,7 +5289,7 @@ return {
 		close = true,
 		description = "Service Part - Oil + Filter",
 		client = {
-			image = "oil_filter.png",
+			image = "oil_filter.webp",
 		}
 	},
 
@@ -5300,7 +5300,7 @@ return {
 		close = true,
 		description = "Car Jack",
 		client = {
-			image = "carjack.png",
+			image = "carjack.webp",
 		}
 	},
 
@@ -5311,7 +5311,7 @@ return {
 		close = true,
 		description = "Body Part - Wheel",
 		client = {
-			image = "part_wheel.png",
+			image = "part_wheel.webp",
 		}
 	},
 
@@ -5322,7 +5322,7 @@ return {
 		close = true,
 		description = "Health Part - Drive Shaft",
 		client = {
-			image = "drive_shaft.png",
+			image = "drive_shaft.webp",
 		}
 	},
 
@@ -5333,7 +5333,7 @@ return {
 		close = true,
 		description = "Service Part - Brake Fluid",
 		client = {
-			image = "brake_fluid.png",
+			image = "brake_fluid.webp",
 		}
 	},
 
@@ -5344,7 +5344,7 @@ return {
 		close = true,
 		description = "Health Part - Alternator",
 		client = {
-			image = "alternator.png",
+			image = "alternator.webp",
 		}
 	},
 
@@ -5355,7 +5355,7 @@ return {
 		close = true,
 		description = "Health Part - Fuel Pump",
 		client = {
-			image = "fuel_pump.png",
+			image = "fuel_pump.webp",
 		}
 	},
 
@@ -5366,7 +5366,7 @@ return {
 		close = true,
 		description = "Service Part - Spark Plugs",
 		client = {
-			image = "spark_plugs.png",
+			image = "spark_plugs.webp",
 		}
 	},
 
@@ -5377,7 +5377,7 @@ return {
 		close = true,
 		description = "Fuel Can with fuel",
 		client = {
-			image = "fuel_can.png",
+			image = "fuel_can.webp",
 		}
 	},
 
@@ -5388,7 +5388,7 @@ return {
 		close = true,
 		description = "Service Part - Power Steering Fluid",
 		client = {
-			image = "steering_fluid.png",
+			image = "steering_fluid.webp",
 		}
 	},
 
@@ -5399,7 +5399,7 @@ return {
 		close = true,
 		description = "Decorated easter egg",
 		client = {
-			image = "kq_easteregg.png",
+			image = "kq_easteregg.webp",
 		}
 	},
 
@@ -5435,7 +5435,7 @@ return {
 		stack = true,
 		close = true,
 		description = "Comes in handy when you want to cut zipties..",
-		client = { image = "flush_cutter.png", }
+		client = { image = "flush_cutter.webp", }
 	},
 
 	["bolt_cutter"] = {
@@ -5444,7 +5444,7 @@ return {
 		stack = true,
 		close = true,
 		description = "Wanna cut some metal items ?",
-		client = { image = "bolt_cutter.png", }
+		client = { image = "bolt_cutter.webp", }
 	},
 
 	["leo-gps"] = {

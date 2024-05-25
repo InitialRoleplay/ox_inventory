@@ -46,7 +46,7 @@ local idToSlot = {
 function clothing.imageExists(image)
     local path = GetResourcePath(GetCurrentResourceName())
 
-    local name = ("%s/web/images/%s.png"):format(path, image)
+    local name = ("%s/web/images/%s.webp"):format(path, image)
 
     local f = io.open(name, "r")
 

@@ -210,7 +210,7 @@ return {
 			ammoname = 'ammo-9'
 		},
 
-		-- Kyroz Weapons Pack V2
+		-- Kyros Weapon Pack V2
 
 		['WEAPON_M32'] = {
 			label = 'M32',

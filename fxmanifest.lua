@@ -42,10 +42,10 @@ files {
     'web/build/assets/*.js',
     'web/build/assets/*.css',
 
-    'web/images/*.png',
-    'web/images/clothes/empty/*.png',
-    'web/images/clothes/male/*.png',
-    'web/images/clothes/female/*.png',
+    'web/images/*.webp',
+    'web/images/clothes/empty/*.webp',
+    'web/images/clothes/male/*.webp',
+    'web/images/clothes/female/*.webp',
 
     'modules/**/shared.lua',
     'modules/**/client.lua',
