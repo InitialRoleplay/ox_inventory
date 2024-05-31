@@ -84,8 +84,7 @@ return {
 		[18] = { 41, 328000 }, -- Emergency
 		[19] = { 41, 328000 }, -- Military
 		[20] = { 61, 488000 }, -- Commercial
-		models = {
-			[`xa21`] = { 11, 10000 }
-		},
+
+		models = {},
 	}
 }
