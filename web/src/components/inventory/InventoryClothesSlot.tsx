@@ -115,7 +115,7 @@ const InventoryClothesSlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotP
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : image})`,
         animation: isOver ? 'tilt-shaking 0.75s infinite' : '',
-        filter: isSlotWithItem(item) ? 'grayscale(0%)' : 'grayscale(100%)',
+        filter: isSlotWithItem(item) ? 'opacity(100%)' : 'opacity(75%)',
       }}
     >
       {isSlotWithItem(item) && (

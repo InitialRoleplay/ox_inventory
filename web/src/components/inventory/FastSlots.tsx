@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Inventory } from '../../typings';
 import InventorySlot from './InventorySlot';
 import { useAppSelector } from '../../store';

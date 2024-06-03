@@ -14,6 +14,7 @@ import InventoryContext from './InventoryContext';
 import { closeContextMenu } from '../../store/contextMenu';
 import Fade from '../utils/transitions/Fade';
 import FastSlots from './FastSlots';
+import ClothesInventory from './ClothesInventory';
 
 const Inventory: React.FC = () => {
   const [inventoryVisible, setInventoryVisible] = useState(false);
@@ -46,7 +47,7 @@ const Inventory: React.FC = () => {
       <Fade in={inventoryVisible}>
         <div className="inventory-wrapper">
           <LeftInventory />
-          {/* <ClothesInventory /> */}
+          <ClothesInventory />
           <RightInventory />
           <FastSlots />
           <InventoryControl />

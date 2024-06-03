@@ -79,8 +79,10 @@ input[type='number']::-webkit-outer-spin-button {
   border: none;
   color: $textColor;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   &:active {
     transform: none;
   }
@@ -121,13 +123,13 @@ button:active {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  gap: 600px;
+  height: 95%;
+  gap: 650px;
 }
 
 .inventory-control {
   position: absolute;
-  top: 80%;
+  top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -273,7 +275,7 @@ button:active {
 // Fast slots grid
 .inventory-fast-grid {
   position: absolute;
-  top: 90%;
+  top: 91.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -313,7 +315,7 @@ button:active {
 // inventory clothes
 .inventory-clothes-wrapper {
   position: absolute;
-  top: 52%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
 
