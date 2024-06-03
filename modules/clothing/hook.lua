@@ -47,10 +47,14 @@ exports.ox_inventory:registerHook('swapItems', function(payload)
             return clothing.removeOutfit(payload)
         end
     elseif payload.action == 'swap' then
-        if not string.find(payload.fromSlot.name, 'clothes') or not string.find(payload.toSlot.name, 'clothes') then
+        if payload.toType == 'clothing' or payload.fromType == 'clothing' then
+            lib.notify(payload.source, {
+                type = 'error',
+                title = 'Inventaire',
+                description = 'Impossible de déplacer un outfit si un outfit est déjà équipé.',
+            })
             return false
         end
-        return clothing.swapOutfit(payload)
     end
 
     return true
