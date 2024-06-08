@@ -124,10 +124,6 @@ end
 function client.createPed()
     if DoesEntityExist(invPed) then return end
 
-	if GetResourceState('ps-pause') == 'started' then
-		-- exports['ps-pause']:TogglePauseMenuColor()
-	end
-
     SetFrontendActive(true)
     ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
 
@@ -140,8 +136,7 @@ function client.createPed()
     SetMouseCursorVisibleInMenus(false)
     ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
 
-    local PlayerPedPreview = ClonePed(cache.ped, false, false, false)
-
+    local PlayerPedPreview = ClonePed(PlayerPedId(), false, false, false)
     SetEntityVisible(PlayerPedPreview, false, false)
     GivePedToPauseMenu(PlayerPedPreview, 1)
     SetPauseMenuPedLighting(true)
@@ -152,16 +147,8 @@ function client.createPed()
 end
 
 function client.deletePed()
-	if not DoesEntityExist(invPed) then return end
-
-    SetFrontendActive(false)
+	SetFrontendActive(false)
     ReplaceHudColourWithRgba(117, 0, 0, 0, 186)
-    Citizen.Wait(100)
-    SetMouseCursorVisibleInMenus(true)
-
-	if GetResourceState('ps-pause') == 'started' then
-		-- exports['ps-pause']:TogglePauseMenuColor()
-	end
 
     if DoesEntityExist(invPed) then
         DeleteEntity(invPed)
@@ -330,10 +317,13 @@ function client.openInventory(inv, data)
     left.items = PlayerData.inventory
     left.groups = PlayerData.groups
 
+    local clothes = lib.callback.await('ox_inventory:getInventoryClothes', false)
+
     SendNUIMessage({
         action = 'setupInventory',
         data = {
             leftInventory = left,
+            clothesInventory = clothes,
             rightInventory = currentInventory
         }
     })
@@ -364,6 +354,8 @@ function client.openInventory(inv, data)
             if invOpen then client.closeInventory() end
         end)
     end
+
+    client.createPed()
 
     return true
 end
