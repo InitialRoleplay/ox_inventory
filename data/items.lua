@@ -684,10 +684,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["driver_license_plane"] = {
@@ -695,10 +691,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["cooked_bluefish"] = {
@@ -706,10 +698,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["weed_nutrition"] = {
@@ -717,10 +705,6 @@ return {
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_nutrition.png",
-		}
 	},
 
 	["laptop"] = {
@@ -728,10 +712,6 @@ return {
 		weight = 4000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "laptop.png",
-		}
 	},
 
 	["raw_sea_bream"] = {
@@ -739,10 +719,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["exhaust"] = {
@@ -750,10 +726,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "exhaust.png",
-		}
 	},
 
 	["diving_fill"] = {
@@ -771,10 +743,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "headlights.png",
-		}
 	},
 
 	["brakes1"] = {
@@ -782,10 +750,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "brakes1.png",
-		}
 	},
 
 	["spray"] = {
@@ -793,10 +757,6 @@ return {
 		weight = 300,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "spray.png",
-		}
 	},
 
 	["bs_fanta"] = {
@@ -804,10 +764,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_fanta.png",
-		}
 	},
 
 	["hay"] = {
@@ -815,10 +771,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "hay.png",
-		}
 	},
 
 	["copper"] = {
@@ -826,10 +778,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "copper.png",
-		}
 	},
 
 	["seat"] = {
@@ -837,10 +785,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "seat.png",
-		}
 	},
 
 	["raw_carp"] = {
@@ -848,10 +792,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["id_card"] = {
@@ -859,10 +799,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "id_card.png",
-		}
 	},
 
 	["xtcbaggy"] = {
@@ -870,10 +806,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "xtc_baggy.png",
-		}
 	},
 
 	["cooked_mackerel"] = {
@@ -881,10 +813,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["livery"] = {
@@ -892,10 +820,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "livery.png",
-		}
 	},
 
 	["raw_beef_meat"] = {
@@ -903,10 +827,6 @@ return {
 		weight = 2500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["driving_test_permit"] = {
@@ -914,10 +834,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "dmv.png",
-		}
 	},
 
 	["cocaine_cut"] = {
@@ -936,10 +852,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["transmission2"] = {
@@ -947,10 +859,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "transmission2.png",
-		}
 	},
 
 	["package_money"] = {
@@ -969,10 +877,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "evidence.png",
-		}
 	},
 
 	["glass"] = {
@@ -980,10 +884,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "glass.png",
-		}
 	},
 
 	["grape"] = {
@@ -991,10 +891,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "grape.png",
-		}
 	},
 
 	["firework2"] = {
@@ -1002,10 +898,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "firework2.png",
-		}
 	},
 
 	["roof"] = {
@@ -1013,10 +905,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "roof.png",
-		}
 	},
 
 	["filled_evidence_bag"] = {
@@ -1035,10 +923,6 @@ return {
 		weight = 1000,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "markedbills.png",
-		}
 	},
 
 	["joint"] = {
@@ -1046,10 +930,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "joint.png",
-		}
 	},
 
 	["lspd_armor"] = {
@@ -1057,10 +937,6 @@ return {
 		weight = 5000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "armor.png",
-		}
 	},
 
 	["transmission1"] = {
@@ -1068,10 +944,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "transmission1.png",
-		}
 	},
 
 	["mojito"] = {
@@ -1079,10 +951,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "mojito.png",
-		}
 	},
 
 	["cooked_tuna"] = {
@@ -1090,21 +958,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
-	},
-
-	["ginger_syrup"] = {
-		label = "Sirop de gingembre",
-		weight = 500,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "ginger_syrup.png",
-		}
 	},
 
 	["fishing_bait"] = {
@@ -1112,10 +965,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "fishing_bait.png",
-		}
 	},
 
 	["cooked_anchovies"] = {
@@ -1123,10 +972,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["hood"] = {
@@ -1134,10 +979,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "hood.png",
-		}
 	},
 
 	["bprooftires"] = {
@@ -1145,10 +986,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "bprooftires.png",
-		}
 	},
 
 	["noscolour"] = {
@@ -1156,10 +993,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "noscolour.png",
-		}
 	},
 
 	["customplate"] = {
@@ -1167,10 +1000,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "plate.png",
-		}
 	},
 
 	["tablet"] = {
@@ -1178,10 +1007,6 @@ return {
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "tablet.png",
-		}
 	},
 
 	["flour"] = {
@@ -1189,21 +1014,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "flour.png",
-		}
-	},
-
-	["wine"] = {
-		label = "Vin",
-		weight = 500,
-		stack = true,
-		close = false,
-		description = "",
-		client = {
-			image = "wine.png",
-		}
 	},
 
 	["drifttires"] = {
@@ -1211,10 +1021,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "drifttires.png",
-		}
 	},
 
 	["sorted_money"] = {
@@ -1233,10 +1039,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["screwdriverset"] = {
@@ -1244,10 +1046,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "screwdriverset.png",
-		}
 	},
 
 	["advancedrepairkit"] = {
@@ -1255,10 +1053,6 @@ return {
 		weight = 4000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "advancedkit.png",
-		}
 	},
 
 	["stickynote"] = {
@@ -1266,10 +1060,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "",
-		client = {
-			image = "stickynote.png",
-		}
 	},
 
 	["diving_gear"] = {
@@ -1288,10 +1078,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "steel.png",
-		}
 	},
 
 	["weed_amnesia"] = {
@@ -1299,10 +1085,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["bs_coca"] = {
@@ -1310,10 +1092,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_coca.png",
-		}
 	},
 
 	["weed_skunk_seed"] = {
@@ -1321,10 +1099,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["small_trap"] = {
@@ -1332,10 +1106,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "small_trap.png",
-		}
 	},
 
 	["cooked_eel"] = {
@@ -1343,10 +1113,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["cooked_carp"] = {
@@ -1354,10 +1120,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["harness"] = {
@@ -1365,10 +1127,6 @@ return {
 		weight = 1000,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "harness.png",
-		}
 	},
 
 	["nitrous"] = {
@@ -1376,10 +1134,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "nitrous.png",
-		}
 	},
 
 	["salad"] = {
@@ -1387,10 +1141,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "salad.png",
-		}
 	},
 
 	["raw_mackerel"] = {
@@ -1398,10 +1148,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["ananas"] = {
@@ -1409,10 +1155,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "ananas.png",
-		}
 	},
 
 	["empty_weed_bag"] = {
@@ -1420,10 +1162,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_baggy_empty.png",
-		}
 	},
 
 	["firework3"] = {
@@ -1431,10 +1169,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "firework3.png",
-		}
 	},
 
 	["aluminum"] = {
@@ -1442,10 +1176,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "aluminum.png",
-		}
 	},
 
 	["raw_perch"] = {
@@ -1453,10 +1183,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["raw_salmon"] = {
@@ -1464,10 +1190,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["radio"] = {
@@ -1475,10 +1197,6 @@ return {
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "radio.png",
-		}
 	},
 
 	["weed_ak47_seed"] = {
@@ -1486,10 +1204,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["policepass"] = {
@@ -1497,10 +1211,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "lawyerpass.png",
-		}
 	},
 
 	["raw_tuna"] = {
@@ -1508,10 +1218,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["lscm"] = {
@@ -1519,10 +1225,6 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "lscm.png",
-		}
 	},
 
 	["weed_packaged"] = {
@@ -1541,10 +1243,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["rhum_bacardi_white"] = {
@@ -1552,10 +1250,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "rhum_bacardi_white.png",
-		}
 	},
 
 	["moneybag"] = {
@@ -1563,21 +1257,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "moneybag.png",
-		}
-	},
-
-	["passion_fruit_juice"] = {
-		label = "Jus au fruit de la passion",
-		weight = 500,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "passion_fruit_juice.png",
-		}
 	},
 
 	["bumper"] = {
@@ -1585,10 +1264,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "bumper.png",
-		}
 	},
 
 	["bs_the-bleeder"] = {
@@ -1596,10 +1271,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_the-bleeder.png",
-		}
 	},
 
 	["kurkakola"] = {
@@ -1607,10 +1278,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "cola.png",
-		}
 	},
 
 	["chemicals"] = {
@@ -1629,10 +1296,6 @@ return {
 		weight = 18000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "police_stormram.png",
-		}
 	},
 
 	["driver_license_helicopter"] = {
@@ -1640,10 +1303,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["bs_milkshake"] = {
@@ -1651,10 +1310,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_milkshake.png",
-		}
 	},
 
 	["cane_sugar_syrup"] = {
@@ -1662,10 +1317,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "cane_sugar_syrup.png",
-		}
 	},
 
 	["spray_remover"] = {
@@ -1673,10 +1324,6 @@ return {
 		weight = 300,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "spray_remover.png",
-		}
 	},
 
 	["gouvernementpass"] = {
@@ -1684,10 +1331,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "lawyerpass.png",
-		}
 	},
 
 	["aluminumoxide"] = {
@@ -1695,10 +1338,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "aluminumoxide.png",
-		}
 	},
 
 	["turbo"] = {
@@ -1706,10 +1345,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "turbo.png",
-		}
 	},
 
 	["big_trap"] = {
@@ -1717,10 +1352,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "big_trap.png",
-		}
 	},
 
 	["weath_seed"] = {
@@ -1728,10 +1359,6 @@ return {
 		weight = 5,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weath_seed.png",
-		}
 	},
 
 	["fishing_rod"] = {
@@ -1739,10 +1366,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "fishing_rod.png",
-		}
 	},
 
 	["firework4"] = {
@@ -1750,10 +1373,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "firework4.png",
-		}
 	},
 
 	["banana_cream"] = {
@@ -1761,10 +1380,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "banana_cream.png",
-		}
 	},
 
 	["firework1"] = {
@@ -1772,10 +1387,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "firework1.png",
-		}
 	},
 
 	["bs_the-heart-stopper"] = {
@@ -1783,10 +1394,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_the-heart-stopper.png",
-		}
 	},
 
 	["plastic"] = {
@@ -1794,10 +1401,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "plastic.png",
-		}
 	},
 
 	["raw_rabbit_meat"] = {
@@ -1805,10 +1408,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["driver_license_boat"] = {
@@ -1816,10 +1415,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["ducttape"] = {
@@ -1827,10 +1422,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bodyrepair.png",
-		}
 	},
 
 	["engine1"] = {
@@ -1838,10 +1429,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "shonen.png",
-		}
 	},
 
 	["cocaine"] = {
@@ -1860,10 +1447,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "snikkel_candy.png",
-		}
 	},
 
 	["bs_pepsi"] = {
@@ -1871,10 +1454,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_pepsi.png",
-		}
 	},
 
 	["rollcage"] = {
@@ -1882,10 +1461,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "rollcage.png",
-		}
 	},
 
 	["bandage"] = {
@@ -1893,10 +1468,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bandage.png",
-		}
 	},
 
 	["weed_purple-haze_seed"] = {
@@ -1904,10 +1475,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["dendrogyra_coral"] = {
@@ -1926,10 +1493,6 @@ return {
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "tosti.png",
-		}
 	},
 
 	["dough"] = {
@@ -1937,10 +1500,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "dough.png",
-		}
 	},
 
 	["sahp_armor"] = {
@@ -1948,10 +1507,6 @@ return {
 		weight = 5000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "armor.png",
-		}
 	},
 
 	["feather"] = {
@@ -1959,10 +1514,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "feather.png",
-		}
 	},
 
 	["radioscanner"] = {
@@ -1970,10 +1521,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "radioscanner.png",
-		}
 	},
 
 	["goldchain"] = {
@@ -1981,10 +1528,6 @@ return {
 		weight = 1500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "goldchain.png",
-		}
 	},
 
 	["leather"] = {
@@ -1992,10 +1535,6 @@ return {
 		weight = 25,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "leather.png",
-		}
 	},
 
 	["vapejuice"] = {
@@ -2003,10 +1542,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "vapejuice.png",
-		}
 	},
 
 	["brakes2"] = {
@@ -2014,10 +1549,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "brakes2.png",
-		}
 	},
 
 	["thermite"] = {
@@ -2025,10 +1556,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "thermite.png",
-		}
 	},
 
 	["painkillers"] = {
@@ -2036,10 +1563,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "painkillers.png",
-		}
 	},
 
 	["meth_packaged"] = {
@@ -2058,10 +1581,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "security_card_01.png",
-		}
 	},
 
 	["brakes3"] = {
@@ -2069,10 +1588,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "brakes3.png",
-		}
 	},
 
 	["engine3"] = {
@@ -2080,10 +1595,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "v10engine.png",
-		}
 	},
 
 	["engine2"] = {
@@ -2091,10 +1602,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "v8engine.png",
-		}
 	},
 
 	["driver_license_truck"] = {
@@ -2102,10 +1609,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["banana_mama"] = {
@@ -2113,10 +1616,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "banana_mama.png",
-		}
 	},
 
 	["ironoxide"] = {
@@ -2124,10 +1623,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "ironoxide.png",
-		}
 	},
 
 	["advancedlockpick"] = {
@@ -2135,10 +1630,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "advancedlockpick.png",
-		}
 	},
 
 	["weed_brick"] = {
@@ -2146,10 +1637,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_brick.png",
-		}
 	},
 
 	["syphoningkit"] = {
@@ -2168,10 +1655,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["parachute"] = {
@@ -2179,10 +1662,6 @@ return {
 		weight = 30000,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "parachute.png",
-		}
 	},
 
 	["mechanic_tools"] = {
@@ -2190,10 +1669,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "mechanic_tools.png",
-		}
 	},
 
 	["raw_anchovies"] = {
@@ -2201,10 +1676,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["goldbar"] = {
@@ -2212,10 +1683,6 @@ return {
 		weight = 7000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "goldbar.png",
-		}
 	},
 
 	["bsco_armor"] = {
@@ -2223,10 +1690,6 @@ return {
 		weight = 5000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "armor.png",
-		}
 	},
 
 	["tunerlaptop"] = {
@@ -2234,10 +1697,6 @@ return {
 		weight = 2000,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "tunerchip.png",
-		}
 	},
 
 	["coke_brick"] = {
@@ -2245,10 +1704,6 @@ return {
 		weight = 1000,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "coke_brick.png",
-		}
 	},
 
 	["cooked_salmon"] = {
@@ -2256,10 +1711,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["tomato_seed"] = {
@@ -2267,10 +1718,6 @@ return {
 		weight = 5,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "tomato_seed.png",
-		}
 	},
 
 	["iron"] = {
@@ -2278,10 +1725,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "iron.png",
-		}
 	},
 
 	["weed_og-kush"] = {
@@ -2289,10 +1732,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["bs_torpedo"] = {
@@ -2300,10 +1739,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_torpedo.png",
-		}
 	},
 
 	["horn"] = {
@@ -2311,10 +1746,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "horn.png",
-		}
 	},
 
 	["fruity_passion"] = {
@@ -2322,10 +1753,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "fruity_passion.png",
-		}
 	},
 
 	["raw_bluefish"] = {
@@ -2333,10 +1760,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["coke_small_brick"] = {
@@ -2344,10 +1767,6 @@ return {
 		weight = 250,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "coke_small_brick.png",
-		}
 	},
 
 	["trojan_usb"] = {
@@ -2355,10 +1774,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "usb_device.png",
-		}
 	},
 
 	["meth"] = {
@@ -2377,10 +1792,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "visacard.png",
-		}
 	},
 
 	["printerdocument"] = {
@@ -2388,10 +1799,6 @@ return {
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "printerdocument.png",
-		}
 	},
 
 	["raw_deer_meat"] = {
@@ -2399,10 +1806,6 @@ return {
 		weight = 2500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["tomato"] = {
@@ -2410,10 +1813,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "tomato.png",
-		}
 	},
 
 	["weed_ak47"] = {
@@ -2421,10 +1820,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["racetablet"] = {
@@ -2432,10 +1827,6 @@ return {
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "tablet.png",
-		}
 	},
 
 	["suspension1"] = {
@@ -2443,10 +1834,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "suspension1.png",
-		}
 	},
 
 	["firstaid"] = {
@@ -2454,10 +1841,6 @@ return {
 		weight = 2500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "firstaid.png",
-		}
 	},
 
 	["armor"] = {
@@ -2465,10 +1848,6 @@ return {
 		weight = 5000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "armor.png",
-		}
 	},
 
 	["mastercard"] = {
@@ -2476,10 +1855,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "mastercard.png",
-		}
 	},
 
 	["bs_patty_raw"] = {
@@ -2487,10 +1862,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_patty_raw.png",
-		}
 	},
 
 	["car_armor"] = {
@@ -2498,10 +1869,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "armour.png",
-		}
 	},
 
 	["oxy"] = {
@@ -2509,10 +1876,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "oxy.png",
-		}
 	},
 
 	["whiskey_bourbon"] = {
@@ -2520,10 +1883,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "whiskey_bourbon.png",
-		}
 	},
 
 	["driver_license_car"] = {
@@ -2531,10 +1890,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["weath"] = {
@@ -2542,10 +1897,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weath.png",
-		}
 	},
 
 	["cleaningkit"] = {
@@ -2553,10 +1904,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "cleaningkit.png",
-		}
 	},
 
 	["crack_baggy"] = {
@@ -2564,10 +1911,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "crack_baggy.png",
-		}
 	},
 
 	["raw_coyote_meat"] = {
@@ -2575,10 +1918,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["lockpick"] = {
@@ -2586,10 +1925,6 @@ return {
 		weight = 300,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "lockpick.png",
-		}
 	},
 
 	["binoculars"] = {
@@ -2597,10 +1932,6 @@ return {
 		weight = 600,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "binoculars.png",
-		}
 	},
 
 	["security_card_02"] = {
@@ -2608,10 +1939,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "security_card_02.png",
-		}
 	},
 
 	["ice_cube"] = {
@@ -2619,10 +1946,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "ice_cube.png",
-		}
 	},
 
 	["bs_patty"] = {
@@ -2630,10 +1953,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_patty.png",
-		}
 	},
 
 	["lighter"] = {
@@ -2641,10 +1960,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "lighter.png",
-		}
 	},
 
 	["bs_cup"] = {
@@ -2652,10 +1967,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_cup.png",
-		}
 	},
 
 	["diamond_ring"] = {
@@ -2663,10 +1974,6 @@ return {
 		weight = 1500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "diamond_ring.png",
-		}
 	},
 
 	["ananas_juice"] = {
@@ -2674,10 +1981,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "ananas_juice.png",
-		}
 	},
 
 	["cocaine_packaged"] = {
@@ -2696,10 +1999,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "lawyerpass.png",
-		}
 	},
 
 	["gatecrack"] = {
@@ -2707,10 +2006,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "usb_device.png",
-		}
 	},
 
 	["casinochips"] = {
@@ -2718,10 +2013,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "casinochips.png",
-		}
 	},
 
 	["whiskey_coca"] = {
@@ -2729,21 +2020,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "whiskey_coca.png",
-		}
-	},
-
-	["mint"] = {
-		label = "Menthe",
-		weight = 15,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "mint.png",
-		}
 	},
 
 	["rice"] = {
@@ -2751,10 +2027,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "rice.png",
-		}
 	},
 
 	["bs_bun"] = {
@@ -2762,10 +2034,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_bun.png",
-		}
 	},
 
 	["certificate"] = {
@@ -2773,10 +2041,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "certificate.png",
-		}
 	},
 
 	["raspberry"] = {
@@ -2784,10 +2048,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "raspberry.png",
-		}
 	},
 
 	["suspension3"] = {
@@ -2795,10 +2055,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "suspension3.png",
-		}
 	},
 
 	["raw_hen_meat"] = {
@@ -2806,10 +2062,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["cooked_sea_bream"] = {
@@ -2817,10 +2069,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["toolbox"] = {
@@ -2828,10 +2076,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "toolbox.png",
-		}
 	},
 
 	["galaxy_pass_basique"] = {
@@ -2839,10 +2083,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "lawyerpass.png",
-		}
 	},
 
 	["engine4"] = {
@@ -2850,10 +2090,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "v12engine.png",
-		}
 	},
 
 	["weed_og-kush_seed"] = {
@@ -2861,10 +2097,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["suspension2"] = {
@@ -2872,10 +2104,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "suspension2.png",
-		}
 	},
 
 	["walkstick"] = {
@@ -2883,10 +2111,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "walkstick.png",
-		}
 	},
 
 	["jerrycan"] = {
@@ -2916,10 +2140,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "noscan.png",
-		}
 	},
 
 	["skirts"] = {
@@ -2927,10 +2147,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "skirts.png",
-		}
 	},
 
 	["medium_trap"] = {
@@ -2938,10 +2154,6 @@ return {
 		weight = 150,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "medium_trap.png",
-		}
 	},
 
 	["labkey"] = {
@@ -2949,10 +2161,6 @@ return {
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "labkey.png",
-		}
 	},
 
 	["vape"] = {
@@ -2960,10 +2168,6 @@ return {
 		weight = 250,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "vape.png",
-		}
 	},
 
 	["cokebaggy"] = {
@@ -2971,10 +2175,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "cocaine_baggy.png",
-		}
 	},
 
 	["driver_license_bike"] = {
@@ -2982,10 +2182,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["pinger"] = {
@@ -2993,10 +2189,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "pinger.png",
-		}
 	},
 
 	["passion_fruit"] = {
@@ -3004,10 +2196,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "passion_fruit.png",
-		}
 	},
 
 	["handcuffs"] = {
@@ -3015,10 +2203,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "handcuffs.png",
-		}
 	},
 
 	["rims"] = {
@@ -3026,10 +2210,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "rims.png",
-		}
 	},
 
 	["weed_purple-haze"] = {
@@ -3037,10 +2217,6 @@ return {
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_baggy.png",
-		}
 	},
 
 	["potato"] = {
@@ -3048,10 +2224,6 @@ return {
 		weight = 15,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "potato.png",
-		}
 	},
 
 	["bs_ingredients_icecream"] = {
@@ -3059,10 +2231,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_ingredients_icecream.png",
-		}
 	},
 
 	["metalscrap"] = {
@@ -3070,10 +2238,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "metalscrap.png",
-		}
 	},
 
 	["bs_money-shot"] = {
@@ -3081,10 +2245,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_money-shot.png",
-		}
 	},
 
 	["spoiler"] = {
@@ -3092,10 +2252,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "spoiler.png",
-		}
 	},
 
 	["raw_eel"] = {
@@ -3103,10 +2259,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["electronickit"] = {
@@ -3114,10 +2266,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "electronickit.png",
-		}
 	},
 
 	["fitbit"] = {
@@ -3125,10 +2273,6 @@ return {
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "fitbit.png",
-		}
 	},
 
 	["diamond"] = {
@@ -3136,10 +2280,6 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "diamond.png",
-		}
 	},
 
 	["tires"] = {
@@ -3147,10 +2287,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "tires.png",
-		}
 	},
 
 	["weed_white-widow_seed"] = {
@@ -3158,10 +2294,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "weed_seed.png",
-		}
 	},
 
 	["nos"] = {
@@ -3169,10 +2301,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "nos.png",
-		}
 	},
 
 	["raw_trout"] = {
@@ -3180,10 +2308,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["suspension4"] = {
@@ -3191,10 +2315,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "suspension4.png",
-		}
 	},
 
 	["bs_fries"] = {
@@ -3202,10 +2322,6 @@ return {
 		weight = 250,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "bs_fries.png",
-		}
 	},
 
 	["water_bottle"] = {
@@ -3286,10 +2402,6 @@ return {
 		weight = 1500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "rolex.png",
-		}
 	},
 
 	["peach_schnaps"] = {
@@ -3297,10 +2409,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "peach_schnaps.png",
-		}
 	},
 
 	["ifaks"] = {
@@ -3308,10 +2416,6 @@ return {
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "ifaks.png",
-		}
 	},
 
 	["raspberry_puree"] = {
@@ -3319,10 +2423,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "raspberry_puree.png",
-		}
 	},
 
 	["salad_seed"] = {
@@ -3330,10 +2430,6 @@ return {
 		weight = 5,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "salad_seed.png",
-		}
 	},
 
 	["weed"] = {
@@ -3352,10 +2448,6 @@ return {
 		weight = 2500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "repairkit.png",
-		}
 	},
 
 	["underglow_controller"] = {
@@ -3363,10 +2455,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "underglow_controller.png",
-		}
 	},
 
 	["rubber"] = {
@@ -3374,10 +2462,6 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "rubber.png",
-		}
 	},
 
 	["transmission3"] = {
@@ -3385,10 +2469,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "transmission3.png",
-		}
 	},
 
 	["paintcan"] = {
@@ -3396,10 +2476,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "spraycan.png",
-		}
 	},
 
 	["drill"] = {
@@ -3407,10 +2483,6 @@ return {
 		weight = 20000,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "drill.png",
-		}
 	},
 
 	["hunting_license"] = {
@@ -3418,10 +2490,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "weapon_license.png",
-		}
 	},
 
 	["emptyvape"] = {
@@ -3429,10 +2497,6 @@ return {
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "vape.png",
-		}
 	},
 
 	["cooked_perch"] = {
@@ -3440,10 +2504,6 @@ return {
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "null.png",
-		}
 	},
 
 	["internals"] = {
@@ -3451,10 +2511,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "internals.png",
-		}
 	},
 
 	["mechboard"] = {
@@ -3462,10 +2518,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "mechboard.png",
-		}
 	},
 
 	["10kgoldchain"] = {
@@ -3473,10 +2525,6 @@ return {
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "10kgoldchain.png",
-		}
 	},
 
 	["externals"] = {
@@ -3484,10 +2532,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "mirror.png",
-		}
 	},
 
 	["pink_phone"] = {
@@ -3610,10 +2654,6 @@ return {
 		weight = 10,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "sim_card.png",
-		}
 	},
 
 	["newoil"] = {
@@ -3621,10 +2661,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "caroil.png",
-		}
 	},
 
 	["axleparts"] = {
@@ -3632,10 +2668,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "axleparts.png",
-		}
 	},
 
 	["engine5"] = {
@@ -3643,10 +2675,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "engine5.png",
-		}
 	},
 
 	["carbattery"] = {
@@ -3654,10 +2682,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "carbattery.png",
-		}
 	},
 
 	["sparetire"] = {
@@ -3665,10 +2689,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "",
-		client = {
-			image = "sparetire.png",
-		}
 	},
 
 	["sparkplugs"] = {
@@ -3676,10 +2696,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-		client = {
-			image = "sparkplugs.png",
-		}
 	},
 
 	["suspension5"] = {
@@ -3687,10 +2703,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "suspension5.png",
-		}
 	},
 
 	["transmission4"] = {
@@ -3698,10 +2710,6 @@ return {
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "transmission4.png",
-		}
 	},
 
 	["gps"] = {
@@ -3709,10 +2717,6 @@ return {
 		weight = 10,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "gps.png",
-		}
 	},
 
 	["gps_detector"] = {
@@ -3720,10 +2724,6 @@ return {
 		weight = 10,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "gps_detector.png",
-		}
 	},
 
 	["tree_lumber"] = {
@@ -3731,10 +2731,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "lumber.png",
-		}
 	},
 
 	["player_gps"] = {
@@ -3742,10 +2738,6 @@ return {
 		weight = 10,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "player_gps.png",
-		}
 	},
 
 	["wood_plank"] = {
@@ -3753,10 +2745,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "woodplank.png",
-		}
 	},
 
 	["vehicle_gps"] = {
@@ -3764,10 +2752,6 @@ return {
 		weight = 10,
 		stack = false,
 		close = true,
-		description = "",
-		client = {
-			image = "vehicle_gps.png",
-		}
 	},
 
 	["tree_bark"] = {
@@ -3775,10 +2759,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		description = "",
-		client = {
-			image = "treebark.png",
-		}
 	},
 
 	["frisbee"] = {
@@ -4454,20 +3434,6 @@ return {
 
 	["sugar_butts"] = {
 		label = "Mégots Aux Sucres",
-		weight = 10,
-		stack = true,
-		close = true,
-	},
-
-	["banana"] = {
-		label = "Banane",
-		weight = 10,
-		stack = true,
-		close = true,
-	},
-
-	["blueberries"] = {
-		label = "Myrabelle",
 		weight = 10,
 		stack = true,
 		close = true,
