@@ -124,6 +124,8 @@ end
 function client.createPed()
     if DoesEntityExist(invPed) then return end
 
+    local playerPed = PlayerPedId()
+
     SetFrontendActive(true)
     ActivateFrontendMenu(`FE_MENU_VERSION_EMPTY_NO_BACKGROUND`, true, -1)
 
@@ -136,7 +138,7 @@ function client.createPed()
     SetMouseCursorVisibleInMenus(false)
     ReplaceHudColourWithRgba(117, 0, 0, 0, 0)
 
-    local PlayerPedPreview = ClonePed(PlayerPedId(), false, false, false)
+    local PlayerPedPreview = ClonePed(playerPed, false, false, false)
     SetEntityVisible(PlayerPedPreview, false, false)
     GivePedToPauseMenu(PlayerPedPreview, 1)
     SetPauseMenuPedLighting(true)

@@ -73,7 +73,7 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
     local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', source)
     Inventory.Clear(clothes, 'clothes_outfits')
 
-    for i = 1, 14 do
+    for i = 1, 15 do
         local cloth = playerClothes[i]
 
         if i > 7 then
@@ -133,5 +133,37 @@ end
 function clothing.swapOutfit(payload)
     return false
 end
+
+exports('GiveClothes', function (source, components, props)
+    local playerSex, _ = lib.callback.await('ox_inventory:getPlayerClothes', source)
+
+    for _, prop in ipairs(props) do
+        local no_prop = shared.clothing.no_props[playerSex][prop.prop_id]
+        if no_prop.drawable ~= prop.drawable then
+            exports.ox_inventory:AddItem(source, shared.clothing.items.props[prop.prop_id], 1, {
+                type = 'prop',
+                prop = prop.prop_id,
+                drawable = prop.drawable,
+                texture = prop.texture,
+                image = ('clothes/%s/%s_prop_%s_%s'):format(playerSex, playerSex, prop.prop_id, prop.drawable) .. (prop.texture ~= 0 and ('_%s'):format(prop.texture) or '')
+            })
+        end
+    end
+
+    for _, component in ipairs(components) do
+        if tonumber(component.component_id) ~= 0 and tonumber(component.component_id) ~= 2 then
+            local no_comp = shared.clothing.no_clothing[playerSex][component.component_id]
+            if no_comp.drawable ~= component.drawable then
+                exports.ox_inventory:AddItem(source, shared.clothing.items.components[component.component_id], 1, {
+                    type = 'component',
+                    component = component.component_id,
+                    drawable = component.drawable,
+                    texture = component.texture,
+                    image = ('clothes/%s/%s_prop_%s_%s'):format(playerSex, playerSex, component.component_id, component.drawable) .. (component.texture ~= 0 and ('_%s'):format(component.texture) or '')
+                })
+            end
+        end
+    end
+end)
 
 return clothing

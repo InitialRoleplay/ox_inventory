@@ -22,13 +22,34 @@ shared = {
 }
 
 shared.clothing = {
+    items = {
+        components = {
+            [1] = 'clothes_masks',
+            [3] = 'clothes_hands',
+            [4] = 'clothes_pants',
+            [5] = 'clothes_bags',
+            [6] = 'clothes_shoes',
+            [7] = 'clothes_chains',
+            [8] = 'clothes_tshirts',
+            [9] = 'clothes_armors',
+            [10] = 'clothes_decals',
+            [11] = 'clothes_torsos',
+        },
+        props = {
+            [0] = 'clothes_hats',
+            [1] = 'clothes_glasses',
+            [2] = 'clothes_ears',
+            [6] = 'clothes_watches',
+            [7] = 'clothes_bracelets',
+        },
+    },
     no_clothing = {
         ['male'] = {
             [1] = { drawable = 0, texture = 0, },
             [3] = { drawable = 15, texture = 0, },
             [4] = { drawable = 14, texture = 1, },
             [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 5, texture = 0, },
+            [6] = { drawable = 34, texture = 0, },
             [7] = { drawable = 0, texture = 0, },
             [8] = { drawable = 15, texture = 0, },
             [9] = { drawable = 0, texture = 0, },
@@ -40,7 +61,7 @@ shared.clothing = {
             [3] = { drawable = 15, texture = 0, },
             [4] = { drawable = 14, texture = 1, },
             [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 5, texture = 0, },
+            [6] = { drawable = 34, texture = 0, },
             [7] = { drawable = 0, texture = 0, },
             [8] = { drawable = 15, texture = 0, },
             [9] = { drawable = 0, texture = 0, },
