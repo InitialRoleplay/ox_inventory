@@ -7,10 +7,10 @@ import { closeContextMenu } from '../store/contextMenu';
 
 type FrameVisibleSetter = (bool: boolean) => void;
 
-const LISTENED_KEYS = ['Escape', 'Tab'];
+const LISTENED_KEYS = ['Escape'];
 
 // Basic hook to listen for key presses in NUI in order to exit
-export const useExitListener = (visible: boolean, visibleSetter: FrameVisibleSetter) => {
+export const useExitListener = (visibleSetter: FrameVisibleSetter) => {
   const setterRef = useRef<FrameVisibleSetter>(noop);
   const dispatch = useAppDispatch();
 
@@ -20,7 +20,7 @@ export const useExitListener = (visible: boolean, visibleSetter: FrameVisibleSet
 
   useEffect(() => {
     const keyHandler = (e: KeyboardEvent) => {
-      if (LISTENED_KEYS.includes(e.code) && visible) {
+      if (LISTENED_KEYS.includes(e.code)) {
         setterRef.current(false);
         dispatch(closeTooltip());
         dispatch(closeContextMenu());
