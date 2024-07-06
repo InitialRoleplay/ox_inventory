@@ -26,7 +26,7 @@ const Inventory: React.FC = () => {
     dispatch(closeContextMenu());
     dispatch(closeTooltip());
   });
-  useExitListener(setInventoryVisible);
+  useExitListener(inventoryVisible, setInventoryVisible);
 
   useNuiEvent<{
     leftInventory?: InventoryProps;
