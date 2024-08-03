@@ -13,8 +13,7 @@ exports.ox_inventory:registerHook('swapItems', function(payload)
         end
         return clothing.addClothing(payload)
     end
-
-    return true
+    return false
 end, {
     disableCheck = true,
     itemFilter = {

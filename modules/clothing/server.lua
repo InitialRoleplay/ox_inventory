@@ -70,7 +70,7 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
     local clothes = clothing.getClothesInv(src)
     if not clothes then return end
 
-    local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', source)
+    local playerSex, playerClothes = lib.callback.await('ox_inventory:getPlayerClothes', src)
     Inventory.Clear(clothes, 'clothes_outfits')
 
     for i = 1, 15 do
@@ -115,10 +115,12 @@ lib.callback.register('ox_inventory:getInventoryClothes', function(source)
 end)
 
 function clothing.addClothing(payload)
+    if not payload.source then return false end
     return lib.callback.await('ox_inventory:addClothing', payload.source, payload.fromSlot.metadata)
 end
 
 function clothing.removeClothing(payload)
+    if not payload.source then return false end
     return lib.callback.await('ox_inventory:removeClothing', payload.source, payload.fromSlot.metadata)
 end
 
