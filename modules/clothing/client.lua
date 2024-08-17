@@ -127,3 +127,7 @@ end)
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     client.syncClothes()
 end)
+
+RegisterCommand('SyncClothes', function ()
+    client.syncClothes()
+end, false)

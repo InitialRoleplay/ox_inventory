@@ -55,7 +55,12 @@ end)
 ---@param source number
 lib.callback.register('ox_inventory:getInventoryClothes', function(source)
     local src = source
-    local clothes = clothing.getClothesInv(src)
+
+    local player = exports.qbx_core:GetPlayer(src)
+    if not player then return end
+
+    local citizenid = player.PlayerData.citizenid
+    local clothes = clothing.getClothesInv(src, citizenid)
 
     return clothes and {
         id = clothes.id,
