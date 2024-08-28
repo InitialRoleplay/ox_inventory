@@ -27,7 +27,7 @@ function server.setPlayerInventory(player, data)
 		data = db.loadPlayer(player.identifier)
 	end
 
-	clothing.getClothesInv(player.source)
+	clothing.getClothesInv(player.source, player.identifier)
 
 	local inventory = {}
 	local totalWeight = 0
