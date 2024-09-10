@@ -115,19 +115,18 @@ return {
         label = "Bouclier anti-émeute",
         weight = 8000,
         stack = false,
-        consume = 0,
+        consume = 1,
         client = {
             export = "cdx_police.useShield",
-            add = function(total)
-                if total > 0 then
-                        pcall(function() return exports.cdx_police:hasShield(true) end)
-                    end
-                end,
-            remove = function(total)
-                if total < 1 then
-                    pcall(function() return exports.cdx_police:hasShield(false) end)
-                end
-            end
+        }
+    },
+
+	["spikestrip"] = {
+        label = "Bande de clous",
+        weight = 1500,
+        consume = 0,
+        client = {
+            export = "cdx_police.deploySpikestrip",
         }
     },
 
