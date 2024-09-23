@@ -10,8 +10,7 @@ function Utils.PlayAnim(wait, dict, name, blendIn, blendOut, duration, flag, rat
     if wait > 0 then Wait(wait) end
 end
 
-function Utils.PlayAnimAdvanced(wait, dict, name, posX, posY, posZ, rotX, rotY, rotZ, blendIn, blendOut, duration, flag,
-                                time)
+function Utils.PlayAnimAdvanced(wait, dict, name, posX, posY, posZ, rotX, rotY, rotZ, blendIn, blendOut, duration, flag, time)
     lib.requestAnimDict(dict)
     TaskPlayAnimAdvanced(cache.ped, dict, name, posX, posY, posZ, rotX, rotY, rotZ, blendIn, blendOut, duration, flag,
         time, 0, 0)
@@ -32,7 +31,7 @@ function Utils.Raycast(flag, destination, size)
         destination.y, destination.z, size or 2.2, flag or 30, cache.ped, 4)
     while true do
         Wait(0)
-        local result, _, coords, _, entityHit = GetShapeTestResult(rayHandle)
+        local result, _, _, _, entityHit = GetShapeTestResult(rayHandle)
         if result ~= 1 then
             -- DrawLine(playerCoords.x, playerCoords.y, playerCoords.z + 0.5, destination.x, destination.y, destination.z, 0, 0, 255, 255)
             -- DrawLine(playerCoords.x, playerCoords.y, playerCoords.z + 0.5, coords.x, coords.y, coords.z, 255, 0, 0, 255)
