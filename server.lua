@@ -27,7 +27,7 @@ function server.setPlayerInventory(player, data)
 		data = db.loadPlayer(player.identifier)
 	end
 
-	clothing.getClothesInv(player.source)
+	clothing.getClothesInv(player.source, player.identifier)
 
 	local inventory = {}
 	local totalWeight = 0
@@ -117,7 +117,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
         local isDataTable = type(data) == 'table'
 
 		if invType == 'stash' then
-			right = Inventory(data, left)
+			right = Inventory(data, left, ignoreSecurityChecks)
 			if right == false then return false end
 		elseif isDataTable then
 			if data.netid then
@@ -139,7 +139,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 				return
 			end
 		elseif invType == 'policeevidence' then
-			if server.hasGroup(left, shared.police) then
+			if ignoreSecurityChecks or server.hasGroup(left, shared.police) then
 				right = Inventory(('evidence-%s'):format(data))
 			end
 		elseif invType == 'dumpster' then
@@ -373,7 +373,7 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 				end
 			elseif not item.weapon and server.UseItem then
                 inventory.usingItem = data
-				-- This is used to call an external useItem function, i.e. ESX.UseItem / QBCore.Functions.CanUseItem
+				-- This is used to call an external useItem function, i.e. ESX.UseItem
 				-- If an error is being thrown on item use there is no internal solution. We previously kept a list
 				-- of usable items which led to issues when restarting resources (for obvious reasons), but config
 				-- developers complained the inventory broke their items. Safely invoking registered item callbacks
@@ -466,7 +466,7 @@ RegisterCommand('convertinventory', function(source, args)
 	local convert = arg and conversionScript[arg]
 
 	if not convert then
-		return warn('Invalid conversion argument. Valid options: esx, esxproperty, qb, linden')
+		return warn('Invalid conversion argument. Valid options: esx, esxproperty')
 	end
 
 	CreateThread(convert)

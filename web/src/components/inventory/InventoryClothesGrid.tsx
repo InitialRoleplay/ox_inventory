@@ -2,26 +2,25 @@ import React from 'react';
 import { Inventory } from '../../typings';
 import InventoryClothesSlot from './InventoryClothesSlot';
 import { useAppSelector } from '../../store';
-import { imagepath } from '../../store/imagepath';
 
 const images: Record<string, string> = {
-  "clothing-1": imagepath + '/clothes/nothing/torsos.webp',
-  "clothing-2": imagepath + '/clothes/nothing/tshirts.webp',
-  "clothing-3": imagepath + '/clothes/nothing/hands.webp',
-  "clothing-4": imagepath + '/clothes/nothing/bags.webp',
-  "clothing-5": imagepath + '/clothes/nothing/armors.webp',
-  "clothing-6": imagepath + '/clothes/nothing/pants.webp',
-  "clothing-7": imagepath + '/clothes/nothing/shoes.webp',
-  "clothing-8": imagepath + '/clothes/nothing/outfits.webp',
+  "clothing-1": 'https://files.fivemerr.com/images/9489297c-a8f4-4f42-ae44-1322e8b78a2c.webp',
+  "clothing-2": 'https://files.fivemerr.com/images/c44090d2-db9a-4713-b3d3-c556287b66db.webp',
+  "clothing-3": 'https://files.fivemerr.com/images/7ac9cc80-14ab-4d33-a3d8-7a5c807520b3.webp',
+  "clothing-4": 'https://files.fivemerr.com/images/46e9253c-865d-4979-9ee9-5bbb46602ba2.webp',
+  "clothing-5": 'https://files.fivemerr.com/images/f1f6b3ee-36cf-4d3c-9fb1-6e0ad79c4a6d.webp',
+  "clothing-6": 'https://files.fivemerr.com/images/227d190d-5e8f-4a1f-a860-dca866be4c32.webp',
+  "clothing-7": 'https://files.fivemerr.com/images/6617649c-101a-4ed1-9c46-0d3755320a79.webp',
+  "clothing-8": '/clothes/nothing/outfits.webp',
 
-  "clothing-9": imagepath + '/clothes/nothing/hats.webp',
-  "clothing-10": imagepath + '/clothes/nothing/masks.webp',
-  "clothing-11": imagepath + '/clothes/nothing/glasses.webp',
-  "clothing-12": imagepath + '/clothes/nothing/ears.webp',
-  "clothing-13": imagepath + '/clothes/nothing/chains.webp',
-  "clothing-14": imagepath + '/clothes/nothing/watches.webp',
-  "clothing-15": imagepath + '/clothes/nothing/bracelets.webp',
-  "clothing-16": imagepath + '/clothes/nothing/decals.webp',
+  "clothing-9": 'https://files.fivemerr.com/images/abb6f377-bf17-4b04-9160-5d517c5876e6.webp',
+  "clothing-10": 'https://files.fivemerr.com/images/2ca43f9c-3160-4caa-91d0-d1f5b7c28380.webp',
+  "clothing-11": 'https://files.fivemerr.com/images/ef16a1f8-2e2a-4e19-9554-6de1edc080e6.webp',
+  "clothing-12": 'https://files.fivemerr.com/images/a65dc382-f7da-4317-8448-b12a918dae04.webp',
+  "clothing-13": 'https://files.fivemerr.com/images/04ee5b64-5d51-4bd3-bf11-1675c6c314b8.webp',
+  "clothing-14": 'https://files.fivemerr.com/images/d2cf1efd-ba3a-423b-b91f-5f6c7fe2bd42.webp',
+  "clothing-15": 'https://files.fivemerr.com/images/b2d4dca4-1eca-4ec8-b218-b2466b241a6b.webp',
+  "clothing-16": 'https://files.fivemerr.com/images/697de83e-06d9-4fbf-906e-bb26b7403fbe.webp',
 };
 
 const InventoryClothesGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {

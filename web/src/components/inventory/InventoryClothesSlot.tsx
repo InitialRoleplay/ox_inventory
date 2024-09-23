@@ -12,20 +12,19 @@ import { openContextMenu } from '../../store/contextMenu';
 import { useMergeRefs } from '@floating-ui/react';
 
 const autorizedItem: Record<number, string> = {
-  1: "clothes_torsos",
-  2: "clothes_tshirts",
-  3: "clothes_hands",
+  1: "clothes_jackets",
+  2: "clothes_shirts",
+  3: "clothes_torsos",
   4: "clothes_bags",
-  5: "clothes_armors",
-  6: "clothes_pants",
+  5: "clothes_vest",
+  6: "clothes_legs",
   7: "clothes_shoes",
   8: 'clothes_outfits',
-
   9: "clothes_hats",
   10: "clothes_masks",
   11: "clothes_glasses",
-  12: "clothes_ears",
-  13: "clothes_chains",
+  12: "clothes_earrings",
+  13: "clothes_neck",
   14: "clothes_watches",
   15: "clothes_bracelets",
   16: "clothes_decals",

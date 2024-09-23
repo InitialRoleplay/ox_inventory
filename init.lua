@@ -22,68 +22,60 @@ shared = {
 }
 
 shared.clothing = {
-    items = {
-        components = {
-            [1] = 'clothes_masks',
-            [3] = 'clothes_hands',
-            [4] = 'clothes_pants',
-            [5] = 'clothes_bags',
-            [6] = 'clothes_shoes',
-            [7] = 'clothes_chains',
-            [8] = 'clothes_tshirts',
-            [9] = 'clothes_armors',
-            [10] = 'clothes_decals',
-            [11] = 'clothes_torsos',
-        },
-        props = {
-            [0] = 'clothes_hats',
-            [1] = 'clothes_glasses',
-            [2] = 'clothes_ears',
-            [6] = 'clothes_watches',
-            [7] = 'clothes_bracelets',
-        },
+    ['male'] = {
+        -- Drawables
+        ["masks"] = { drawable = 0, texture = 0, },
+        ["torsos"] = { drawable = 15, texture = 0, },
+        ["legs"] = { drawable = 14, texture = 1, },
+        ["bags"] = { drawable = 0, texture = 0, },
+        ["shoes"] = { drawable = 34, texture = 0, },
+        ["neck"] = { drawable = 0, texture = 0, },
+        ["shirts"] = { drawable = 15, texture = 0, },
+        ["vest"] = { drawable = 0, texture = 0, },
+        ["decals"] = { drawable = 0, texture = 0, },
+        ["jackets"] = { drawable = 15, texture = 0, },
+        -- Props
+        ["hats"] = { drawable = -1, texture = -1, },
+        ["glasses"] = { drawable = -1, texture = -1, },
+        ["earrings"] = { drawable = -1, texture = -1, },
+        ["watches"] = { drawable = -1, texture = -1, },
+        ["bracelets"] = { drawable = -1, texture = -1, },
     },
-    no_clothing = {
-        ['male'] = {
-            [1] = { drawable = 0, texture = 0, },
-            [3] = { drawable = 15, texture = 0, },
-            [4] = { drawable = 14, texture = 1, },
-            [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 34, texture = 0, },
-            [7] = { drawable = 0, texture = 0, },
-            [8] = { drawable = 15, texture = 0, },
-            [9] = { drawable = 0, texture = 0, },
-            [10] = { drawable = 0, texture = 0, },
-            [11] = { drawable = 15, texture = 0, },
-        },
-        ['female'] = {
-            [1] = { drawable = 0, texture = 0, },
-            [3] = { drawable = 15, texture = 0, },
-            [4] = { drawable = 14, texture = 1, },
-            [5] = { drawable = 0, texture = 0, },
-            [6] = { drawable = 34, texture = 0, },
-            [7] = { drawable = 0, texture = 0, },
-            [8] = { drawable = 15, texture = 0, },
-            [9] = { drawable = 0, texture = 0, },
-            [10] = { drawable = 0, texture = 0, },
-            [11] = { drawable = 15, texture = 0, },
-        }
+    ['female'] = {
+        -- Drawables
+        ["masks"] = { drawable = 0, texture = 0, },
+        ["torsos"] = { drawable = 15, texture = 0, },
+        ["legs"] = { drawable = 14, texture = 1, },
+        ["bags"] = { drawable = 0, texture = 0, },
+        ["shoes"] = { drawable = 34, texture = 0, },
+        ["neck"] = { drawable = 0, texture = 0, },
+        ["shirts"] = { drawable = 15, texture = 0, },
+        ["vest"] = { drawable = 0, texture = 0, },
+        ["decals"] = { drawable = 0, texture = 0, },
+        ["jackets"] = { drawable = 15, texture = 0, },
+        -- Props
+        ["hats"] = { drawable = -1, texture = -1, },
+        ["glasses"] = { drawable = -1, texture = -1, },
+        ["earrings"] = { drawable = -1, texture = -1, },
+        ["watches"] = { drawable = -1, texture = -1, },
+        ["bracelets"] = { drawable = -1, texture = -1, },
     },
-    no_props = {
-        ['male'] = {
-            [0] = { drawable = -1, texture = -1, },
-            [1] = { drawable = -1, texture = -1, },
-            [2] = { drawable = -1, texture = -1, },
-            [6] = { drawable = -1, texture = -1, },
-            [7] = { drawable = -1, texture = -1, },
-        },
-        ['female'] = {
-            [0] = { drawable = -1, texture = -1, },
-            [1] = { drawable = -1, texture = -1, },
-            [2] = { drawable = -1, texture = -1, },
-            [6] = { drawable = -1, texture = -1, },
-            [7] = { drawable = -1, texture = -1, },
-        },
+    ['slots'] = { -- DO NOT MODIFY
+        ["clothes_jackets"] = 1,
+        ["clothes_shirts"] = 2,
+        ["clothes_torsos"] = 3,
+        ["clothes_bags"] = 4,
+        ["clothes_vest"] = 5,
+        ["clothes_legs"] = 6,
+        ["clothes_shoes"] = 7,
+        ["clothes_hats"] = 9,
+        ["clothes_masks"] = 10,
+        ["clothes_glasses"] = 11,
+        ["clothes_earrings"] = 12,
+        ["clothes_neck"] = 13,
+        ["clothes_watches"] = 14,
+        ["clothes_bracelets"] = 15,
+        ["clothes_decals"] = 16,
     },
 }
 shared.dropslots = GetConvarInt('inventory:dropslots', shared.playerslots)
@@ -177,7 +169,7 @@ end
 
 function shared.print(...) print(string.strjoin(' ', ...)) end
 
-function shared.info(...) shared.print('^2[info]^7', ...) end
+function shared.info(...) lib.print.info(string.strjoin(' ', ...)) end
 
 ---Throws a formatted type error.
 ---```lua
