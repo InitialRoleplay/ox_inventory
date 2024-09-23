@@ -22,11 +22,11 @@ const FastGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
     <>
       <div className="inventory-fast-grid" ref={containerRef}>
         <>
-          {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => (
+          {inventory.items.slice(0, 5).map((item, index) => (
             <InventorySlot
               key={`${inventory.type}-${inventory.id}-${item.slot}`}
               item={item}
-              ref={index === (page + 1) * PAGE_SIZE - 1 ? ref : null}
+              ref={index === 5 - 1 ? ref : null}
               inventoryType={inventory.type}
               inventoryGroups={inventory.groups}
               inventoryId={inventory.id}
