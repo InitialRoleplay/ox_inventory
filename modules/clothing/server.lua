@@ -28,9 +28,8 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
 
     for key, data in pairs(props) do
         if slotItems['clothes_' .. key] then
-            if data.value ~= shared.clothing['male'][key].drawable then
-                data.image = 'https://files.fivemerr.com/images/13c6f2c2-5272-4efe-b371-97a04cb24973.png'
-                -- data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+            if data.value ~= shared.clothing[sex][key].drawable then
+                data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
             end
             Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end
@@ -38,9 +37,8 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
 
     for key, data in pairs(drawables) do
         if slotItems['clothes_' .. key] then
-            if data.value ~= shared.clothing['male'][key].drawable then
-                data.image = 'https://files.fivemerr.com/images/13c6f2c2-5272-4efe-b371-97a04cb24973.png'
-                -- data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+            if data.value ~= shared.clothing[sex][key].drawable then
+                data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
             end
             Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end
