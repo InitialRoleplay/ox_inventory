@@ -106,8 +106,8 @@ local function loadInventoryData(data, player, ignoreSecurityChecks)
 			data.type = 'glovebox'
 		elseif data.id:find('^trunk') then
 			data.type = 'trunk'
-		elseif data.id:find('^clothing') then
-			data.type = 'clothing'
+		elseif data.id:find('^clothes_') then
+			data.type = 'clothes'
 		elseif data.id:find('^evidence-') then
 			data.type = 'policeevidence'
 		end
@@ -176,7 +176,7 @@ local function loadInventoryData(data, player, ignoreSecurityChecks)
 		end
 	elseif data.type == 'policeevidence' then
 		inventory = Inventory.Create(data.id, locale('police_evidence'), data.type, 100, 0, 100000, false)
-	elseif data.type == 'clothing' then
+	elseif data.type == 'clothes' then
 		inventory = Inventory.Create(data.id, 'Vêtements', data.type, 17, 0, 100000, false)
 	else
 		local stash = RegisteredStashes[data.id]
@@ -1702,18 +1702,18 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 	local toInventory
 	local fromInventory
 
-	if data.toType == 'clothing' then
+	if data.toType == 'clothes' then
 		local license = GetPlayerIdentifierByType(source, 'license')
 		license = license and license:gsub('license:', '')
-		toInventory =  Inventory('clothing' .. license, source)
+		toInventory =  Inventory('clothes' .. license, source)
 	else
 		toInventory = (data.toType == 'player' and playerInventory) or Inventory(playerInventory.open)
 	end
 
-	if data.fromType == 'clothing' then
+	if data.fromType == 'clothes' then
 		local license = GetPlayerIdentifierByType(source, 'license')
 		license = license and license:gsub('license:', '')
-		fromInventory =  Inventory('clothing' .. license, source)
+		fromInventory =  Inventory('clothes' .. license, source)
 	else
 		fromInventory = (data.fromType == 'player' and playerInventory) or Inventory(playerInventory.open)
 	end
@@ -1783,7 +1783,7 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
         end
 
         if data.toType == 'newdrop' then
-			if data.fromType == 'clothing' then
+			if data.fromType == 'clothes' then
 				return dropClothes(source, playerInventory, fromInventory, fromData, data)
 			end
             return dropItem(source, playerInventory, fromData, data)

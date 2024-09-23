@@ -59,8 +59,8 @@ debugData([
         ],
       },
       clothesInventory: {
-        id: 'clothingCITIZENID',
-        type: 'clothing',
+        id: 'clothes_CITIZENID',
+        type: 'clothes',
         slots: 17,
         label: 'Vêtements',
         weight: 100,

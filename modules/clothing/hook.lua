@@ -2,9 +2,9 @@ local clothing = require 'modules.clothing.server'
 
 exports.ox_inventory:registerHook('swapItems', function(payload)
     if payload.action == 'move' then
-        if payload.toType == 'clothing' then
+        if payload.toType == 'clothes' then
             return clothing.addClothing(payload)
-        elseif payload.fromType == 'clothing' then
+        elseif payload.fromType == 'clothes' then
             return clothing.removeClothing(payload)
         end
     elseif payload.action == 'swap' then
@@ -34,19 +34,19 @@ end, {
         clothes_decals = true,
     },
     inventoryFilter = {
-        '^clothing[%w]+',
+        '^clothes[%w]+',
     }
 })
 
 exports.ox_inventory:registerHook('swapItems', function(payload)
     if payload.action == 'move' then
-        if payload.toType == 'clothing' then
+        if payload.toType == 'clothes' then
             return clothing.addOutfit(payload)
-        elseif payload.fromType == 'clothing' then
+        elseif payload.fromType == 'clothes' then
             return clothing.removeOutfit(payload)
         end
     elseif payload.action == 'swap' then
-        if payload.toType == 'clothing' or payload.fromType == 'clothing' then
+        if payload.toType == 'clothes' or payload.fromType == 'clothes' then
             lib.notify(payload.source, {
                 type = 'error',
                 title = 'Inventaire',
@@ -63,6 +63,6 @@ end, {
         clothes_outfits = true,
     },
     inventoryFilter = {
-        '^clothing[%w]+',
+        '^clothes[%w]+',
     }
 })

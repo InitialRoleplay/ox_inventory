@@ -98,10 +98,10 @@ export const findAvailableSlot = (item: Slot, data: ItemData, items: Slot[]) => 
 //   sourceType: Inventory['type'],
 //   targetType?: Inventory['type']
 // ): { sourceInventory: Inventory; targetInventory: Inventory } => ({
-//   sourceInventory: sourceType === InventoryType.PLAYER ? state.leftInventory : (sourceType === InventoryType.CLOTHING ? state.clothesInventory : state.rightInventory),
+//   sourceInventory: sourceType === InventoryType.PLAYER ? state.leftInventory : (sourceType === InventoryType.CLOTHES ? state.clothesInventory : state.rightInventory),
 //   targetInventory: targetType ? targetType === InventoryType.PLAYER
 //       ? state.leftInventory
-//       : (targetType === InventoryType.CLOTHING ? state.clothesInventory : state.rightInventory)
+//       : (targetType === InventoryType.CLOTHES ? state.clothesInventory : state.rightInventory)
 //     : sourceType === InventoryType.PLAYER
 //       ? state.rightInventory
 //       : state.leftInventory,
@@ -112,14 +112,14 @@ export const getTargetInventory = (
   sourceType: Inventory['type'],
   targetType?: Inventory['type']
 ): { sourceInventory: Inventory; targetInventory: Inventory } => {
-  if (sourceType === InventoryType.CLOTHING) {
+  if (sourceType === InventoryType.CLOTHES) {
     if (!targetType) {
       return { sourceInventory: state.clothesInventory, targetInventory: state.leftInventory };
     }
     return { sourceInventory: state.clothesInventory, targetInventory: (targetType === InventoryType.PLAYER ? state.leftInventory : state.rightInventory) };
   }
 
-  if (targetType === InventoryType.CLOTHING) {
+  if (targetType === InventoryType.CLOTHES) {
     if (!sourceType) {
       return { sourceInventory: state.leftInventory, targetInventory: state.clothesInventory };
     }

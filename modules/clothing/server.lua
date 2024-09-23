@@ -9,7 +9,7 @@ end)
 local slotItems = shared.clothing.slots
 
 function clothing.getClothesInv(src, identifier)
-    return Inventory('clothes_' .. identifier, src) --[[@as OxInventory]]
+    return Inventory('clothes_' .. identifier, src, true) --[[@as OxInventory]]
 end
 
 RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
@@ -24,21 +24,23 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
 
     local sex, props, drawables = lib.callback.await('ox_inventory:clothes:appearance', src)
     if not sex or not props or not drawables then return end
-    Inventory.Clear(clothes, 'clothes_outfits')
+    if Inventory.Clear(clothes, 'clothes_outfits') then return print('error') end
 
-    for key, data in ipairs(props) do
+    for key, data in pairs(props) do
         if slotItems['clothes_' .. key] then
             if data.value ~= shared.clothing['male'][key].drawable then
-                data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+                data.image = 'https://files.fivemerr.com/images/13c6f2c2-5272-4efe-b371-97a04cb24973.png'
+                -- data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
             end
             Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end
     end
 
-    for key, data in ipairs(drawables) do
+    for key, data in pairs(drawables) do
         if slotItems['clothes_' .. key] then
             if data.value ~= shared.clothing['male'][key].drawable then
-                data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+                data.image = 'https://files.fivemerr.com/images/13c6f2c2-5272-4efe-b371-97a04cb24973.png'
+                -- data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
             end
             Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end

@@ -5,17 +5,16 @@ end
 
 function client.syncClothes()
     local outfit = exports.bl_appearance:GetPedAppearance(PlayerPedId())
-    TriggerServerEvent('ox_inventory:clothing:save', outfit)
     if client.getPed() ~= 0 then
         exports.bl_appearance:SetPedAppearance(client.getPed(), outfit)
     end
+    TriggerServerEvent('ox_inventory:syncPlayerClothes')
 end
 
 lib.callback.register('ox_inventory:clothes:appearance', function()
     local sex = isMaleOrFemale()
-    local props = exports.bl_appearance:GetPedProps(PlayerPedId())
-    local drawables = exports.bl_appearance:GetPedDrawables(PlayerPedId())
-    return sex, props, drawables
+    local appearance = exports.bl_appearance:GetPlayerPedAppearance()
+    return sex, appearance.props, appearance.drawables
 end)
 
 lib.callback.register('ox_inventory:addClothing', function(data)
