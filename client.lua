@@ -579,7 +579,7 @@ local function useSlot(slot, noAnim)
             SetCurrentPedWeapon(playerPed, data.hash, false)
 
             if data.hash ~= GetSelectedPedWeapon(playerPed) then
-                lib.print.info(('%s cannot be used in current context (default game behaviour)'):format(item.name))
+                lib.print.info(('failed to equip %s (cause unknown)'):format(item.name))
                 return lib.notify({ type = 'error', description = locale('cannot_use', data.label) })
             end
 
@@ -798,7 +798,7 @@ local function registerCommands()
 		-- No storage or no glovebox
 		if (checkVehicle == 0 or checkVehicle == 2) or (not Vehicles.glovebox[vehicleClass] and not Vehicles.glovebox.models[vehicleHash]) then return end
 
-		local isOpen = client.openInventory('glovebox', { id = 'glove'..GetVehicleNumberPlateText(vehicle), netid = NetworkGetNetworkIdFromEntity(vehicle) })
+		local isOpen = client.openInventory('glovebox', { netid = NetworkGetNetworkIdFromEntity(vehicle) })
 
 		if isOpen then
 			currentInventory.entity = vehicle
@@ -1250,6 +1250,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
     ---@class PlayerData
     ---@field inventory table<number, SlotWithItem?>
     ---@field weight number
+    ---@field groups table<string, number>
 	PlayerData = player
 	PlayerData.id = cache.playerId
 	PlayerData.source = cache.serverId
@@ -1364,7 +1365,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 		end
 	end
 
-	for id, data in pairs(lib.load('data.licenses')) do
+	for id, data in pairs(lib.load('data.licenses') or {}) do
 		lib.points.new({
 			coords = data.coords,
 			distance = 16,
@@ -1464,7 +1465,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 				end
 
 				if weaponHash ~= currentWeapon.hash then
-                    lib.print.info(('%s cannot be used in current context (default game behaviour)'):format(currentWeapon.name))
+                    lib.print.info(('%s was forcibly unequipped (caused by game behaviour or another resource)'):format(currentWeapon.name))
 					currentWeapon = Weapon.Disarm(currentWeapon, true)
 				end
 			end
