@@ -42,14 +42,10 @@ files {
     'web/build/assets/*.js',
     'web/build/assets/*.css',
 
-    'web/images/*.webp',
-    'web/images/clothes/empty/*.webp',
-    'web/images/clothes/male/*.webp',
-    'web/images/clothes/female/*.webp',
-
     'modules/**/shared.lua',
     'modules/**/client.lua',
     'modules/bridge/**/client.lua',
 
     'data/*.lua',
+    'data/**/*.lua',
 }

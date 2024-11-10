@@ -4,9 +4,10 @@ local files = {
     'clothes',
     'drugs',
     'inventory',
-    'mechanic',
+    'motorworks',
     'police',
     'radio',
+    'restaurants',
 }
 
 for _, file in ipairs(files) do

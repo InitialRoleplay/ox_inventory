@@ -27,4 +27,20 @@ return {
         weight = 500,
         stack = true
     },
+
+    ["phone"] = {
+        label = "Phone",
+        weight = 190,
+        stack = false,
+        consume = 0,
+        client = {
+            export = "lb-phone.UsePhoneItem",
+            remove = function()
+                TriggerEvent("lb-phone:itemRemoved")
+            end,
+            add = function()
+                TriggerEvent("lb-phone:itemAdded")
+            end
+        }
+    },
 }
