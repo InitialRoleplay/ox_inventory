@@ -14,6 +14,7 @@ end
 lib.callback.register('ox_inventory:clothes:appearance', function()
     local sex = isMaleOrFemale()
     local appearance = exports.bl_appearance:GetPlayerPedAppearance()
+    if not appearance then return end
     return sex, appearance.props, appearance.drawables
 end)
 

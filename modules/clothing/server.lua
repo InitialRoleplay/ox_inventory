@@ -24,7 +24,7 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
 
     local sex, props, drawables = lib.callback.await('ox_inventory:clothes:appearance', src)
     if not sex or not props or not drawables then return end
-    if Inventory.Clear(clothes, 'clothes_outfits') then return print('error') end
+    if not Inventory.Clear(clothes, 'clothes_outfits') then return end
 
     for key, data in pairs(props) do
         if slotItems['clothes_' .. key] then
