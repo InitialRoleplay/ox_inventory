@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     outDir: '../build',
     target: 'esnext',
+    emptyOutDir: true,
   },
   define: {
     'process.env': {},
