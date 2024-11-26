@@ -133,6 +133,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
         animation: isOver ? 'tilt-shaking 0.75s infinite' : '',
+        display: ((inventoryType === 'crafting' || inventoryType == 'shop') && !isSlotWithItem(item)) ? 'none' : 'block',
       }}
     >
       {isSlotWithItem(item) && (

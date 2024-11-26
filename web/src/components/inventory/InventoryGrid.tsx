@@ -6,7 +6,7 @@ import { getTotalWeight } from '../../helpers';
 import { useAppSelector } from '../../store';
 import { useIntersection } from '../../hooks/useIntersection';
 
-const PAGE_SIZE = 45;
+const PAGE_SIZE = 30;
 
 const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
   const weight = useMemo(
@@ -28,20 +28,28 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
   return (
     <>
       <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
-        <div>
-          <div className="inventory-grid-header-wrapper">
-            <p>{inventory.label}</p>
-            {inventory.maxWeight && (
-              <p>
-                {weight / 1000}/{inventory.maxWeight / 1000}kg
-              </p>
+        <>
+          <div>
+            <div className="inventory-grid-header-wrapper">
+              <p>{inventory.label}</p>
+              {inventory.type != 'shop' && inventory.type != 'crafting' && (
+                <>
+                  {inventory.maxWeight && (
+                    <p>
+                      {weight / 1000}/{inventory.maxWeight / 1000}kg
+                    </p>
+                  )}
+                </>
+              )}
+            </div>
+            {inventory.type != 'shop' && inventory.type != 'crafting' && (
+              <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
             )}
           </div>
-          <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
-        </div>
+        </>
         <div className="inventory-grid-container" ref={containerRef}>
           <>
-            {inventory.items.slice((inventory.type == 'player' ? 5 : 0), (page + 1) * PAGE_SIZE).map((item, index) => (
+            {inventory.items.slice(inventory.type == 'player' ? 5 : 0, (page + 1) * PAGE_SIZE).map((item, index) => (
               <InventorySlot
                 key={`${inventory.type}-${inventory.id}-${item.slot}`}
                 item={item}
