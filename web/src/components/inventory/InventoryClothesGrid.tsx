@@ -11,7 +11,7 @@ const images: Record<string, string> = {
   "clothes-5": 'https://files.fivemerr.com/images/f1f6b3ee-36cf-4d3c-9fb1-6e0ad79c4a6d.webp',
   "clothes-6": 'https://files.fivemerr.com/images/227d190d-5e8f-4a1f-a860-dca866be4c32.webp',
   "clothes-7": 'https://files.fivemerr.com/images/6617649c-101a-4ed1-9c46-0d3755320a79.webp',
-  "clothes-8": '/clothes/nothing/outfits.webp',
+  "clothes-8": '',
 
   "clothes-9": 'https://files.fivemerr.com/images/abb6f377-bf17-4b04-9160-5d517c5876e6.webp',
   "clothes-10": 'https://files.fivemerr.com/images/2ca43f9c-3160-4caa-91d0-d1f5b7c28380.webp',

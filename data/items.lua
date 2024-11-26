@@ -1,5 +1,6 @@
 local items = {}
 local files = {
+    'ambulance',
     'carkeys',
     'clothes',
     'drugs',

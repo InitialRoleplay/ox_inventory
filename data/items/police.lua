@@ -24,6 +24,13 @@ return {
         weight = 1000,
     },
 
+    ['bobby_pin'] = {
+        label = 'Bobby Pin',
+        weight = 2,
+        stack = true,
+        close = true,
+    },
+
     ["shield"] = {
         label = "Bouclier anti-émeute",
         weight = 8000,
@@ -34,7 +41,7 @@ return {
         }
     },
 
-	["spikestrip"] = {
+    ["spikestrip"] = {
         label = "Bande de clous",
         weight = 1500,
         consume = 0,

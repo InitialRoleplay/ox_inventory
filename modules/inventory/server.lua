@@ -1702,17 +1702,19 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 	local fromInventory
 
 	if data.toType == 'clothes' then
-		local license = GetPlayerIdentifierByType(source, 'license')
-		license = license and license:gsub('license:', '')
-		toInventory =  Inventory('clothes' .. license, source)
+		local player = exports.qbx_core:GetPlayer(source)
+		if not player then return end
+		local citizenid = player.PlayerData.citizenid
+		toInventory =  Inventory('clothes_' .. citizenid, source)
 	else
 		toInventory = (data.toType == 'player' and playerInventory) or Inventory(playerInventory.open)
 	end
 
 	if data.fromType == 'clothes' then
-		local license = GetPlayerIdentifierByType(source, 'license')
-		license = license and license:gsub('license:', '')
-		fromInventory =  Inventory('clothes' .. license, source)
+		local player = exports.qbx_core:GetPlayer(source)
+		if not player then return end
+		local citizenid = player.PlayerData.citizenid
+		fromInventory =  Inventory('clothes_' .. citizenid, source)
 	else
 		fromInventory = (data.fromType == 'player' and playerInventory) or Inventory(playerInventory.open)
 	end

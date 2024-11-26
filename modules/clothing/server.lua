@@ -22,25 +22,33 @@ RegisterNetEvent('ox_inventory:syncPlayerClothes', function()
     local clothes = clothing.getClothesInv(src, citizenid)
     if not clothes then return end
 
-    local sex, props, drawables = lib.callback.await('ox_inventory:clothes:appearance', src)
-    if not sex or not props or not drawables then return end
-    if not Inventory.Clear(clothes, 'clothes_outfits') then return end
+    local sex, props, head, drawables = lib.callback.await('ox_inventory:clothes:appearance', src)
+    if not sex or not props or not head or not drawables then return end
+    Inventory.Clear(clothes, 'clothes_outfits')
+
+    exports.bl_appearance:SavePlayerClothes(citizenid, {
+        headOverlay = head,
+        drawables = drawables,
+        props = props,
+    })
 
     for key, data in pairs(props) do
         if slotItems['clothes_' .. key] then
             if data.value ~= shared.clothing[sex][key].drawable then
+                data.type = 'prop'
                 data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+                Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
             end
-            Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end
     end
 
     for key, data in pairs(drawables) do
         if slotItems['clothes_' .. key] then
             if data.value ~= shared.clothing[sex][key].drawable then
+                data.type = 'component'
                 data.image = ('clothes/%s/%s_%s_%s'):format(sex, sex, data.index, data.value) .. (data.texture ~= 0 and ('_%s'):format(data.texture) or '')
+                Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
             end
-            Inventory.AddItem(clothes, 'clothes_' .. key, 1, data, slotItems['clothes_' .. key])
         end
     end
 

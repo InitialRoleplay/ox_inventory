@@ -112,7 +112,6 @@ local function closeTrunk()
 	end
 end
 
-local CraftingBenches = require 'modules.crafting.client'
 local Vehicles = lib.load('data.vehicles')
 local Inventory = require 'modules.inventory.client'
 

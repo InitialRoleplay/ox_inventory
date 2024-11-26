@@ -22,7 +22,7 @@ shared = {
 }
 
 shared.clothing = {
-    ['male'] = {
+    male = {
         -- Drawables
         ["masks"] = { drawable = 0, texture = 0, },
         ["torsos"] = { drawable = 15, texture = 0, },
@@ -41,7 +41,7 @@ shared.clothing = {
         ["watches"] = { drawable = -1, texture = -1, },
         ["bracelets"] = { drawable = -1, texture = -1, },
     },
-    ['female'] = {
+    female = {
         -- Drawables
         ["masks"] = { drawable = 0, texture = 0, },
         ["torsos"] = { drawable = 15, texture = 0, },
